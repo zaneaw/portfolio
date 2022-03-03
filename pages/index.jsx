@@ -4,6 +4,7 @@ import Link from "next/link";
 import Layout from "../components/layout";
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
+import About from "../components/about";
 
 export default function Home() {
     return (
@@ -20,7 +21,9 @@ export default function Home() {
             <div className="primary-background">
                 <Hero />
             </div>
-            <section>Blah</section>
+            <div className="secondary-background">
+                <About />
+            </div>
             {/* <footer className={styles.footer}></footer> */}
         </>
     );

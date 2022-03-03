@@ -1,5 +1,4 @@
 .grid {
-    background: var(--clr-accent);
     display: grid;
     gap: 1.5rem;
     grid-template-areas:

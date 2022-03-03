@@ -21,6 +21,17 @@
     --clr-accent: #80ced7;
     --clr-green: #c2e812;
 
+    --clr-gradient-primary: linear-gradient(
+        101.08deg,
+        #80ced7 0%,
+        #e5e5e5 93.81%
+    );
+    --clr-gradient-secondary: linear-gradient(
+        77.63deg,
+        #f8f6f7 6.82%,
+        #dad2d8 100%
+    );
+
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
@@ -97,3 +108,10 @@ section {
 /* 
     Background
 */
+.primary-background {
+    background: var(--clr-gradient-primary);
+}
+
+.secondary-background {
+    background: var(--clr-gradient-secondary);
+}
