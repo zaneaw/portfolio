@@ -1,16 +1,99 @@
-html,
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 
+    Custom Properties 
+*/
+
+:root {
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Noto Sans", sans-serif;
+    --ff-code: "Fira Code", monospace;
+
+    --fw-reg: 400;
+    --fw-bold: 700;
+
+    --clr-light: #dad2d8;
+    --clr-dark: #143642;
+    --clr-accent: #80ced7;
+    --clr-green: #c2e812;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+}
+
+@media (min-width: 50em) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* 
+    General Styling 
+*/
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--clr-dark);
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    text-decoration: none;
+    font-family: var(--ff-secondary);
+    font-size: var(--fw-reg);
 }
 
-* {
-  box-sizing: border-box;
+button {
+    border-radius: 10px;
+    min-width: 120px;
+    min-height: 38px;
+    font-family: var(--ff-primary);
+    border: none;
 }
+
+.image-wrapper {
+    display: block;
+    min-width: 100%;
+}
+
+/* 
+    Typography
+*/
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+/* 
+section {
+    display: grid;
+    grid-auto-columns: 1fr;
+    gap: 1.5rem;
+} */
+
+/* 
+    Background
+*/

@@ -1,10 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import Link from "next/link";
+import Layout from "../components/layout";
+import Navbar from "../components/navbar";
+import Hero from "../components/hero";
 
 export default function Home() {
     return (
-        <div className={styles.container}>
+        <>
             <Head>
                 <title>Zane&apos;s Portfolio</title>
                 <meta
@@ -13,20 +16,12 @@ export default function Home() {
                 />
                 <link rel="icon" href="/images/heart.png" />
             </Head>
-            <nav>
-                <div className="logo">
-                    <h2>Zane Wilson</h2>
-                    <Image
-                        src="/images/heart.png"
-                        width="25px"
-                        height="25px"
-                        alt="logo"
-                    />
-                </div>
-            </nav>
-            <main className={styles.main}></main>
-
-            <footer className={styles.footer}></footer>
-        </div>
+            <Navbar />
+            <div className="primary-background">
+                <Hero />
+            </div>
+            <section>Blah</section>
+            {/* <footer className={styles.footer}></footer> */}
+        </>
     );
 }

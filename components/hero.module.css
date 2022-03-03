@@ -1,0 +1,59 @@
+.grid {
+    background: var(--clr-accent);
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas:
+        ". hello hello ."
+        ". detail detail ."
+        ". buttons buttons ."
+        "image image image image";
+}
+
+@media (max-width: 30em) {
+    .show {
+        display: none;
+    }
+}
+.hello {
+    grid-area: hello;
+}
+
+.detail {
+    grid-area: detail;
+    /* slight offset from left side */
+    margin: 0 0 3% 2%;
+}
+
+.buttons {
+    grid-area: buttons;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 3%;
+}
+
+.contact {
+    background-color: var(--clr-green);
+}
+
+.download {
+    background-color: var(--clr-dark);
+    color: #fff;
+}
+
+.image {
+    grid-area: image;
+    padding-bottom: 1em;
+}
+
+@media (min-width: 50em) {
+    .grid {
+        height: 100vh;
+        display: grid;
+        padding-inline: 15%;
+        grid-auto-columns: 1fr;
+        grid-template-areas:
+            "hello hello image"
+            "detail detail image"
+            "contact download image";
+    }
+}
