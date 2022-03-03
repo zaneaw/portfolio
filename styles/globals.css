@@ -63,14 +63,6 @@ a {
     font-size: var(--fw-reg);
 }
 
-button {
-    border-radius: 10px;
-    min-width: 120px;
-    min-height: 38px;
-    font-family: var(--ff-primary);
-    border: none;
-}
-
 .image-wrapper {
     display: block;
     min-width: 100%;
@@ -98,12 +90,10 @@ h2 {
 h3 {
     font-size: var(--fs-h3);
 }
-/* 
+
 section {
-    display: grid;
-    grid-auto-columns: 1fr;
-    gap: 1.5rem;
-} */
+    padding: 1em 2em 2em;
+}
 
 /* 
     Background

@@ -15,10 +15,22 @@ export default function Hero() {
                     development!
                 </span>
             </h4>
-            <div className={styles.buttons}>
-                <button className={styles.contact}>Contact Me</button>
-                <button className={styles.download}>Download CV</button>
-            </div>
+            <a
+                className={`${styles.contact} ${styles.buttons}`}
+                href="mailto:wilsonzanea@gmail.com?subject=Contacting%20You
+                &body=I'd%20like%20to%20hire%20YOU!"
+                target="_blank"
+                rel="noreferrer"
+            >
+                Contact Me
+            </a>
+            <a
+                className={`${styles.download} ${styles.buttons}`}
+                href="/downloads/resume_website.pdf"
+                download="zanesAwesomeResume"
+            >
+                Download CV
+            </a>
             <div className={styles.image}>
                 <Image
                     src="/images/hero-image.svg"

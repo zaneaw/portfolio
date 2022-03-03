@@ -2,10 +2,10 @@
     display: grid;
     gap: 1.5rem;
     grid-template-areas:
-        ". hello hello ."
-        ". detail detail ."
-        ". buttons buttons ."
-        "image image image image";
+        "hello hello"
+        "detail detail"
+        "buttons buttons"
+        "image image";
 }
 
 @media (max-width: 30em) {
@@ -23,20 +23,33 @@
     margin: 0 0 3% 2%;
 }
 
-.buttons {
-    grid-area: buttons;
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 3%;
-}
-
 .contact {
     background-color: var(--clr-green);
 }
 
+.buttons {
+    border-radius: 10px;
+    min-width: 140px;
+    min-height: 42px;
+    font-family: var(--ff-primary);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .download {
     background-color: var(--clr-dark);
-    color: #fff;
+    color: var(--clr-light);
+}
+
+/* Style text inside buttons*/
+.contact {
+    color: var(--clr-dark);
+}
+
+.download {
+    color: var(--clr-light);
 }
 
 .image {
