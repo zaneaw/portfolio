@@ -5,6 +5,9 @@ import Layout from "../components/layout";
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 import About from "../components/about";
+import Projects from "../components/projects";
+import Cert from "../components/cert";
+import FindMe from "../components/findMe";
 
 export default function Home() {
     return (
@@ -17,12 +20,21 @@ export default function Home() {
                 />
                 <link rel="icon" href="/images/heart.png" />
             </Head>
-            <Navbar />
+            {/* <Navbar />
             <div className="primary-background">
                 <Hero />
             </div>
             <div className="secondary-background">
                 <About />
+            </div>
+            <div className="primary-background">
+                <Projects />
+            </div>
+            <div className="secondary-background">
+                <Cert />
+            </div> */}
+            <div className="primary-background">
+                <FindMe />
             </div>
             {/* <footer className={styles.footer}></footer> */}
         </>

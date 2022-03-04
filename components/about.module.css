@@ -14,6 +14,7 @@
 
 .about {
     grid-area: about;
+    justify-self: start;
 }
 
 .aboutText {
@@ -58,6 +59,7 @@
 
 .personal {
     grid-area: personal;
+    justify-self: start;
 }
 
 .personalText {

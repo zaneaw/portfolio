@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Head from "next/head";
-// import { EmblaCarousel } from "./carousel";
 import styles from "./about.module.css";
 
 export default function About() {

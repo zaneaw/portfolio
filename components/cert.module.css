@@ -1,0 +1,75 @@
+.grid {
+    padding-top: 15px;
+    display: grid;
+    gap: 1em;
+    grid-template-areas:
+        "certificates"
+        "react"
+        "javascript"
+        "python"
+        "django";
+}
+
+.article {
+    margin: 1em 0;
+    display: grid;
+}
+
+.imageContainer {
+    max-width: 100%;
+}
+
+.certificates {
+    grid-area: certificates;
+}
+
+.react {
+    grid-area: react;
+    row-gap: 0em;
+    grid-template-areas:
+        "certTitle"
+        "imageContainer";
+}
+
+.javascript {
+    grid-area: javascript;
+    column-gap: 0.5em;
+    align-items: center;
+    grid-template-areas:
+        "certTitle imageContainer imageContainer"
+        "certTitle imageContainer imageContainer";
+}
+
+.django {
+    grid-area: django;
+    row-gap: 0em;
+    grid-template-areas:
+        "certTitle"
+        "imageContainer";
+}
+
+.python {
+    grid-area: python;
+    column-gap: 0.5em;
+    align-items: center;
+    grid-template-areas:
+        "imageContainer imageContainer certTitle"
+        "imageContainer imageContainer certTitle";
+}
+
+.certTitle {
+    grid-area: certTitle;
+}
+
+.imageContainer {
+    grid-area: imageContainer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.small {
+    text-decoration: none;
+    color: rgb(105, 105, 105);
+    font-size: 0.75rem;
+}

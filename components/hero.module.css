@@ -9,6 +9,7 @@
 }
 
 @media (max-width: 30em) {
+    /* text underneath header, only show at > 30em */
     .show {
         display: none;
     }
