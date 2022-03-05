@@ -1,7 +1,7 @@
 .header {
     display: flex;
     justify-content: space-between;
-    display: none;
+    background-color: var(--clr-dark);
 }
 
 .navList {
@@ -12,4 +12,8 @@
 .navItem {
     list-style-type: none;
     padding: 0 0.3em;
+}
+
+.navLink {
+    color: var(--clr-light);
 }

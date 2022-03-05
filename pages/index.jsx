@@ -20,7 +20,7 @@ export default function Home() {
                 />
                 <link rel="icon" href="/images/heart.png" />
             </Head>
-            {/* <Navbar />
+            <Navbar />
             <div className="primary-background">
                 <Hero />
             </div>
@@ -32,7 +32,7 @@ export default function Home() {
             </div>
             <div className="secondary-background">
                 <Cert />
-            </div> */}
+            </div>
             <div className="primary-background">
                 <FindMe />
             </div>
