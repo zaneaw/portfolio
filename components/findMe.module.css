@@ -4,7 +4,6 @@
 
 .bubble {
     border-radius: 50%;
-    background-color: #fff;
     width: 100px;
     height: 100px;
     display: flex;
@@ -13,26 +12,104 @@
 }
 
 .icon {
-    border-radius: 50%;
-    width: 100%;
+    height: auto;
+    width: 100px;
     height: auto;
 }
 
 .githubBubble {
     grid-area: githubBubble;
+    background: linear-gradient(to bottom, #9332af, #5f2b8d);
 }
 
 .githubIcon {
-    color: #6e5494;
-    border: 2px solid #6e5494;
+    color: #fff;
+    width: 80%;
 }
 
-.emailBubble {
-    grid-area: emailBubble;
-    background-color: #000;
+.gmailBubble {
+    grid-area: gmailBubble;
+    background-color: #fff;
 }
 
-.emailIcon {
-    color: white;
-    border: 2px solid white;
+.gmailIcon {
+    color: #c9001e;
+    width: 65%;
+}
+
+.linkedInBubble {
+    grid-area: linkedInBubble;
+    background-color: #0a66c2;
+}
+
+.linkedInIcon {
+    color: rgb(255, 255, 255);
+    width: 60%;
+}
+
+.twitterBubble {
+    grid-area: twitterBubble;
+    background-color: #fff;
+}
+
+.twitterIcon {
+    color: #1b9df0;
+    width: 65%;
+}
+
+.instagramBubble {
+    grid-area: instagramBubble;
+    background: #f09433;
+    background: -moz-linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+    );
+    background: -webkit-linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+    );
+    background: linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.instagramIcon {
+    color: #fff;
+    width: 80%;
+}
+
+.facebookBubble {
+    grid-area: facebookBubble;
+    align-items: flex-end;
+    background: linear-gradient(to top, #0062e0, #19afff);
+}
+
+.facebookIcon {
+    color: #fff;
+    width: 60%;
+    height: 80%;
+}
+
+.youtubeBubble {
+    grid-area: youtubeBubble;
+    background-color: #fff;
+}
+
+.youtubeIcon {
+    color: #ff1a1a;
+    width: 65%;
 }
