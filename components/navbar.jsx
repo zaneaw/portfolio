@@ -5,7 +5,7 @@ import styles from "./navbar.module.css";
 export default function Navbar() {
     return (
         <header className={styles.header}>
-            <div className="logo">
+            <div className={styles.logo}>
                 <Image
                     src="/images/heart.png"
                     width="25px"
