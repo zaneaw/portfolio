@@ -8,6 +8,7 @@ import About from "../components/about";
 import Projects from "../components/projects";
 import Cert from "../components/cert";
 import FindMe from "../components/findMe";
+import Footer from "../components/footer";
 
 export default function Home() {
     return (
@@ -20,7 +21,7 @@ export default function Home() {
                 />
                 <link rel="icon" href="/images/heart.png" />
             </Head>
-            <Navbar />
+            {/* <Navbar /> */}
             <div className="primary-background">
                 <Hero />
             </div>
@@ -36,7 +37,7 @@ export default function Home() {
             <div className="primary-background">
                 <FindMe />
             </div>
-            {/* <footer className={styles.footer}></footer> */}
+            <Footer />
         </>
     );
 }

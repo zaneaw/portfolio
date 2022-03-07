@@ -11,8 +11,8 @@ export default function Hero() {
                 Meticulous, detail-oriented and self-motivated{" "}
                 <span className={styles.show}>
                     - My professional experience as a top-producing real estate
-                    broker in NYC translates seamlessly into software
-                    development!
+                    broker in NYC translates seamlessly into being the best
+                    software engineer that I can be!
                 </span>
             </h4>
             <a

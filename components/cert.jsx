@@ -9,7 +9,7 @@ export default function Certs() {
 
             <article className={`${styles.article} ${styles.react}`}>
                 <h4 className={styles.certTitle}>
-                    Full Stack Web Dev. with ReactJS
+                    Full Stack Web Dev with React
                 </h4>
                 <a
                     href="/cert/react.pdf"
