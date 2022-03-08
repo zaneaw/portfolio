@@ -1,3 +1,4 @@
+import Feedback from "./feedback";
 import styles from "./footer.module.css";
 
 export default function Footer() {
@@ -7,7 +8,7 @@ export default function Footer() {
             <a href="#" className={styles.top}>
                 &uarr; Back to Top &uarr;
             </a>
-            <span>Feedback</span>
+            <Feedback />
         </div>
     );
 }

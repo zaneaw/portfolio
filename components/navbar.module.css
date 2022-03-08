@@ -1,7 +1,7 @@
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: var(--clr-dark);
+    background-color: transparent;
 }
 
 .navList {
@@ -16,4 +16,76 @@
 
 .navLink {
     color: var(--clr-light);
+}
+
+.navbarToggle {
+    display: none;
+}
+
+@media (max-width: 40em) {
+    .navbarToggle {
+        display: block;
+        padding: 0.5em;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        z-index: 1000;
+    }
+
+    .hamburger {
+        display: block;
+        position: relative;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+        background-color: red;
+        width: 2em;
+        height: 3px;
+        border-radius: 1em;
+        transition: transform 250ms ease-in-out;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+
+    .hamburger::before {
+        top: 6px;
+    }
+
+    .hamburger::after {
+        bottom: 6px;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .nav {
+        position: fixed;
+        inset: 0 0 0 30%;
+        background: hsl(196 53% 17% / 0.75);
+        backdrop-filter: blur(1rem);
+        z-index: 1;
+    }
+
+    .navList {
+        flex-direction: column;
+    }
+
+    .navItem {
+        font-weight: var(--fw-bold);
+        font-size: 1rem;
+        letter-spacing: 4px;
+        padding: 1em;
+    }
 }

@@ -2,8 +2,7 @@
     background-color: var(--clr-dark);
     color: var(--clr-light);
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column-reverse;
     align-items: center;
     padding: 2em 1em;
     font-family: var(--ff-secondary);
@@ -15,4 +14,14 @@
     color: var(--clr-light);
     font-weight: var(--fw-bold);
     font-size: 1rem;
+    padding: 5px;
+    margin: 10px;
+}
+
+@media (min-width: 550px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }

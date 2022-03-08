@@ -14,6 +14,7 @@ export default function About() {
             </p>
             <div className={`${styles.image} ${styles.theo}`}>
                 <Image
+                    priority
                     src="/images/theo.jpg"
                     height="250px"
                     width="250px"

@@ -1,8 +1,15 @@
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./navbar.module.css";
 
 export default function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    function handleClick() {
+        setIsOpen(!isOpen);
+    }
+
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
@@ -13,38 +20,38 @@ export default function Navbar() {
                     alt=""
                 />
             </div>
-            {/* <button className="nav-toggle" aria-label="toggle navigation">
-                <span className="hamburger"></span>
-            </button> */}
-            <nav className={styles.nav}>
+            <button
+                className={styles.navbarToggle}
+                onClick={handleClick}
+                aria-label="toggle navigation"
+            >
+                <span className={styles.hamburger}></span>
+            </button>
+            <nav className={`${styles.nav} ${isOpen ? styles.toggle : ""}`}>
                 <ul className={styles.navList}>
                     <li className={styles.navItem}>
                         <Link href="/">
-                            <a className={styles.navLink}>About</a>
+                            <a className={styles.navLink}>ABOUT</a>
                         </Link>
                     </li>{" "}
-                    |
                     <li className={styles.navItem}>
                         <Link href="/">
-                            <a className={styles.navLink}>Projects</a>
+                            <a className={styles.navLink}>PROJECTS</a>
                         </Link>
                     </li>
-                    |
                     <li className={styles.navItem}>
                         <Link href="/">
-                            <a className={styles.navLink}>Certifications</a>
+                            <a className={styles.navLink}>CERTIFICATES</a>
                         </Link>
                     </li>
-                    |
                     <li className={styles.navItem}>
                         <Link href="/">
-                            <a className={styles.navLink}>Contact</a>
+                            <a className={styles.navLink}>FIND ME</a>
                         </Link>
                     </li>
-                    |
                     <li className={styles.navItem}>
                         <Link href="/">
-                            <a className={styles.navLink}>Challenges</a>
+                            <a className={styles.navLink}>FEEDBACK</a>
                         </Link>
                     </li>
                 </ul>
