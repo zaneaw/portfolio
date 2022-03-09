@@ -7,7 +7,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     function handleClick() {
-        setIsOpen(!isOpen);
+        return setIsOpen(!isOpen);
     }
 
     return (
@@ -21,37 +21,39 @@ export default function Navbar() {
                 />
             </div>
             <button
-                className={styles.navbarToggle}
+                className={`${styles.hamburger} ${isOpen ? styles.active : ""}`}
                 onClick={handleClick}
                 aria-label="toggle navigation"
             >
-                <span className={styles.hamburger}></span>
+                <span className={styles.bar}></span>
+                <span className={styles.bar}></span>
+                <span className={styles.bar}></span>
             </button>
-            <nav className={`${styles.nav} ${isOpen ? styles.toggle : ""}`}>
+            <nav className={`${styles.nav} ${isOpen ? "" : styles.toggle}`}>
                 <ul className={styles.navList}>
                     <li className={styles.navItem}>
                         <Link href="/">
-                            <a className={styles.navLink}>ABOUT</a>
+                            <a className={styles.navLink}>About</a>
                         </Link>
                     </li>{" "}
                     <li className={styles.navItem}>
                         <Link href="/">
-                            <a className={styles.navLink}>PROJECTS</a>
+                            <a className={styles.navLink}>Projects</a>
                         </Link>
                     </li>
                     <li className={styles.navItem}>
                         <Link href="/">
-                            <a className={styles.navLink}>CERTIFICATES</a>
+                            <a className={styles.navLink}>Certificates</a>
                         </Link>
                     </li>
                     <li className={styles.navItem}>
                         <Link href="/">
-                            <a className={styles.navLink}>FIND ME</a>
+                            <a className={styles.navLink}>Contact</a>
                         </Link>
                     </li>
                     <li className={styles.navItem}>
                         <Link href="/">
-                            <a className={styles.navLink}>FEEDBACK</a>
+                            <a className={styles.navLink}>Feedback</a>
                         </Link>
                     </li>
                 </ul>
