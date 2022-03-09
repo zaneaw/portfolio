@@ -4,8 +4,8 @@ import styles from "./cert.module.css";
 
 export default function Certs() {
     return (
-        <section className={styles.grid}>
-            <h2 className={styles.certificates}>Certificates</h2>
+        <section className={styles.grid} id="certificates">
+            <h2 className={`${styles.certificates} sectionHeader`}>Certificates</h2>
 
             <article className={`${styles.article} ${styles.react}`}>
                 <h4 className={styles.certTitle}>

@@ -11,8 +11,8 @@ import { SiGmail } from "react-icons/si";
 
 export default function ContactMe() {
     return (
-        <section className={styles.grid}>
-            <h2 className={styles.findMe}>Find Me</h2>
+        <section className={styles.grid} id="contact">
+            <h2 className={`${styles.findMe} sectionHeader`}>Find Me</h2>
             <a
                 target="_blank"
                 rel="noreferrer"

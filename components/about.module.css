@@ -21,21 +21,6 @@
     grid-area: aboutText;
 }
 
-@media (min-width: 580px) {
-    .grid {
-        padding-top: 15px;
-        display: grid;
-        gap: 1em;
-        justify-items: center;
-        grid-template-areas:
-            "about about about about"
-            "aboutText aboutText aboutText aboutText"
-            "theo park nyc cooking"
-            "personal personal personal personal"
-            "personalText personalText personalText personalText";
-    }
-}
-
 .theo {
     grid-area: theo;
 }
@@ -53,8 +38,7 @@
 }
 
 .image {
-    max-width: 300px;
-    max-height: 300px;
+    aspect-ratio: 1;
 }
 
 .personal {
@@ -64,4 +48,19 @@
 
 .personalText {
     grid-area: personalText;
+}
+
+@media (min-width: 580px) {
+    .grid {
+        padding-top: 15px;
+        display: grid;
+        gap: 1em;
+        justify-items: center;
+        grid-template-areas:
+            "about about about about"
+            "aboutText aboutText aboutText aboutText"
+            "theo park nyc cooking"
+            "personal personal personal personal"
+            "personalText personalText personalText personalText";
+    }
 }

@@ -7,3 +7,7 @@
     border-color: var(--clr-light);
     color: var(--clr-light);
 }
+
+.modalTitle {
+    padding-bottom: 0;
+}

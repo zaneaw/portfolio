@@ -20,6 +20,7 @@
     --clr-dark: #143642;
     --clr-accent: #80ced7;
     --clr-green: #c2e812;
+    --clr-burnt: #c97064;
 
     --clr-gradient-primary: linear-gradient(
         101.08deg,
@@ -107,9 +108,34 @@ section {
     padding: 1em 2em 2em;
 }
 
+@media (min-width: 40em) {
+    .sectionHeader {
+        justify-self: center !important;
+    }
+}
+
+@media (min-width: 50em) {
+    section {
+        padding-inline: 8%;
+    }
+}
+
+@media (min-width: 70em) {
+    section {
+        padding-inline: 15%;
+    }
+}
+
 /* 
     Background
 */
+.bgi {
+    background-image: url("../public/images/bg.png");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: right -40% top 60%;
+}
+
 .primary-background {
     background: var(--clr-gradient-primary);
 }

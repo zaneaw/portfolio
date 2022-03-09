@@ -4,7 +4,7 @@ import styles from "./projects.module.css";
 
 export default function Projects() {
     return (
-        <section className={styles.grid}>
+        <section className={styles.grid} id="projects">
             <h2 className={styles.projects}>Projects</h2>
             <article className={`${styles.article} ${styles.articleOne}`}>
                 <h4 className={styles.articleTitle}>Notes Taking App</h4>

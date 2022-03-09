@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { FaHeart } from "react-icons/fa";
 import styles from "./navbar.module.css";
 
 export default function Navbar() {
@@ -12,14 +13,7 @@ export default function Navbar() {
 
     return (
         <header className={styles.header}>
-            <div className={styles.logo}>
-                <Image
-                    src="/images/heart.png"
-                    width="25px"
-                    height="25px"
-                    alt=""
-                />
-            </div>
+            <FaHeart className={styles.heart} />
             <button
                 className={`${styles.hamburger} ${isOpen ? styles.active : ""}`}
                 onClick={handleClick}
@@ -32,28 +26,23 @@ export default function Navbar() {
             <nav className={`${styles.nav} ${isOpen ? "" : styles.toggle}`}>
                 <ul className={styles.navList}>
                     <li className={styles.navItem}>
-                        <Link href="/">
+                        <Link href="#about">
                             <a className={styles.navLink}>About</a>
                         </Link>
                     </li>{" "}
                     <li className={styles.navItem}>
-                        <Link href="/">
+                        <Link href="#projects">
                             <a className={styles.navLink}>Projects</a>
                         </Link>
                     </li>
                     <li className={styles.navItem}>
-                        <Link href="/">
+                        <Link href="#certificates">
                             <a className={styles.navLink}>Certificates</a>
                         </Link>
                     </li>
                     <li className={styles.navItem}>
-                        <Link href="/">
+                        <Link href="#contact">
                             <a className={styles.navLink}>Contact</a>
-                        </Link>
-                    </li>
-                    <li className={styles.navItem}>
-                        <Link href="/">
-                            <a className={styles.navLink}>Feedback</a>
                         </Link>
                     </li>
                 </ul>

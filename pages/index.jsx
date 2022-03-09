@@ -21,23 +21,23 @@ export default function Home() {
                 />
                 <link rel="icon" href="/images/heart.png" />
             </Head>
-            <Navbar />
             <div className="primary-background">
+                <Navbar />
                 <Hero />
             </div>
             <div className="secondary-background">
                 <About />
             </div>
-            {/* <div className="primary-background">
+            <div className="primary-background">
                 <Projects />
             </div>
             <div className="secondary-background">
                 <Cert />
             </div>
-            */}
-            {/* <div className="primary-background">
+
+            <div className="primary-background">
                 <FindMe />
-            </div> */}
+            </div>
             <Footer />
         </>
     );

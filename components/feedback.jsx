@@ -14,9 +14,6 @@ import styles from "./feedback.module.css";
 
 export default function Feedback() {
     const [open, setOpen] = useState(false);
-    // const [rating, setRating] = useState(5.0);
-    // const [comments, setComments] = useState("");
-    // const [email, setEmail] = useState("");
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -38,7 +35,7 @@ export default function Feedback() {
     });
 
     return (
-        <div>
+        <>
             <Button
                 variant="outlined"
                 onClick={handleClickOpen}
@@ -47,7 +44,7 @@ export default function Feedback() {
                 Send Feedback
             </Button>
             <Dialog open={open} onClose={handleClose}>
-                <DialogTitle>Send Feedback</DialogTitle>
+                <DialogTitle className={styles.modalTitle}>Send Feedback</DialogTitle>
                 <form onSubmit={formik.handleSubmit}>
                     <DialogContent>
                         <DialogContentText>Rating:</DialogContentText>
@@ -82,6 +79,6 @@ export default function Feedback() {
                     </DialogActions>
                 </form>
             </Dialog>
-        </div>
+        </>
     );
 }

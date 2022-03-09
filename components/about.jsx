@@ -3,8 +3,8 @@ import styles from "./about.module.css";
 
 export default function About() {
     return (
-        <section className={styles.grid}>
-            <h2 className={styles.about}>About</h2>
+        <section className={styles.grid} id="about">
+            <h2 className={`${styles.about} sectionHeader`}>About</h2>
             <p className={styles.aboutText}>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
                 excepturi veniam fugiat consequatur, quas quos inventore est
@@ -45,7 +45,7 @@ export default function About() {
                     alt=""
                 />
             </div>
-            <h3 className={styles.personal}>Personal</h3>
+            <h3 className={`${styles.personal} sectionHeader`}>Personal</h3>
             <p className={styles.personalText}>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Explicabo corrupti et minima eius expedita dignissimos nisi

@@ -10,6 +10,18 @@
         "django";
 }
 
+.certTitle {
+    display: none;
+}
+
+@media (min-width: 40em) {
+    .grid {
+        grid-template-areas:
+            "certificates certificates certificates certificates"
+            "react javascript python django";
+    }
+}
+
 .article {
     margin: 1em 0;
     display: grid;

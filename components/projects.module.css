@@ -2,6 +2,7 @@
     padding-top: 1em;
     display: grid;
     gap: 1em;
+    grid-auto-columns: 1fr;
     justify-items: center;
     grid-template-areas:
         "projects"
@@ -10,9 +11,7 @@
         "articleThree";
 }
 
-.articleOne,
-.articleTwo,
-.articleThree {
+.article {
     grid-area: article;
     display: grid;
     gap: 0.5em;
@@ -57,6 +56,41 @@
     grid-area: articleThree;
 }
 
+@media (min-width: 50em) {
+    .grid {
+        row-gap: 2em;
+    }
+
+    .article {
+        column-gap: 2em;
+        row-gap: 0em;
+        margin-bottom: 4em;
+        align-items: center;
+    }
+
+    /* offset a little */
+    .articleTitle {
+        padding-left: 0.5em;
+    }
+
+    .articleOne,
+    .articleThree {
+        grid-template-columns: 0.8fr 1fr;
+        grid-template-areas:
+            "articleVideo articleTitle"
+            "articleVideo articleBody"
+            "articleVideo articleLink";
+    }
+
+    .articleTwo {
+        grid-template-columns: 1fr 0.8fr;
+        grid-template-areas:
+            "articleTitle articleVideo"
+            "articleBody articleVideo"
+            "articleLink articleVideo";
+    }
+}
+
 /* 
     Video Player
 */
@@ -65,10 +99,11 @@
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
 }
+
 .iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
 }

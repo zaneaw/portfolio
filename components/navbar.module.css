@@ -1,7 +1,14 @@
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: transparent;
+    padding: 1em 2em;
+    background-color: var(--clr-dark);
+}
+
+.heart {
+    color: var(--clr-burnt);
+    width: 40px;
+    height: auto;
 }
 
 .navList {
@@ -30,14 +37,16 @@
 .bar {
     display: block;
     width: 35px;
-    height: 3px;
+    height: 5px;
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: #222222;
+    border: 1px var(--clr-dark) solid;
+    border-radius: 5px;
+    background-color: var(--clr-burnt);
 }
 
-@media (max-width: 40em) {
+@media (max-width: 45em) {
     .hamburger {
         display: block;
         padding: 0.5em;
@@ -45,7 +54,7 @@
         border: 0;
         cursor: pointer;
         position: fixed;
-        right: 1em;
+        right: 2em;
         top: 1em;
         z-index: 2;
     }
@@ -79,12 +88,12 @@
     }
 
     .hamburger.active .bar:nth-child(1) {
-        -webkit-transform: translateY(8px) rotate(45deg);
-        transform: translateY(8px) rotate(45deg);
+        -webkit-transform: translateY(10px) rotate(45deg);
+        transform: translateY(10px) rotate(45deg);
     }
 
     .hamburger.active .bar:nth-child(3) {
-        -webkit-transform: translateY(-8px) rotate(-45deg);
-        transform: translateY(-8px) rotate(-45deg);
+        -webkit-transform: translateY(-10px) rotate(-45deg);
+        transform: translateY(-10px) rotate(-45deg);
     }
 }
