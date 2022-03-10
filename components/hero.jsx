@@ -13,7 +13,7 @@ export default function Hero() {
                     <span className={styles.show}>
                         - My professional experience as a top-producing real
                         estate broker in NYC translates seamlessly into being
-                        the best software engineer that I can be!
+                        a great software engineer!
                     </span>
                 </h4>
                 <a

@@ -10,18 +10,24 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { useFormik } from "formik";
+import * as yup from "yup";
+import Airtable from "airtable";
 import styles from "./feedback.module.css";
 
-export default function Feedback() {
-    const [open, setOpen] = useState(false);
+const base = new Airtable({ apiKey: "keyWWDklEJ0xaO7nM" }).base(
+    "appJ9OiLS6w2HJiHr"
+);
 
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-
-    const handleClose = () => {
-        setOpen(false);
-    };
+export default function Feedback({ open, handleClose }) {
+    const validationSchema = yup.object({
+        rating: yup.number(),
+        comments: yup.string(),
+        email: yup
+            .string()
+            .email("Enter valid email.")
+            .required("Email required!"),
+        createdOn: yup.date().default(() => new Date()),
+    });
 
     const formik = useFormik({
         initialValues: {
@@ -29,22 +35,19 @@ export default function Feedback() {
             comments: "",
             email: "",
         },
-        onSubmit: (values) => {
+        validationSchema: validationSchema,
+        onSubmit: (values, { resetForm }) => {
             alert(JSON.stringify(values, null, 2));
+            resetForm();
         },
     });
 
     return (
         <>
-            <Button
-                variant="outlined"
-                onClick={handleClickOpen}
-                className={styles.feedbackButton}
-            >
-                Send Feedback
-            </Button>
             <Dialog open={open} onClose={handleClose}>
-                <DialogTitle className={styles.modalTitle}>Send Feedback</DialogTitle>
+                <DialogTitle className={styles.modalTitle}>
+                    Send Feedback
+                </DialogTitle>
                 <form onSubmit={formik.handleSubmit}>
                     <DialogContent>
                         <DialogContentText>Rating:</DialogContentText>
@@ -59,6 +62,7 @@ export default function Feedback() {
                         <TextField
                             label="Comments"
                             id="comments"
+                            name="comments"
                             rows={4}
                             multiline
                             value={formik.values.comments}
@@ -69,8 +73,16 @@ export default function Feedback() {
                         <TextField
                             label="Email"
                             id="email"
+                            name="email"
                             value={formik.values.email}
                             onChange={formik.handleChange}
+                            error={
+                                formik.touched.email &&
+                                Boolean(formik.errors.email)
+                            }
+                            helperText={
+                                formik.touched.email && formik.errors.email
+                            }
                         />
                     </DialogContent>
                     <DialogActions>

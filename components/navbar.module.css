@@ -46,6 +46,10 @@
     background-color: var(--clr-burnt);
 }
 
+.feedback {
+    cursor: pointer;
+}
+
 @media (max-width: 45em) {
     .hamburger {
         display: block;

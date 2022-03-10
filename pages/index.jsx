@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,6 +12,16 @@ import FindMe from "../components/findMe";
 import Footer from "../components/footer";
 
 export default function Home() {
+    const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
+
+    const handleOpenFeedback = () => {
+        setIsFeedbackOpen(true);
+    };
+
+    const handleCloseFeedback = () => {
+        setIsFeedbackOpen(false);
+    };
+
     return (
         <>
             <Head>
@@ -22,7 +33,9 @@ export default function Home() {
                 <link rel="icon" href="/images/heart.png" />
             </Head>
             <div className="primary-background">
-                <Navbar />
+                <Navbar
+                    handleOpenFeedback={handleOpenFeedback}
+                />
                 <Hero />
             </div>
             <div className="secondary-background">
@@ -38,7 +51,11 @@ export default function Home() {
             <div className="primary-background">
                 <FindMe />
             </div>
-            <Footer />
+            <Footer
+                isFeedbackOpen={isFeedbackOpen}
+                handleCloseFeedback={handleCloseFeedback}
+                handleOpenFeedback={handleOpenFeedback}
+            />
         </>
     );
 }
