@@ -11,12 +11,7 @@ import {
 import { useState } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import Airtable from "airtable";
 import styles from "./feedback.module.css";
-
-const base = new Airtable({ apiKey: "keyWWDklEJ0xaO7nM" }).base(
-    "appJ9OiLS6w2HJiHr"
-);
 
 export default function Feedback({ open, handleClose }) {
     const validationSchema = yup.object({
