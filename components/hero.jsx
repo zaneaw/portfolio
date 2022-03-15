@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./hero.module.css";
+import { FaTelegramPlane, FaDownload } from "react-icons/fa";
 
 export default function Hero() {
     return (
@@ -12,8 +13,8 @@ export default function Hero() {
                     Meticulous, detail-oriented and self-motivated{" "}
                     <span className={styles.show}>
                         - My professional experience as a top-producing real
-                        estate broker in NYC translates seamlessly into being
-                        a great software engineer!
+                        estate broker in NYC translates seamlessly into being a
+                        great software engineer!
                     </span>
                 </h4>
                 <a
@@ -23,14 +24,14 @@ export default function Hero() {
                     target="_blank"
                     rel="noreferrer"
                 >
-                    Contact Me
+                    Contact Me <FaTelegramPlane />
                 </a>
                 <a
                     className={`${styles.download} ${styles.buttons}`}
                     href="/downloads/resume_website.pdf"
                     download="zanesAwesomeResume"
                 >
-                    Download CV
+                    Download CV <FaDownload />
                 </a>
                 <div className={styles.image}>
                     <Image

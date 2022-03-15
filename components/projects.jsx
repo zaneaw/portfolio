@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./projects.module.css";
+import { MdExitToApp } from "react-icons/md";
 
 export default function Projects() {
     return (
         <section className={styles.grid} id="projects">
-            <h2 className={styles.projects}>Projects</h2>
+            <h2 className={`${styles.projects} sectionHeader`}>Projects</h2>
             <article className={`${styles.article} ${styles.articleOne}`}>
                 <h4 className={styles.articleTitle}>Notes Taking App</h4>
                 <p className={styles.articleBody}>
@@ -20,7 +21,7 @@ export default function Projects() {
                     rel="noreferrer"
                     className={styles.articleLink}
                 >
-                    View Source Code
+                    View Source Code <MdExitToApp/>
                 </a>
                 <div
                     className={`${styles.videoContainer} ${styles.articleVideo}`}
@@ -49,7 +50,7 @@ export default function Projects() {
                     rel="noreferrer"
                     className={styles.articleLink}
                 >
-                    View Source Code
+                    View Source Code <MdExitToApp />
                 </a>
                 <div
                     className={`${styles.videoContainer} ${styles.articleVideo}`}
@@ -78,7 +79,7 @@ export default function Projects() {
                     rel="noreferrer"
                     className={styles.articleLink}
                 >
-                    View Source Code
+                    View Source Code <MdExitToApp />
                 </a>
                 <div
                     className={`${styles.videoContainer} ${styles.articleVideo}`}

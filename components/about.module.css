@@ -63,4 +63,10 @@
             "personal personal personal personal"
             "personalText personalText personalText personalText";
     }
+
+    .personalText,
+    .aboutText {
+        max-width: 75%;
+        text-align: center;
+    }
 }

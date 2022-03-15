@@ -38,10 +38,27 @@
 
 .articleLink {
     grid-area: articleLink;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-self: start;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 185px;
+    padding: 5px 15px;
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: ease-in 0.2s;
+}
+
+.articleLink:hover {
+    filter: brightness(85%);
 }
 
 .articleVideo {
     grid-area: articleVideo;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .articleOne {
@@ -90,6 +107,8 @@
             "articleLink articleVideo";
     }
 }
+
+
 
 /* 
     Video Player

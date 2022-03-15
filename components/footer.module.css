@@ -16,6 +16,11 @@
     font-size: 1rem;
     padding: 5px;
     margin: 10px;
+    transition: ease-in 0.2s;
+}
+
+.top:hover {
+    filter: brightness(75%);
 }
 
 .feedbackButton {

@@ -25,8 +25,14 @@
     font-family: var(--ff-primary);
     border: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: ease-in 0.2s;
+}
+
+.buttons:hover {
+    filter: brightness(85%)
 }
 
 .contact {
@@ -44,6 +50,10 @@
 .image {
     padding-bottom: 1em;
     grid-area: image;
+}
+
+.show {
+    font-family: var(--ff-primary);
 }
 
 /* @media (min-width: 40em) */

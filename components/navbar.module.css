@@ -19,6 +19,11 @@
 .navItem {
     list-style-type: none;
     padding: 0 0.3em;
+    transition: ease-in 0.2s;
+}
+
+.navItem:hover {
+    filter: brightness(75%);
 }
 
 .navLink {
