@@ -17,28 +17,27 @@ export default function Feedback({ open, handleClose }) {
     const validationSchema = Yup.object({
         rating: Yup.number(),
         comments: Yup.string(),
-        email: Yup
-            .string()
+        email: Yup.string()
             .email("Enter valid email.")
-            .required("Email required!")
+            .required("Email required!"),
     });
 
     const formik = useFormik({
         initialValues: {
             rating: 5.0,
             comments: "",
-            email: ""
+            email: "",
         },
         validationSchema: validationSchema,
         onSubmit: (values, { resetForm }) => {
-            values.createdOn = new Date().toISOString().split("T")[0];
             fetch("/api/createFeedback", {
                 method: "POST",
-                headers: {"Content-Type": "application/json"},
-                body: JSON.stringify({ values })
-            })
-                .then((res) => res.json())
-                .catch((error) => { console.error("Error", error)});
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: { rating, comments, email },
+            });
+            alert(JSON.stringify(values, null, 2));
             resetForm();
         },
     });
@@ -89,7 +88,7 @@ export default function Feedback({ open, handleClose }) {
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={handleClose}>Cancel</Button>
-                        <Button type="submit" onClick={handleClose}>Submit</Button>
+                        <Button type="submit">Submit</Button>
                     </DialogActions>
                 </form>
             </Dialog>

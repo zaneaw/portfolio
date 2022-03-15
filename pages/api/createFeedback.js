@@ -2,12 +2,14 @@ import { table } from "./utils/Airtable";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req, res) => {
+    if (req.method !== "POST") {
+        return res.status(405).send({ message: "Only POST requests allowed" })
+    }
     // array destructuring
-    const { Rating, Comments, Email, Date } = req.body;
-
+    const { values } = req.body;
     try {
         const createdRecords = await table.create([
-            { fields: { Rating, Comments, Email, Date } },
+            { fields: { rating: Number(values.rating), comments: values.comments, email: values.email, date: values.createdOn } },
         ]);
         const createdRecord = {
             id: createdRecords[0].id,
