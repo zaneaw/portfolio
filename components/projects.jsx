@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./projects.module.css";
 import { MdExitToApp } from "react-icons/md";
+import { motion } from "framer-motion";
 
 export default function Projects() {
     return (
@@ -15,14 +16,16 @@ export default function Projects() {
                     voluptatibus blanditiis nisi eius, dolore totam aperiam, ad,
                     nulla culpa saepe quidem sequi beatae laudantium.
                 </p>
-                <a
+                <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                     href="https://github.com/zaneaw/notes-app"
                     target="_blank"
                     rel="noreferrer"
                     className={styles.articleLink}
                 >
-                    View Source Code <MdExitToApp/>
-                </a>
+                    View Source Code <MdExitToApp />
+                </motion.a>
                 <div
                     className={`${styles.videoContainer} ${styles.articleVideo}`}
                 >
@@ -44,14 +47,16 @@ export default function Projects() {
                     voluptatibus blanditiis nisi eius, dolore totam aperiam, ad,
                     nulla culpa saepe quidem sequi beatae laudantium.
                 </p>
-                <a
+                <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                     href="https://github.com/zaneaw/notes-app"
                     target="_blank"
                     rel="noreferrer"
                     className={styles.articleLink}
                 >
                     View Source Code <MdExitToApp />
-                </a>
+                </motion.a>
                 <div
                     className={`${styles.videoContainer} ${styles.articleVideo}`}
                 >
@@ -73,14 +78,16 @@ export default function Projects() {
                     voluptatibus blanditiis nisi eius, dolore totam aperiam, ad,
                     nulla culpa saepe quidem sequi beatae laudantium.
                 </p>
-                <a
+                <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                     href="https://github.com/zaneaw/notes-app"
                     target="_blank"
                     rel="noreferrer"
                     className={styles.articleLink}
                 >
                     View Source Code <MdExitToApp />
-                </a>
+                </motion.a>
                 <div
                     className={`${styles.videoContainer} ${styles.articleVideo}`}
                 >

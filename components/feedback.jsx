@@ -8,10 +8,10 @@ import {
     TextField,
     DialogActions,
 } from "@mui/material";
-import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import styles from "./feedback.module.css";
+import { motion } from "framer-motion";
 
 export default function Feedback({ open, handleClose }) {
     const validationSchema = Yup.object({
@@ -44,7 +44,7 @@ export default function Feedback({ open, handleClose }) {
     });
 
     return (
-        <>
+        <motion.div>
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle className={styles.modalTitle}>
                     Send Feedback
@@ -57,7 +57,7 @@ export default function Feedback({ open, handleClose }) {
                             name="rating"
                             value={Number(formik.values.rating)}
                             onChange={formik.handleChange}
-                            precision={0.5}
+                            precision={1}
                         />
                         <br />
                         <TextField
@@ -93,6 +93,6 @@ export default function Feedback({ open, handleClose }) {
                     </DialogActions>
                 </form>
             </Dialog>
-        </>
+        </motion.div>
     );
 }

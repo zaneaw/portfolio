@@ -16,21 +16,27 @@
     font-size: 1rem;
     padding: 5px;
     margin: 10px;
-    transition: ease-in 0.2s;
+    text-transform: uppercase;
 }
 
-.top:hover {
-    filter: brightness(75%);
-}
 
 .feedbackButton {
     color: #fff;
-    border-color: #fff;
-}
-
-.feedbackButton:hover {
-    border-color: var(--clr-light);
-    color: var(--clr-light);
+    background-color: transparent;
+    border: solid 1px #fff;
+    border-radius: 4px;
+    text-transform: uppercase;
+    min-width: 64px;
+    padding: 5px 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    line-height: 1.75;
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.02857rem;
+    font-family: var(--ff-primary);
 }
 
 @media (min-width: 550px) {

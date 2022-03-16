@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./hero.module.css";
 import { FaTelegramPlane, FaDownload } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Hero() {
     return (
@@ -17,7 +18,9 @@ export default function Hero() {
                         great software engineer!
                     </span>
                 </h4>
-                <a
+                <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                     className={`${styles.contact} ${styles.buttons}`}
                     href="mailto:wilsonzanea@gmail.com?subject=Contacting%20You
                 &body=I'd%20like%20to%20hire%20YOU!"
@@ -25,14 +28,16 @@ export default function Hero() {
                     rel="noreferrer"
                 >
                     Contact Me <FaTelegramPlane />
-                </a>
-                <a
+                </motion.a>
+                <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                     className={`${styles.download} ${styles.buttons}`}
                     href="/downloads/resume_website.pdf"
                     download="zanesAwesomeResume"
                 >
                     Download CV <FaDownload />
-                </a>
+                </motion.a>
                 <div className={styles.image}>
                     <Image
                         src="/images/hero-image.svg"

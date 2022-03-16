@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "./cert.module.css";
+import { motion } from "framer-motion";
 
 export default function Certs() {
     return (
@@ -11,7 +12,9 @@ export default function Certs() {
                 <h4 className={styles.certTitle}>
                     Full Stack Web Dev with React
                 </h4>
-                <a
+                <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                     href="/cert/react.pdf"
                     target="_blank"
                     className={styles.imageContainer}
@@ -25,14 +28,16 @@ export default function Certs() {
                     <small className={styles.small}>
                         (click &#9757; to view details)
                     </small>
-                </a>
+                </motion.a>
             </article>
 
             <article className={`${styles.article} ${styles.javascript}`}>
                 <h4 className={styles.certTitle}>
                     JavaScript Algorithms and Data Structures
                 </h4>
-                <a
+                <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                     href="/cert/JScript.jpg"
                     target="_blank"
                     className={styles.imageContainer}
@@ -46,12 +51,14 @@ export default function Certs() {
                     <small className={styles.small}>
                         (click &#9757; to view details)
                     </small>
-                </a>
+                </motion.a>
             </article>
 
             <article className={`${styles.article} ${styles.django}`}>
                 <h4 className={styles.certTitle}>Django</h4>
-                <a
+                <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                     href="/cert/django.pdf"
                     target="_blank"
                     className={styles.imageContainer}
@@ -65,14 +72,16 @@ export default function Certs() {
                     <small className={styles.small}>
                         (click &#9757; to view details)
                     </small>
-                </a>
+                </motion.a>
             </article>
 
             <article className={`${styles.article} ${styles.python}`}>
                 <h4 className={styles.certTitle}>
                     Scientific Computing with Python
                 </h4>
-                <a
+                <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                     href="/cert/python.png"
                     target="_blank"
                     className={styles.imageContainer}
@@ -86,7 +95,7 @@ export default function Certs() {
                     <small className={styles.small}>
                         (click &#9757; to view details)
                     </small>
-                </a>
+                </motion.a>
             </article>
         </section>
     );

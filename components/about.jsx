@@ -1,5 +1,7 @@
 import Image from "next/image";
 import styles from "./about.module.css";
+import { motion } from "framer-motion";
+import zIndex from "@mui/material/styles/zIndex";
 
 export default function About() {
     return (
@@ -12,39 +14,51 @@ export default function About() {
                 obcaecati aut maxime deleniti nulla magni blanditiis
                 reprehenderit! Nisi, molestiae?
             </p>
-            <div className={`${styles.image} ${styles.theo}`}>
+            <motion.div
+                whileHover={{ scale: 1.4, zIndex: 1 }}
+                className={`${styles.image} ${styles.theo}`}
+            >
                 <Image
                     priority
                     src="/images/theo.jpg"
-                    height="250px"
-                    width="250px"
+                    height="500px"
+                    width="500px"
                     alt=""
                 />
-            </div>
-            <div className={`${styles.image} ${styles.cooking}`}>
+            </motion.div>
+            <motion.div
+                whileHover={{ scale: 1.4, zIndex: 1 }}
+                className={`${styles.image} ${styles.cooking}`}
+            >
                 <Image
                     src="/images/cooking.jpg"
-                    height="250px"
-                    width="250px"
+                    height="500px"
+                    width="500px"
                     alt=""
                 />
-            </div>
-            <div className={`${styles.image} ${styles.park}`}>
+            </motion.div>
+            <motion.div
+                whileHover={{ scale: 1.4, zIndex: 1 }}
+                className={`${styles.image} ${styles.park}`}
+            >
                 <Image
                     src="/images/park.jpg"
-                    height="250px"
-                    width="250px"
+                    height="500px"
+                    width="500px"
                     alt=""
                 />
-            </div>
-            <div className={`${styles.image} ${styles.nyc}`}>
+            </motion.div>
+            <motion.div
+                whileHover={{ scale: 1.4, zIndex: 1 }}
+                className={`${styles.image} ${styles.nyc}`}
+            >
                 <Image
                     src="/images/nyc.jpg"
-                    height="250px"
-                    width="250px"
+                    height="500px"
+                    width="500px"
                     alt=""
                 />
-            </div>
+            </motion.div>
             <h3 className={`${styles.personal} sectionHeader`}>Personal</h3>
             <p className={styles.personalText}>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
