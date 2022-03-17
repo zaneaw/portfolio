@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styles from "./about.module.css";
 import { motion } from "framer-motion";
-import zIndex from "@mui/material/styles/zIndex";
 
 export default function About() {
     return (

@@ -7,9 +7,9 @@ export default function Hero() {
     return (
         <div className="bgi">
             <section className={styles.grid}>
-                <h2 className={styles.hello}>
+                <motion.h2 className={styles.hello} initial={{ x: "-100vw", opacity: 0 }} animate={{ x: 0, opacity: 1 }}>
                     Hello! I&apos;m Zane, Software Engineer
-                </h2>
+                </motion.h2>
                 <h4 className={styles.detail}>
                     Meticulous, detail-oriented and self-motivated{" "}
                     <span className={styles.show}>

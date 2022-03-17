@@ -1,8 +1,5 @@
 import { useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import Layout from "../components/layout";
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 import About from "../components/about";
@@ -10,6 +7,7 @@ import Projects from "../components/projects";
 import Cert from "../components/cert";
 import FindMe from "../components/findMe";
 import Footer from "../components/footer";
+import Feedback from "../components/feedback";
 
 export default function Home() {
     const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
@@ -33,9 +31,7 @@ export default function Home() {
                 <link rel="icon" href="/images/heart.png" />
             </Head>
             <div className="primary-background">
-                <Navbar
-                    handleOpenFeedback={handleOpenFeedback}
-                />
+                <Navbar handleOpenFeedback={handleOpenFeedback} />
                 <Hero />
             </div>
             <div className="secondary-background">
@@ -55,6 +51,10 @@ export default function Home() {
                 isFeedbackOpen={isFeedbackOpen}
                 handleCloseFeedback={handleCloseFeedback}
                 handleOpenFeedback={handleOpenFeedback}
+            />
+            <Feedback
+                open={isFeedbackOpen}
+                handleClose={handleCloseFeedback}
             />
         </>
     );

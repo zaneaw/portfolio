@@ -1,4 +1,3 @@
-import Feedback from "./feedback";
 import styles from "./footer.module.css";
 import { motion } from "framer-motion";
 
@@ -24,10 +23,6 @@ export default function Footer(props) {
             >
                 Send Feedback
             </motion.button>
-            <Feedback
-                open={props.isFeedbackOpen}
-                handleClose={props.handleCloseFeedback}
-            />
         </div>
     );
 }
