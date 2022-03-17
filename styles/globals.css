@@ -105,7 +105,8 @@ h4 {
     font-size: var(--fs-h4);
 }
 
-section {
+section,
+.navbarHeader {
     padding: 1em 2em 2em;
 }
 
@@ -116,13 +117,15 @@ section {
 }
 
 @media (min-width: 50em) {
-    section {
+    section,
+    .navbarHeader {
         padding-inline: 8%;
     }
 }
 
 @media (min-width: 70em) {
-    section {
+    section,
+    .navbarHeader {
         padding-inline: 15%;
     }
 }

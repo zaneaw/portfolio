@@ -5,11 +5,20 @@
     background-color: var(--clr-dark);
 }
 
+.logoContainer {
+    display: flex;
+}
+
 .heart {
     color: var(--clr-burnt);
     width: 40px;
     height: auto;
 }
+
+/* .nav {
+    position: fixed;
+    right: 0
+} */
 
 .navList {
     display: flex;
@@ -19,11 +28,7 @@
 .navItem {
     list-style-type: none;
     padding: 0 0.3em;
-    transition: ease-in 0.2s;
-}
-
-.navItem:hover {
-    filter: brightness(75%);
+    border-radius: 10px;
 }
 
 .navLink {
@@ -69,7 +74,6 @@
     }
 
     .nav {
-        position: fixed;
         inset: 0 0 0 30%;
         background: hsl(196 53% 17% / 0.75);
         transition: 0.3s;
