@@ -48,8 +48,6 @@ export default function Home() {
                 <FindMe />
             </div>
             <Footer
-                isFeedbackOpen={isFeedbackOpen}
-                handleCloseFeedback={handleCloseFeedback}
                 handleOpenFeedback={handleOpenFeedback}
             />
             <Feedback
