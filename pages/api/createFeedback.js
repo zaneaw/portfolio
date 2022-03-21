@@ -6,10 +6,10 @@ export default async (req, res) => {
         return res.status(405).send({ message: "Only POST requests allowed" })
     }
     // array destructuring
-    const { values } = req.body;
+    const { data } = req.body;
     try {
         const createdRecords = await table.create([
-            { fields: { rating: Number(values.rating), comments: values.comments, email: values.email, date: values.createdOn } },
+            { fields: { rating: Number(data.rating), comments: data.comments, name: data.name, email: data.email, date: data.createdOn } },
         ]);
         const createdRecord = {
             id: createdRecords[0].id,
