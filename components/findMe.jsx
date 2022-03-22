@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 
 export default function ContactMe() {
     return (
-        <section className={styles.grid} id="contact">
+        <section className={`${styles.grid} primaryBackground`} id="contact">
             <h2 className={`${styles.findMe} sectionHeader`}>Find Me</h2>
             <motion.a
                 whileHover={{ scale: 1.1 }}

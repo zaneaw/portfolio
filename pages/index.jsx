@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 import About from "../components/about";
@@ -32,23 +34,12 @@ export default function Home() {
                 />
                 <link rel="icon" href="/images/heart.png" />
             </Head>
-            <div className="primary-background">
-                <Navbar handleOpenFeedback={handleOpenFeedback} />
-                <Hero />
-            </div>
-            <div className="secondary-background">
-                <About />
-            </div>
-            <div className="primary-background">
-                <Projects />
-            </div>
-            <div className="secondary-background">
-                <Cert />
-            </div>
-
-            <div className="primary-background">
-                <FindMe />
-            </div>
+            <Navbar handleOpenFeedback={handleOpenFeedback} />
+            <Hero />
+            <About />
+            <Projects />
+            <Cert />
+            <FindMe />
             <Footer handleOpenFeedback={handleOpenFeedback} />
             <Feedback
                 open={isFeedbackOpen}

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
     return (
-        <section className={styles.grid} id="projects">
+        <section className={`${styles.grid} primaryBackground`} id="projects">
             <h2 className={`${styles.projects} sectionHeader`}>Projects</h2>
             <article className={`${styles.article} ${styles.articleOne}`}>
                 <h4 className={styles.articleTitle}>Notes Taking App</h4>

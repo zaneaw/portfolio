@@ -5,8 +5,13 @@ import { motion } from "framer-motion";
 
 export default function Certs() {
     return (
-        <section className={styles.grid} id="certificates">
-            <h2 className={`${styles.certificates} sectionHeader`}>Certificates</h2>
+        <section
+            className={`${styles.grid} secondaryBackground`}
+            id="certificates"
+        >
+            <h2 className={`${styles.certificates} sectionHeader`}>
+                Certificates
+            </h2>
 
             <article className={`${styles.article} ${styles.react}`}>
                 <h4 className={styles.certTitle}>
