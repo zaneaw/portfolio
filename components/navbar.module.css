@@ -34,26 +34,30 @@
 .nav {
     position: fixed;
     right: 0;
+    top: 0;
+    padding-block: 20px;
+    background-color: var(--clr-dark);
+    border-radius: 0 0 0 20px;
+    z-index: 2;
 }
 
 .navList {
     display: flex;
     flex-direction: row;
+    margin: 0;
+    padding: 0;
 }
 
 .navItem {
     list-style-type: none;
-    padding: 0 0.3em;
+    padding: 0.2em 0.2em;
+    margin-inline: 0.3em;
     border-radius: 10px;
 }
 
 .navLink {
     color: var(--clr-light);
     text-transform: uppercase;
-}
-
-.navLink:focus-visible {
-    text-decoration: underline;
 }
 
 .navbarToggle {

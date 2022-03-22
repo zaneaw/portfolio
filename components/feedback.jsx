@@ -56,7 +56,7 @@ export default function Feedback({
     console.log(errors);
 
     return (
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence>
             {open && (
                 <motion.div
                     className={styles.backdrop}

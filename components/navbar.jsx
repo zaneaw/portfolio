@@ -43,7 +43,7 @@ export default function Navbar({ handleOpenFeedback }) {
                         className={styles.heartContainer}
                         whileHover={{ scale: 1.1 }}
                     >
-                        <FaHeart className={styles.heartBackground} size={46} />
+                        <FaHeart className={styles.heartBackground} size={44} />
                         <FaHeart className={styles.heart} size={40} />
                     </motion.a>
                 </Link>
