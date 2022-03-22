@@ -38,7 +38,7 @@ export default function Navbar({ handleOpenFeedback }) {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 2.2, duration: 1 }}
             >
-                <Link href="#">
+                <Link href="#" passHref>
                     <motion.a
                         className={styles.heartContainer}
                         whileHover={{ scale: 1.1 }}
