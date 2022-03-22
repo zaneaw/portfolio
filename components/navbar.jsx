@@ -23,7 +23,7 @@ const liVariant = {
     },
 };
 
-export default function Navbar(props) {
+export default function Navbar({ handleOpenFeedback }) {
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
     function toggleNavbar() {
@@ -38,7 +38,15 @@ export default function Navbar(props) {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 2.2, duration: 1 }}
             >
-                <FaHeart className={styles.heart} />
+                <Link href="#" passHref>
+                    <motion.a
+                        className={styles.heartContainer}
+                        whileHover={{ scale: 1.1 }}
+                    >
+                        <FaHeart className={styles.heartBackground} size={46} />
+                        <FaHeart className={styles.heart} size={40} />
+                    </motion.a>
+                </Link>
             </motion.div>
 
             <button
@@ -65,7 +73,14 @@ export default function Navbar(props) {
                         className={styles.navItem}
                     >
                         <Link href="#about">
-                            <a className={styles.navLink}>About</a>
+                            <a
+                                className={styles.navLink}
+                                onClick={
+                                    isNavbarOpen ? toggleNavbar : undefined
+                                }
+                            >
+                                About
+                            </a>
                         </Link>
                     </motion.li>
                     <motion.li
@@ -74,7 +89,14 @@ export default function Navbar(props) {
                         className={styles.navItem}
                     >
                         <Link href="#projects">
-                            <a className={styles.navLink}>Projects</a>
+                            <a
+                                className={styles.navLink}
+                                onClick={
+                                    isNavbarOpen ? toggleNavbar : undefined
+                                }
+                            >
+                                Projects
+                            </a>
                         </Link>
                     </motion.li>
                     <motion.li
@@ -83,7 +105,14 @@ export default function Navbar(props) {
                         className={styles.navItem}
                     >
                         <Link href="#certificates">
-                            <a className={styles.navLink}>Certificates</a>
+                            <a
+                                className={styles.navLink}
+                                onClick={
+                                    isNavbarOpen ? toggleNavbar : undefined
+                                }
+                            >
+                                Certificates
+                            </a>
                         </Link>
                     </motion.li>
                     <motion.li
@@ -92,7 +121,14 @@ export default function Navbar(props) {
                         className={styles.navItem}
                     >
                         <Link href="#contact">
-                            <a className={styles.navLink}>Contact</a>
+                            <a
+                                className={styles.navLink}
+                                onClick={
+                                    isNavbarOpen ? toggleNavbar : undefined
+                                }
+                            >
+                                Contact
+                            </a>
                         </Link>
                     </motion.li>
                     <motion.li
@@ -102,7 +138,12 @@ export default function Navbar(props) {
                     >
                         <a
                             className={styles.navLink}
-                            onClick={props.handleOpenFeedback}
+                            onClick={() => {
+                                handleOpenFeedback();
+                                {
+                                    isNavbarOpen && toggleNavbar();
+                                }
+                            }}
                         >
                             Feedback
                         </a>

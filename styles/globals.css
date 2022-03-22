@@ -47,6 +47,10 @@
 /* 
     General Styling 
 */
+html {
+    scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
@@ -146,4 +150,15 @@ section,
 
 .secondary-background {
     background: var(--clr-gradient-secondary);
+}
+
+/* 
+    NavLinks
+*/
+
+#about,
+#projects,
+#certificates,
+#contact {
+    scroll-margin-top: 65px;
 }

@@ -11,6 +11,7 @@ import Feedback from "../components/feedback";
 
 export default function Home() {
     const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
+    const [submitSuccess, setSubmitSuccess] = useState(false);
 
     const handleOpenFeedback = () => {
         setIsFeedbackOpen(true);
@@ -18,6 +19,7 @@ export default function Home() {
 
     const handleCloseFeedback = () => {
         setIsFeedbackOpen(false);
+        setSubmitSuccess(false);
     };
 
     return (
@@ -47,14 +49,12 @@ export default function Home() {
             <div className="primary-background">
                 <FindMe />
             </div>
-            <Footer
-                isFeedbackOpen={isFeedbackOpen}
-                handleCloseFeedback={handleCloseFeedback}
-                handleOpenFeedback={handleOpenFeedback}
-            />
+            <Footer handleOpenFeedback={handleOpenFeedback} />
             <Feedback
                 open={isFeedbackOpen}
                 handleClose={handleCloseFeedback}
+                submitSuccess={submitSuccess}
+                setSubmitSuccess={setSubmitSuccess}
             />
         </>
     );
