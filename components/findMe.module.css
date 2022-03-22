@@ -3,6 +3,7 @@
 }
 
 .grid {
+    min-height: 80vh;
     padding-top: 1em;
     display: grid;
     row-gap: 1em;

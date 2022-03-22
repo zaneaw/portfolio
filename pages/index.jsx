@@ -22,7 +22,6 @@ export default function Home() {
         setSubmitSuccess(false);
     };
 
-
     return (
         <>
             <Head>
@@ -50,9 +49,7 @@ export default function Home() {
             <div className="primary-background">
                 <FindMe />
             </div>
-            <Footer
-                handleOpenFeedback={handleOpenFeedback}
-            />
+            <Footer handleOpenFeedback={handleOpenFeedback} />
             <Feedback
                 open={isFeedbackOpen}
                 handleClose={handleCloseFeedback}
