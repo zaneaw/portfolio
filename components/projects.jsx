@@ -1,33 +1,76 @@
-import Image from "next/image";
-import Link from "next/link";
 import styles from "./projects.module.css";
 import { MdExitToApp } from "react-icons/md";
 import { motion } from "framer-motion";
 
 export default function Projects() {
+    const textVariant = {
+        hidden: { opacity: 0, scale: 0 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: { duration: 0.5, staggerChildren: 0.5 },
+        }
+    };
+
+    const childVariant = {
+        hidden: { opacity: 0, scale: 0 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: { duration: 1 },
+        },
+    };
+
     return (
-        <section className={`${styles.grid} primaryBackground`} id="projects">
-            <h2 className={`${styles.projects} sectionHeader`}>Projects</h2>
-            <article className={`${styles.article} ${styles.articleOne}`}>
-                <h4 className={styles.articleTitle}>Notes Taking App</h4>
-                <p className={styles.articleBody}>
+        <motion.section
+            className={`${styles.grid} primaryBackground`}
+            id="projects"
+        >
+            <motion.h2
+                className={`${styles.projects} sectionHeader`}
+                variants={textVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport="viewAmount"
+            >
+                Projects
+            </motion.h2>
+            <motion.article
+                className={`${styles.article} ${styles.articleOne}`}
+                variants={textVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport="viewAmount"
+            >
+                <motion.h4
+                    className={styles.articleTitle}
+                    variants={childVariant}
+                >
+                    Notes Taking App
+                </motion.h4>
+                <motion.p
+                    className={styles.articleBody}
+                    variants={childVariant}
+                >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Suscipit fugit quaerat modi perspiciatis omnis dolorum
                     voluptatibus blanditiis nisi eius, dolore totam aperiam, ad,
                     nulla culpa saepe quidem sequi beatae laudantium.
-                </p>
+                </motion.p>
                 <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
                     href="https://github.com/zaneaw/notes-app"
                     target="_blank"
                     rel="noreferrer"
                     className={styles.articleLink}
+                    variants={childVariant}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                 >
                     View Source Code <MdExitToApp />
                 </motion.a>
-                <div
+                <motion.div
                     className={`${styles.videoContainer} ${styles.articleVideo}`}
+                    variants={childVariant}
                 >
                     <iframe
                         className={styles.iframe}
@@ -37,16 +80,30 @@ export default function Projects() {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                     ></iframe>
-                </div>
-            </article>
-            <article className={`${styles.article} ${styles.articleTwo}`}>
-                <h4 className={styles.articleTitle}>Notes Taking App</h4>
-                <p className={styles.articleBody}>
+                </motion.div>
+            </motion.article>
+            <motion.article
+                className={`${styles.article} ${styles.articleTwo}`}
+                variants={textVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport="viewAmount"
+            >
+                <motion.h4
+                    className={styles.articleTitle}
+                    variants={childVariant}
+                >
+                    Notes Taking App
+                </motion.h4>
+                <motion.p
+                    className={styles.articleBody}
+                    variants={childVariant}
+                >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Suscipit fugit quaerat modi perspiciatis omnis dolorum
                     voluptatibus blanditiis nisi eius, dolore totam aperiam, ad,
                     nulla culpa saepe quidem sequi beatae laudantium.
-                </p>
+                </motion.p>
                 <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -54,11 +111,13 @@ export default function Projects() {
                     target="_blank"
                     rel="noreferrer"
                     className={styles.articleLink}
+                    variants={childVariant}
                 >
                     View Source Code <MdExitToApp />
                 </motion.a>
-                <div
+                <motion.div
                     className={`${styles.videoContainer} ${styles.articleVideo}`}
+                    variants={childVariant}
                 >
                     <iframe
                         className={styles.iframe}
@@ -68,16 +127,30 @@ export default function Projects() {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                     ></iframe>
-                </div>
-            </article>
-            <article className={`${styles.article} ${styles.articleThree}`}>
-                <h4 className={styles.articleTitle}>Notes Taking App</h4>
-                <p className={styles.articleBody}>
+                </motion.div>
+            </motion.article>
+            <motion.article
+                className={`${styles.article} ${styles.articleThree}`}
+                variants={textVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport="viewAmount"
+            >
+                <motion.h4
+                    className={styles.articleTitle}
+                    variants={childVariant}
+                >
+                    Notes Taking App
+                </motion.h4>
+                <motion.p
+                    className={styles.articleBody}
+                    variants={childVariant}
+                >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Suscipit fugit quaerat modi perspiciatis omnis dolorum
                     voluptatibus blanditiis nisi eius, dolore totam aperiam, ad,
                     nulla culpa saepe quidem sequi beatae laudantium.
-                </p>
+                </motion.p>
                 <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -85,11 +158,13 @@ export default function Projects() {
                     target="_blank"
                     rel="noreferrer"
                     className={styles.articleLink}
+                    variants={childVariant}
                 >
                     View Source Code <MdExitToApp />
                 </motion.a>
-                <div
+                <motion.div
                     className={`${styles.videoContainer} ${styles.articleVideo}`}
+                    variants={childVariant}
                 >
                     <iframe
                         className={styles.iframe}
@@ -99,8 +174,8 @@ export default function Projects() {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                     ></iframe>
-                </div>
-            </article>
-        </section>
+                </motion.div>
+            </motion.article>
+        </motion.section>
     );
 }

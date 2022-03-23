@@ -1,6 +1,8 @@
 .grid {
     padding-top: 15px;
     display: grid;
+    justify-content: center;
+    align-items: center;
     gap: 1em;
     grid-template-areas:
         "certificates"
@@ -10,17 +12,9 @@
         "django";
 }
 
-.certTitle {
+/* .certTitle {
     display: none;
-}
-
-@media (min-width: 40em) {
-    .grid {
-        grid-template-areas:
-            "certificates certificates certificates certificates"
-            "react javascript python django";
-    }
-}
+} */
 
 .article {
     margin: 1em 0;
@@ -37,41 +31,37 @@
 
 .react {
     grid-area: react;
-    row-gap: 0em;
-    grid-template-areas:
+    /* grid-template-areas:
         "certTitle"
-        "imageContainer";
+        "imageContainer"; */
 }
 
 .javascript {
     grid-area: javascript;
-    column-gap: 0.5em;
     align-items: center;
-    grid-template-areas:
+    /* grid-template-areas:
         "certTitle imageContainer imageContainer"
-        "certTitle imageContainer imageContainer";
+        "certTitle imageContainer imageContainer"; */
 }
 
 .django {
     grid-area: django;
-    row-gap: 0em;
-    grid-template-areas:
+    /* grid-template-areas:
         "certTitle"
-        "imageContainer";
+        "imageContainer"; */
 }
 
 .python {
     grid-area: python;
-    column-gap: 0.5em;
     align-items: center;
-    grid-template-areas:
+    /* grid-template-areas:
         "imageContainer imageContainer certTitle"
-        "imageContainer imageContainer certTitle";
+        "imageContainer imageContainer certTitle"; */
 }
 
-.certTitle {
+/* .certTitle {
     grid-area: certTitle;
-}
+} */
 
 .imageContainer {
     grid-area: imageContainer;
@@ -84,4 +74,38 @@
     text-decoration: none;
     color: rgb(105, 105, 105);
     font-size: 0.75rem;
+}
+
+@media (min-width: 40em ) and (max-width: 50em) {
+    .small {
+        font-size: 1.4vw;
+    }
+}
+
+@media (max-width: 40em) {
+    .javascriptImage,
+    .pythonImage {
+        max-width: 250px;
+    }
+
+    .djangoImage {
+        max-width: 390px;
+    }
+
+    .reactImage {
+        max-width: 410px;
+    }
+
+}
+
+@media (min-width: 40em) {
+    .grid {
+        align-items: baseline;
+        grid-template-columns: 1fr 0.7fr 0.7fr 1fr;
+        grid-template-areas:
+            "certificates certificates certificates certificates"
+            "react javascript python django";
+    }
+
+  
 }

@@ -33,20 +33,23 @@ export default function Navbar({ handleOpenFeedback }) {
     return (
         <header className={`${styles.header} navbarHeader`}>
             <motion.div
-                className={styles.logoContainer}
+                className={styles.heartContainer}
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 2.2, duration: 1 }}
             >
-                <Link href="#" passHref>
-                    <motion.a
-                        className={styles.heartContainer}
-                        whileHover={{ scale: 1.11 }}
+                <Link className={styles.heart} href="#" passHref>
+                    <motion.div
+                        className={styles.heartColor}
+                        whileHover={{ scale: 1.15 }}
+                        transition={{ duration: 1 }}
                     >
-                        <FaHeart className={styles.heartBackground} size={44} />
-                        <FaHeart className={styles.heart} size={40} />
-                    </motion.a>
+                        <FaHeart size={40} />
+                    </motion.div>
                 </Link>
+                <motion.div className={styles.heartBackground}>
+                    <FaHeart size={44} />
+                </motion.div>
             </motion.div>
 
             <button

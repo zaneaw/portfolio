@@ -6,29 +6,29 @@
     height: 72px;
 }
 
-.logoContainer {
-    display: flex;
-}
-
 .heartContainer {
     position: fixed;
     z-index: 1;
     display: grid;
     justify-items: center;
     align-items: center;
+    cursor: pointer;
 }
 
-.heart, .heartBackground {
+.heart,
+.heartBackground {
     grid-column: 1;
     grid-row: 1;
 }
 
-.heartBackground {
-    color: var(--clr-dark);
+.heartColor {
+    color: var(--clr-burnt);
+    position: relative;
+    bottom: 50px;
 }
 
-.heart {
-    color: var(--clr-burnt);
+.heartBackground {
+    color: var(--clr-dark);
 }
 
 .nav {

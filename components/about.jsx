@@ -1,43 +1,39 @@
-import { useEffect } from "react";
 import Image from "next/image";
 import styles from "./about.module.css";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 export default function About() {
-    const { ref, inView } = useInView();
-    const animation = useAnimation();
-
-    useEffect(() => {
-        if (inView) {
-            animation.start("visible");
-        }
-        if (!inView) {
-            animation.start("hidden");
-        }
-        console.log("useEffectHook = ", inView);
-    }, [animation, inView]);
-
-    const containerVariant = {
-        hidden: { opacity: 0, x: "-100vw" },
-        visible: { opacity: 1, x: 0 },
+    const textVariant = {
+        hidden: { opacity: 0, scale: 0 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: { duration: 1 },
+        },
+        viewAmount: { amount: 0.1 },
     };
 
     return (
         <motion.section
-            ref={ref}
             className={`${styles.grid} secondaryBackground`}
             id="about"
         >
             <motion.h2
                 className={`${styles.about} sectionHeader`}
+                variants={textVariant}
                 initial="hidden"
-                animate={animation}
-                variants={containerVariant}
+                whileInView="visible"
+                viewport="viewAmount"
             >
                 About
             </motion.h2>
-            <motion.p className={styles.aboutText}>
+            <motion.p
+                className={styles.aboutText}
+                variants={textVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport="viewAmount"
+            >
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
                 excepturi veniam fugiat consequatur, quas quos inventore est
                 exercitationem voluptatem, harum accusantium tenetur a ea nemo
@@ -45,8 +41,12 @@ export default function About() {
                 reprehenderit! Nisi, molestiae?
             </motion.p>
             <motion.div
-                whileHover={{ scale: 1.4, zIndex: 1 }}
+                whileHover={{ scale: 1.2, zIndex: 3 }}
                 className={`${styles.image} ${styles.theo}`}
+                variants={textVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport="viewAmount"
             >
                 <Image
                     priority
@@ -57,8 +57,12 @@ export default function About() {
                 />
             </motion.div>
             <motion.div
-                whileHover={{ scale: 1.4, zIndex: 1 }}
+                whileHover={{ scale: 1.2, zIndex: 3 }}
                 className={`${styles.image} ${styles.cooking}`}
+                variants={textVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport="viewAmount"
             >
                 <Image
                     src="/images/cooking.jpg"
@@ -68,8 +72,12 @@ export default function About() {
                 />
             </motion.div>
             <motion.div
-                whileHover={{ scale: 1.4, zIndex: 1 }}
+                whileHover={{ scale: 1.2, zIndex: 3 }}
                 className={`${styles.image} ${styles.park}`}
+                variants={textVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport="viewAmount"
             >
                 <Image
                     src="/images/park.jpg"
@@ -79,8 +87,12 @@ export default function About() {
                 />
             </motion.div>
             <motion.div
-                whileHover={{ scale: 1.4, zIndex: 1 }}
+                whileHover={{ scale: 1.2, zIndex: 3 }}
                 className={`${styles.image} ${styles.nyc}`}
+                variants={textVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport="viewAmount"
             >
                 <Image
                     src="/images/nyc.jpg"
@@ -89,10 +101,22 @@ export default function About() {
                     alt=""
                 />
             </motion.div>
-            <motion.h3 className={`${styles.personal} sectionHeader`}>
+            <motion.h3
+                className={`${styles.personal} sectionHeader`}
+                variants={textVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport="viewAmount"
+            >
                 Personal
             </motion.h3>
-            <motion.p className={styles.personalText}>
+            <motion.p
+                className={styles.personalText}
+                variants={textVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport="viewAmount"
+            >
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Explicabo corrupti et minima eius expedita dignissimos nisi
                 eligendi quod deleniti provident aut, vero voluptate suscipit
