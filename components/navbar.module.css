@@ -83,6 +83,18 @@
     cursor: pointer;
 }
 
+@media (min-width: 50em) {
+    .navbarHeader {
+        padding-inline: 8%;
+    }
+}
+
+@media (min-width: 70em) {
+    .navbarHeader {
+        padding-inline: 15%;
+    }
+}
+
 @media (max-width: 45em) {
     .hamburger {
         display: block;
