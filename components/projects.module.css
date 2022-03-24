@@ -1,14 +1,8 @@
 .grid {
     padding-top: 1em;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 1em;
-    grid-auto-columns: 1fr;
-    justify-items: center;
-    grid-template-areas:
-        "projects"
-        "articleOne"
-        "articleTwo"
-        "articleThree";
 }
 
 .article {
@@ -57,18 +51,6 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.articleOne {
-    grid-area: articleOne;
-}
-
-.articleTwo {
-    grid-area: articleTwo;
-}
-
-.articleThree {
-    grid-area: articleThree;
-}
-
 @media (min-width: 50em) {
     .grid {
         row-gap: 2em;
@@ -87,25 +69,21 @@
         padding-left: 0.5em;
     }
 
-    .articleOne,
-    .articleThree {
-        grid-template-columns: 0.8fr 1fr;
+    .article:nth-child(odd) {
+        grid-template-columns: 1fr 0.8fr;
         grid-template-areas:
             "articleVideo articleTitle"
             "articleVideo articleBody"
             "articleVideo articleLink";
     }
-
-    .articleTwo {
-        grid-template-columns: 1fr 0.8fr;
+    .article:nth-child(even) {
+        grid-template-columns: 0.8fr 1fr;
         grid-template-areas:
             "articleTitle articleVideo"
             "articleBody articleVideo"
             "articleLink articleVideo";
     }
 }
-
-
 
 /* 
     Video Player

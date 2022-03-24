@@ -2,18 +2,26 @@ import Image from "next/image";
 import styles from "./about.module.css";
 import { motion } from "framer-motion";
 
-export default function About() {
-    const textVariant = {
-        hidden: { opacity: 0, scale: 0 },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-                scale: { duration: 0.3 },
-                default: { duration: 1 },
-            },
+const textVariant = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            scale: { duration: 0.3 },
+            default: { duration: 1 },
         },
-    };
+    },
+};
+
+export default function About() {
+
+    const photos = [
+        { text: "Theo", image: "/images/theo.jpg", alt: "most handsome French Bulldog (biased opinion)" },
+        { text: "Cooking", image: "/images/cooking.jpg", alt: "cutting board with freshly chopped food on it" },
+        { text: "Park", image: "/images/park.jpg", alt: "Me, my partner, and our dog, Theo in a park" },
+        { text: "NYC", image: "/images/nyc.jpg", alt: "view of NYC skyscrapers" },
+    ];
 
     return (
         <section className={`${styles.grid} secondaryBackground`} id="about">
@@ -53,67 +61,26 @@ export default function About() {
                 obcaecati aut maxime deleniti nulla magni blanditiis
                 reprehenderit! Nisi, molestiae?
             </motion.p>
-            <motion.div
-                whileHover={{ scale: 1.2, zIndex: 3 }}
-                className={`${styles.image} ${styles.theo}`}
-                variants={textVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-            >
-                <Image
-                    priority
-                    src="/images/theo.jpg"
-                    height="500px"
-                    width="500px"
-                    alt=""
-                />
-            </motion.div>
-            <motion.div
-                whileHover={{ scale: 1.2, zIndex: 3 }}
-                className={`${styles.image} ${styles.cooking}`}
-                variants={textVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-            >
-                <Image
-                    src="/images/cooking.jpg"
-                    height="500px"
-                    width="500px"
-                    alt=""
-                />
-            </motion.div>
-            <motion.div
-                whileHover={{ scale: 1.2, zIndex: 3 }}
-                className={`${styles.image} ${styles.park}`}
-                variants={textVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-            >
-                <Image
-                    src="/images/park.jpg"
-                    height="500px"
-                    width="500px"
-                    alt=""
-                />
-            </motion.div>
-            <motion.div
-                whileHover={{ scale: 1.2, zIndex: 3 }}
-                className={`${styles.image} ${styles.nyc}`}
-                variants={textVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-            >
-                <Image
-                    src="/images/nyc.jpg"
-                    height="500px"
-                    width="500px"
-                    alt=""
-                />
-            </motion.div>
+
+            {photos.map((photo) => (
+                <motion.div
+                    key={photo.text}
+                    whileHover={{ scale: 1.2, zIndex: 3 }}
+                    className={`${styles.image} styles.${photo.text.toLowerCase()}`}
+                    variants={textVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                >
+                    <Image
+                        src={photo.image}
+                        height="500px"
+                        width="500px"
+                        alt={photo.alt}
+                    />
+                </motion.div>
+            ))}
+
             <motion.h3
                 className={`${styles.personal} sectionHeader`}
                 variants={textVariant}
