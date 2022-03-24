@@ -8,8 +8,9 @@ export default function Projects() {
         visible: {
             opacity: 1,
             scale: 1,
-            transition: { duration: 0.5, staggerChildren: 0.5 },
-        }
+            transition: { duration: 0.5, staggerChildren: 0.4 },
+        },
+        view: { visible: { once: true } },
     };
 
     const childVariant = {
@@ -17,21 +18,24 @@ export default function Projects() {
         visible: {
             opacity: 1,
             scale: 1,
-            transition: { duration: 1 },
+            transition: {
+                scale: { duration: 0.3 },
+                default: { duration: 1 },
+            },
         },
+        hover: { scale: 1.1 },
+        tap: { scale: 0.9 },
+        view: { visible: { once: true } },
     };
 
     return (
-        <motion.section
-            className={`${styles.grid} primaryBackground`}
-            id="projects"
-        >
+        <section className={`${styles.grid} primaryBackground`} id="projects">
             <motion.h2
                 className={`${styles.projects} sectionHeader`}
                 variants={textVariant}
                 initial="hidden"
                 whileInView="visible"
-                viewport="viewAmount"
+                viewport={{ once: true }}
             >
                 Projects
             </motion.h2>
@@ -40,7 +44,7 @@ export default function Projects() {
                 variants={textVariant}
                 initial="hidden"
                 whileInView="visible"
-                viewport="viewAmount"
+                viewport={{ once: true }}
             >
                 <motion.h4
                     className={styles.articleTitle}
@@ -51,6 +55,7 @@ export default function Projects() {
                 <motion.p
                     className={styles.articleBody}
                     variants={childVariant}
+                    viewport={{ once: true }}
                 >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Suscipit fugit quaerat modi perspiciatis omnis dolorum
@@ -63,8 +68,9 @@ export default function Projects() {
                     rel="noreferrer"
                     className={styles.articleLink}
                     variants={childVariant}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
+                    whileHover="hover"
+                    whileTap="tap"
+                    viewport="view"
                 >
                     View Source Code <MdExitToApp />
                 </motion.a>
@@ -87,17 +93,19 @@ export default function Projects() {
                 variants={textVariant}
                 initial="hidden"
                 whileInView="visible"
-                viewport="viewAmount"
+                viewport={{ once: true }}
             >
                 <motion.h4
                     className={styles.articleTitle}
                     variants={childVariant}
+                    viewport={{ once: true }}
                 >
                     Notes Taking App
                 </motion.h4>
                 <motion.p
                     className={styles.articleBody}
                     variants={childVariant}
+                    viewport={{ once: true }}
                 >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Suscipit fugit quaerat modi perspiciatis omnis dolorum
@@ -105,13 +113,14 @@ export default function Projects() {
                     nulla culpa saepe quidem sequi beatae laudantium.
                 </motion.p>
                 <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
                     href="https://github.com/zaneaw/notes-app"
                     target="_blank"
                     rel="noreferrer"
                     className={styles.articleLink}
                     variants={childVariant}
+                    whileHover="hover"
+                    whileTap="tap"
+                    viewport="view"
                 >
                     View Source Code <MdExitToApp />
                 </motion.a>
@@ -134,17 +143,19 @@ export default function Projects() {
                 variants={textVariant}
                 initial="hidden"
                 whileInView="visible"
-                viewport="viewAmount"
+                viewport={{ once: true }}
             >
                 <motion.h4
                     className={styles.articleTitle}
                     variants={childVariant}
+                    viewport={{ once: true }}
                 >
                     Notes Taking App
                 </motion.h4>
                 <motion.p
                     className={styles.articleBody}
                     variants={childVariant}
+                    viewport={{ once: true }}
                 >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Suscipit fugit quaerat modi perspiciatis omnis dolorum
@@ -152,13 +163,14 @@ export default function Projects() {
                     nulla culpa saepe quidem sequi beatae laudantium.
                 </motion.p>
                 <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
                     href="https://github.com/zaneaw/notes-app"
                     target="_blank"
                     rel="noreferrer"
                     className={styles.articleLink}
                     variants={childVariant}
+                    whileHover="hover"
+                    whileTap="tap"
+                    viewport="view"
                 >
                     View Source Code <MdExitToApp />
                 </motion.a>
@@ -176,6 +188,6 @@ export default function Projects() {
                     ></iframe>
                 </motion.div>
             </motion.article>
-        </motion.section>
+        </section>
     );
 }

@@ -21,6 +21,7 @@
         "articleLink"
         "articleVideo";
     margin-bottom: 1.5em;
+    margin-left: 10px;
 }
 
 .projects {
@@ -78,6 +79,7 @@
         row-gap: 0em;
         margin-bottom: 4em;
         align-items: center;
+        margin-left: 0;
     }
 
     /* offset a little */

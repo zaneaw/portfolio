@@ -2,6 +2,7 @@ import styles from "./footer.module.css";
 import { motion } from "framer-motion";
 
 export default function Footer(props) {
+
     return (
         <div className={styles.footer}>
             <span>&copy; 2022 Zane Wilson</span>

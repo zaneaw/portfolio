@@ -36,7 +36,7 @@
     right: 0;
     top: 0;
     padding-block: 20px;
-    background-color: var(--clr-dark);
+    background: hsl(196 53% 17% / 0.75);
     border-radius: 0 0 0 20px;
     z-index: 2;
 }

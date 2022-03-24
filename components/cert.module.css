@@ -1,8 +1,6 @@
 .grid {
-    padding-top: 15px;
+    padding-top: 1em;
     display: grid;
-    justify-content: center;
-    align-items: center;
     gap: 1em;
     grid-template-areas:
         "certificates"

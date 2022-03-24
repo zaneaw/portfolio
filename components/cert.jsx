@@ -20,6 +20,9 @@ export default function Certs() {
             scale: 1,
             transition: { duration: 1 },
         },
+        hover: { scale: 1.1 },
+        tap: { scale: 0.9 },
+        view: { visible: { once: true } },
     };
 
     return (
@@ -32,6 +35,7 @@ export default function Certs() {
                 variants={textVariant}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
             >
                 Certificates
             </motion.h2>
@@ -41,17 +45,19 @@ export default function Certs() {
                 variants={articleVariant}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
             >
                 {/* <motion.h4 className={styles.certTitle}>
                     Full Stack Web Dev with React
                 </motion.h4> */}
                 <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
                     href="/cert/react.pdf"
                     target="_blank"
                     className={`${styles.imageContainer} ${styles.reactImage}`}
                     variants={textVariant}
+                    whileHover="hover"
+                    whileTap="tap"
+                    viewport="view"
                 >
                     <Image
                         src="/images/mern.png"
@@ -70,17 +76,19 @@ export default function Certs() {
                 variants={articleVariant}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
             >
                 {/* <h4 className={styles.certTitle}>
                     JavaScript Algorithms and Data Structures
                 </h4> */}
                 <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
                     href="/cert/JScript.jpg"
                     target="_blank"
                     className={`${styles.imageContainer} ${styles.javascriptImage}`}
                     variants={textVariant}
+                    whileHover="hover"
+                    whileTap="tap"
+                    viewport="view"
                 >
                     <Image
                         src="/images/js-logo.png"
@@ -99,15 +107,17 @@ export default function Certs() {
                 variants={articleVariant}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
             >
                 {/* <h4 className={styles.certTitle}>Django</h4> */}
                 <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
                     href="/cert/django.pdf"
                     target="_blank"
                     className={`${styles.imageContainer} ${styles.djangoImage}`}
                     variants={textVariant}
+                    whileHover="hover"
+                    whileTap="tap"
+                    viewport="view"
                 >
                     <Image
                         src="/images/djgreenbg.png"
@@ -126,17 +136,19 @@ export default function Certs() {
                 variants={articleVariant}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
             >
                 {/* <h4 className={styles.certTitle}>
                     Scientific Computing with Python
                 </h4> */}
                 <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
                     href="/cert/python.png"
                     target="_blank"
                     className={`${styles.imageContainer} ${styles.pythonImage}`}
                     variants={textVariant}
+                    whileHover="hover"
+                    whileTap="tap"
+                    viewport="view"
                 >
                     <Image
                         src="/images/python-logo-small.png"

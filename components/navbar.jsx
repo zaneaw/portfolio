@@ -41,8 +41,8 @@ export default function Navbar({ handleOpenFeedback }) {
                 <Link className={styles.heart} href="#" passHref>
                     <motion.div
                         className={styles.heartColor}
-                        whileHover={{ scale: 1.15 }}
-                        transition={{ duration: 1 }}
+                        whileHover={{ scale: 1.17 }}
+                        transition={{ duration: 0.3 }}
                     >
                         <FaHeart size={40} />
                     </motion.div>
@@ -52,17 +52,21 @@ export default function Navbar({ handleOpenFeedback }) {
                 </motion.div>
             </motion.div>
 
-            <button
+            <motion.button
                 className={`${styles.hamburger} ${
                     isNavbarOpen && styles.active
                 }`}
                 onClick={toggleNavbar}
                 aria-label="toggle navigation"
+                whileHover={{ scale: 1.2 }}
+                transition={{ duration: 0.3 }}
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
             >
                 <span className={styles.bar}></span>
                 <span className={styles.bar}></span>
                 <span className={styles.bar}></span>
-            </button>
+            </motion.button>
             <nav className={`${styles.nav} ${!isNavbarOpen && styles.toggle}`}>
                 <motion.ul
                     initial="hidden"
@@ -72,74 +76,79 @@ export default function Navbar({ handleOpenFeedback }) {
                 >
                     <motion.li
                         variants={liVariant}
+                        style={{ originX: 0.01 }}
                         whileHover={{ scale: 1.1 }}
                         className={styles.navItem}
                     >
                         <Link href="#about">
-                            <a
+                            <motion.a
                                 className={styles.navLink}
                                 onClick={
                                     isNavbarOpen ? toggleNavbar : undefined
                                 }
                             >
                                 About
-                            </a>
+                            </motion.a>
                         </Link>
                     </motion.li>
                     <motion.li
                         variants={liVariant}
+                        style={{ originX: 0.01 }}
                         whileHover={{ scale: 1.1 }}
                         className={styles.navItem}
                     >
                         <Link href="#projects">
-                            <a
+                            <motion.a
                                 className={styles.navLink}
                                 onClick={
                                     isNavbarOpen ? toggleNavbar : undefined
                                 }
                             >
                                 Projects
-                            </a>
+                            </motion.a>
                         </Link>
                     </motion.li>
                     <motion.li
                         variants={liVariant}
+                        style={{ originX: 0.01 }}
                         whileHover={{ scale: 1.1 }}
                         className={styles.navItem}
                     >
                         <Link href="#certificates">
-                            <a
+                            <motion.a
                                 className={styles.navLink}
                                 onClick={
                                     isNavbarOpen ? toggleNavbar : undefined
                                 }
                             >
                                 Certificates
-                            </a>
+                            </motion.a>
                         </Link>
                     </motion.li>
                     <motion.li
                         variants={liVariant}
+                        style={{ originX: 0.01 }}
                         whileHover={{ scale: 1.1 }}
                         className={styles.navItem}
                     >
                         <Link href="#contact">
-                            <a
+                            <motion.a
                                 className={styles.navLink}
                                 onClick={
                                     isNavbarOpen ? toggleNavbar : undefined
                                 }
                             >
                                 Contact
-                            </a>
+                            </motion.a>
                         </Link>
                     </motion.li>
                     <motion.li
                         variants={liVariant}
+                        style={{ originX: 0.01 }}
                         whileHover={{ scale: 1.1 }}
                         className={`${styles.navItem} ${styles.feedback}`}
                     >
-                        <a
+                        <motion.a
                             className={styles.navLink}
                             onClick={() => {
                                 handleOpenFeedback();
@@ -149,7 +158,7 @@ export default function Navbar({ handleOpenFeedback }) {
                             }}
                         >
                             Feedback
-                        </a>
+                        </motion.a>
                     </motion.li>
                 </motion.ul>
             </nav>

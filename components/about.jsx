@@ -8,31 +8,44 @@ export default function About() {
         visible: {
             opacity: 1,
             scale: 1,
-            transition: { duration: 1 },
+            transition: {
+                scale: { duration: 0.3 },
+                default: { duration: 1 },
+            },
         },
-        viewAmount: { amount: 0.1 },
     };
 
     return (
-        <motion.section
-            className={`${styles.grid} secondaryBackground`}
-            id="about"
-        >
+        <section className={`${styles.grid} secondaryBackground`} id="about">
             <motion.h2
                 className={`${styles.about} sectionHeader`}
-                variants={textVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport="viewAmount"
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{
+                    opacity: 1,
+                    scale: 1,
+                    transition: {
+                        delay: 2,
+                        scale: { duration: 0.3 },
+                        default: { duration: 3 },
+                    },
+                }}
+                viewport={{ once: true }}
             >
                 About
             </motion.h2>
             <motion.p
                 className={styles.aboutText}
-                variants={textVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport="viewAmount"
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{
+                    opacity: 1,
+                    scale: 1,
+                    transition: {
+                        delay: 2,
+                        scale: { duration: 0.3 },
+                        default: { duration: 3 },
+                    },
+                }}
+                viewport={{ once: true }}
             >
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
                 excepturi veniam fugiat consequatur, quas quos inventore est
@@ -46,7 +59,7 @@ export default function About() {
                 variants={textVariant}
                 initial="hidden"
                 whileInView="visible"
-                viewport="viewAmount"
+                viewport={{ once: true }}
             >
                 <Image
                     priority
@@ -62,7 +75,7 @@ export default function About() {
                 variants={textVariant}
                 initial="hidden"
                 whileInView="visible"
-                viewport="viewAmount"
+                viewport={{ once: true }}
             >
                 <Image
                     src="/images/cooking.jpg"
@@ -77,7 +90,7 @@ export default function About() {
                 variants={textVariant}
                 initial="hidden"
                 whileInView="visible"
-                viewport="viewAmount"
+                viewport={{ once: true }}
             >
                 <Image
                     src="/images/park.jpg"
@@ -92,7 +105,7 @@ export default function About() {
                 variants={textVariant}
                 initial="hidden"
                 whileInView="visible"
-                viewport="viewAmount"
+                viewport={{ once: true }}
             >
                 <Image
                     src="/images/nyc.jpg"
@@ -106,7 +119,7 @@ export default function About() {
                 variants={textVariant}
                 initial="hidden"
                 whileInView="visible"
-                viewport="viewAmount"
+                viewport={{ once: true }}
             >
                 Personal
             </motion.h3>
@@ -115,13 +128,13 @@ export default function About() {
                 variants={textVariant}
                 initial="hidden"
                 whileInView="visible"
-                viewport="viewAmount"
+                viewport={{ once: true }}
             >
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Explicabo corrupti et minima eius expedita dignissimos nisi
                 eligendi quod deleniti provident aut, vero voluptate suscipit
                 odio!
             </motion.p>
-        </motion.section>
+        </section>
     );
 }
