@@ -81,14 +81,14 @@ export default function Navbar({ handleOpenFeedback }) {
                         className={styles.navItem}
                     >
                         <Link href="#about">
-                            <motion.a
+                            <a
                                 className={styles.navLink}
                                 onClick={
                                     isNavbarOpen ? toggleNavbar : undefined
                                 }
                             >
                                 About
-                            </motion.a>
+                            </a>
                         </Link>
                     </motion.li>
                     <motion.li
@@ -98,14 +98,14 @@ export default function Navbar({ handleOpenFeedback }) {
                         className={styles.navItem}
                     >
                         <Link href="#projects">
-                            <motion.a
+                            <a
                                 className={styles.navLink}
                                 onClick={
                                     isNavbarOpen ? toggleNavbar : undefined
                                 }
                             >
                                 Projects
-                            </motion.a>
+                            </a>
                         </Link>
                     </motion.li>
                     <motion.li
@@ -115,14 +115,14 @@ export default function Navbar({ handleOpenFeedback }) {
                         className={styles.navItem}
                     >
                         <Link href="#certificates">
-                            <motion.a
+                            <a
                                 className={styles.navLink}
                                 onClick={
                                     isNavbarOpen ? toggleNavbar : undefined
                                 }
                             >
                                 Certificates
-                            </motion.a>
+                            </a>
                         </Link>
                     </motion.li>
                     <motion.li
@@ -132,14 +132,14 @@ export default function Navbar({ handleOpenFeedback }) {
                         className={styles.navItem}
                     >
                         <Link href="#contact">
-                            <motion.a
+                            <a
                                 className={styles.navLink}
                                 onClick={
                                     isNavbarOpen ? toggleNavbar : undefined
                                 }
                             >
                                 Contact
-                            </motion.a>
+                            </a>
                         </Link>
                     </motion.li>
                     <motion.li
@@ -148,7 +148,7 @@ export default function Navbar({ handleOpenFeedback }) {
                         whileHover={{ scale: 1.1 }}
                         className={`${styles.navItem} ${styles.feedback}`}
                     >
-                        <motion.a
+                        <a
                             className={styles.navLink}
                             onClick={() => {
                                 handleOpenFeedback();
@@ -158,7 +158,7 @@ export default function Navbar({ handleOpenFeedback }) {
                             }}
                         >
                             Feedback
-                        </motion.a>
+                        </a>
                     </motion.li>
                 </motion.ul>
             </nav>

@@ -12,7 +12,6 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    cursor: pointer;
 }
 
 .heart,
@@ -25,6 +24,7 @@
     color: var(--clr-burnt);
     position: relative;
     bottom: 50px;
+    cursor: pointer;
 }
 
 .heartBackground {
@@ -36,6 +36,7 @@
     right: 0;
     top: 0;
     padding-block: 20px;
+    padding-right: 10px;
     background: hsl(196 53% 17% / 0.75);
     border-radius: 0 0 0 20px;
     z-index: 2;
@@ -58,6 +59,11 @@
 .navLink {
     color: var(--clr-light);
     text-transform: uppercase;
+    cursor: pointer;
+}
+
+.navLink:hover {
+    text-decoration: wavy underline 1px;
 }
 
 .navbarToggle {
@@ -79,22 +85,6 @@
     background-color: var(--clr-burnt);
 }
 
-.feedback {
-    cursor: pointer;
-}
-
-@media (min-width: 50em) {
-    .navbarHeader {
-        padding-inline: 8%;
-    }
-}
-
-@media (min-width: 70em) {
-    .navbarHeader {
-        padding-inline: 15%;
-    }
-}
-
 @media (max-width: 45em) {
     .hamburger {
         display: block;
@@ -112,7 +102,7 @@
         inset: 0 0 0 30%;
         background: hsl(196 53% 17% / 0.75);
         transition: 0.3s;
-        backdrop-filter: blur(1rem);
+        backdrop-filter: blur(0.5rem);
         z-index: 1;
     }
 
