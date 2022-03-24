@@ -1,7 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Head from "next/head";
-import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 import About from "../components/about";

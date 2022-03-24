@@ -26,6 +26,15 @@ const liVariant = {
 export default function Navbar({ handleOpenFeedback }) {
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
+    const normalClick = isNavbarOpen ? toggleNavbar : undefined;
+
+    const navItems = [
+        { title: "About", click: normalClick },
+        { title: "Projects", click: normalClick },
+        { title: "Certificates", click: normalClick },
+        { title: "Contact", click: normalClick },
+    ];
+
     function toggleNavbar() {
         return setIsNavbarOpen(!isNavbarOpen);
     }
@@ -74,74 +83,24 @@ export default function Navbar({ handleOpenFeedback }) {
                     variants={navVariant}
                     className={styles.navList}
                 >
-                    <motion.li
-                        variants={liVariant}
-                        style={{ originX: 0.01 }}
-                        whileHover={{ scale: 1.1 }}
-                        className={styles.navItem}
-                    >
-                        <Link href="#about">
-                            <a
-                                className={styles.navLink}
-                                onClick={
-                                    isNavbarOpen ? toggleNavbar : undefined
-                                }
-                            >
-                                About
-                            </a>
-                        </Link>
-                    </motion.li>
-                    <motion.li
-                        variants={liVariant}
-                        style={{ originX: 0.01 }}
-                        whileHover={{ scale: 1.1 }}
-                        className={styles.navItem}
-                    >
-                        <Link href="#projects">
-                            <a
-                                className={styles.navLink}
-                                onClick={
-                                    isNavbarOpen ? toggleNavbar : undefined
-                                }
-                            >
-                                Projects
-                            </a>
-                        </Link>
-                    </motion.li>
-                    <motion.li
-                        variants={liVariant}
-                        style={{ originX: 0.01 }}
-                        whileHover={{ scale: 1.1 }}
-                        className={styles.navItem}
-                    >
-                        <Link href="#certificates">
-                            <a
-                                className={styles.navLink}
-                                onClick={
-                                    isNavbarOpen ? toggleNavbar : undefined
-                                }
-                            >
-                                Certificates
-                            </a>
-                        </Link>
-                    </motion.li>
-                    <motion.li
-                        variants={liVariant}
-                        style={{ originX: 0.01 }}
-                        whileHover={{ scale: 1.1 }}
-                        className={styles.navItem}
-                    >
-                        <Link href="#contact">
-                            <a
-                                className={styles.navLink}
-                                onClick={
-                                    isNavbarOpen ? toggleNavbar : undefined
-                                }
-                            >
-                                Contact
-                            </a>
-                        </Link>
-                    </motion.li>
+                    {navItems.map((navItem) => (
+                        <motion.li
+                            variants={liVariant}
+                            style={{ originX: 0.01 }}
+                            whileHover={{ scale: 1.1 }}
+                            className={styles.navItem}
+                            key={navItem.title}
+                        >
+                            <Link href={`#${navItem.title.toLowerCase()}`}>
+                                <a
+                                    className={styles.navLink}
+                                    onClick={navItem.click}
+                                >
+                                    {navItem.title}
+                                </a>
+                            </Link>
+                        </motion.li>
+                    ))}
                     <motion.li
                         variants={liVariant}
                         style={{ originX: 0.01 }}
