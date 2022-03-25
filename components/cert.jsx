@@ -41,7 +41,7 @@ export default function Certs() {
             image: "/images/js-logo.png",
             width: 1052,
             height: 1052,
-            alt: "picture"
+            alt: "yellow JavaScript logo"
         },
         {
             key: "django",
@@ -50,7 +50,7 @@ export default function Certs() {
             image: "/images/djgreenbg.png",
             width: 1200,
             height: 546,
-            alt: "picture"
+            alt: "green Django logo"
         },
         {
             key: "python",
@@ -59,7 +59,7 @@ export default function Certs() {
             image: "/images/python-logo-small.png",
             width: 1200,
             height: 1200,
-            alt: "picture"
+            alt: "Python programming language logo"
         },
     ];
 
