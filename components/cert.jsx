@@ -18,7 +18,7 @@ const textVariant = {
         scale: 1,
         transition: { duration: 1 },
     },
-    hover: { scale: 1.1 },
+    hover: { scale: 1.05, translateY: "-15px" },
     tap: { scale: 0.9 },
     view: { visible: { once: true } },
 };

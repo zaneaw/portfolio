@@ -87,7 +87,11 @@ export default function Navbar({ handleOpenFeedback }) {
                         <motion.li
                             variants={liVariant}
                             style={{ originX: 0.01 }}
-                            whileHover={{ scale: 1.1 }}
+                            whileHover={{
+                                scale: 1.1,
+                                translateY: "-10px",
+                                translateX: "6px",
+                            }}
                             className={styles.navItem}
                             key={navItem.title}
                         >
@@ -104,7 +108,11 @@ export default function Navbar({ handleOpenFeedback }) {
                     <motion.li
                         variants={liVariant}
                         style={{ originX: 0.01 }}
-                        whileHover={{ scale: 1.1 }}
+                        whileHover={{
+                            scale: 1.1,
+                            translateY: "-6px",
+                            translateX: "6px",
+                        }}
                         className={`${styles.navItem} ${styles.feedback}`}
                     >
                         <a
