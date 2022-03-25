@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+import { Image } from "next/image";
 import styles from "./projects.module.css";
 import { MdExitToApp } from "react-icons/md";
 import { motion } from "framer-motion";
@@ -41,14 +43,14 @@ export default function Projects() {
             title: "Notes Taking App 1",
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit fugit quaerat modi perspiciatis omnis dolorum voluptatibus blanditiis nisi eius, dolore totam aperiam, ad, nulla culpa saepe quidem sequi beatae laudantium.",
             sourceCode: "https://github.com/zaneaw/notes-app",
-            youtube: "https://www.youtube.com/embed/FFEjjDExoSs",
+            youtube: "",
         },
         {
             key: 3,
             title: "Notes Taking App 2",
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit fugit quaerat modi perspiciatis omnis dolorum voluptatibus blanditiis nisi eius, dolore totam aperiam, ad, nulla culpa saepe quidem sequi beatae laudantium.",
             sourceCode: "https://github.com/zaneaw/notes-app",
-            youtube: "https://www.youtube.com/embed/FFEjjDExoSs",
+            youtube: "",
         },
     ];
 
@@ -66,7 +68,7 @@ export default function Projects() {
             >
                 Projects
             </motion.h2>
-            {projectsList.map((project, i) => {
+            {projectsList.map((project) => {
                 return (
                     <motion.article
                         key={project.key}
@@ -105,17 +107,39 @@ export default function Projects() {
                             </p>
                         </motion.a>
                         <motion.div
-                            className={`${styles.videoContainer} ${styles.articleVideo}`}
+                            className={`${
+                                project.youtube != ""
+                                    ? styles.videoContainer
+                                    : styles.imgContainer
+                            } ${styles.articleVideo}`}
                             variants={childVariant}
                         >
-                            <iframe
-                                className={styles.iframe}
-                                src={project.youtube}
-                                title="YouTube video player"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            ></iframe>
+                            {project.youtube != "" ? (
+                                <iframe
+                                    className={styles.iframe}
+                                    src={project.youtube}
+                                    title="YouTube video player"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            ) : (
+                                <a
+                                    href={project.sourceCode}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <motion.img
+                                        className={styles.img}
+                                        src="images/coming-soon.jpg"
+                                        alt="Coming soon! *smiley face*"
+                                        variants={childVariant}
+                                        whileHover="hover"
+                                        whileTap="tap"
+                                        viewport="view"
+                                    ></motion.img>
+                                </a>
+                            )}
                         </motion.div>
                     </motion.article>
                 );

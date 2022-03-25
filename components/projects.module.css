@@ -5,6 +5,10 @@
     gap: 1em;
 }
 
+.p {
+    background-color: red;
+}
+
 .article {
     display: flex;
     flex-direction: column;
@@ -49,7 +53,7 @@
 
 .articleVideo {
     grid-area: articleVideo;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    
 }
 
 @media (min-width: 50em) {
@@ -102,4 +106,25 @@
     left: 0;
     min-width: 100%;
     min-height: 100%;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/* 
+    Coming Soon!
+*/
+.imgContainer {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    border-radius: 15px;
+}
+
+.img {
+    width: 100%;
+    position: relative;
+    bottom: 35px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
