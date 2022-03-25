@@ -53,7 +53,10 @@ export default function Projects() {
     ];
 
     return (
-        <section className={`${styles.grid} primaryBackground`} id="projects">
+        <section
+            className={`${styles.section} primaryBackground`}
+            id="projects"
+        >
             <motion.h2
                 className={`${styles.projects} sectionHeader`}
                 variants={textVariant}
@@ -97,7 +100,9 @@ export default function Projects() {
                             whileTap="tap"
                             viewport="view"
                         >
-                            View Source Code <MdExitToApp />
+                            <p>
+                                View Source Code <MdExitToApp />
+                            </p>
                         </motion.a>
                         <motion.div
                             className={`${styles.videoContainer} ${styles.articleVideo}`}

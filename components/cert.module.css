@@ -1,13 +1,10 @@
-.grid {
-    padding-top: 1em;
-    display: grid;
-    gap: 1em;
-    grid-template-areas:
-        "certificates"
-        "react"
-        "javascript"
-        "python"
-        "django";
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.certificates {
+    align-self: flex-start;
 }
 
 /* .certTitle {
@@ -16,50 +13,15 @@
 
 .article {
     margin: 1em 0;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .imageContainer {
     max-width: 100%;
 }
-
-.certificates {
-    grid-area: certificates;
-}
-
-.react {
-    grid-area: react;
-    /* grid-template-areas:
-        "certTitle"
-        "imageContainer"; */
-}
-
-.javascript {
-    grid-area: javascript;
-    align-items: center;
-    /* grid-template-areas:
-        "certTitle imageContainer imageContainer"
-        "certTitle imageContainer imageContainer"; */
-}
-
-.django {
-    grid-area: django;
-    /* grid-template-areas:
-        "certTitle"
-        "imageContainer"; */
-}
-
-.python {
-    grid-area: python;
-    align-items: center;
-    /* grid-template-areas:
-        "imageContainer imageContainer certTitle"
-        "imageContainer imageContainer certTitle"; */
-}
-
-/* .certTitle {
-    grid-area: certTitle;
-} */
 
 .imageContainer {
     grid-area: imageContainer;
@@ -74,36 +36,32 @@
     font-size: 0.75rem;
 }
 
-@media (min-width: 40em ) and (max-width: 50em) {
+@media (min-width: 40em) and (max-width: 51em) {
     .small {
         font-size: 1.4vw;
     }
 }
 
-@media (max-width: 40em) {
-    .javascriptImage,
-    .pythonImage {
-        max-width: 250px;
+@media (min-width: 40em) {
+    .section {
+        align-items: baseline;
+        display: flex;
+        flex-direction: column;
     }
 
-    .djangoImage {
-        max-width: 390px;
+    .certificates {
+        align-self: center;
     }
 
-    .reactImage {
-        max-width: 410px;
+    .articlesContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 1em;
     }
-
 }
 
-@media (min-width: 40em) {
-    .grid {
-        align-items: baseline;
-        grid-template-columns: 1fr 0.7fr 0.7fr 1fr;
-        grid-template-areas:
-            "certificates certificates certificates certificates"
-            "react javascript python django";
+@media (max-width: 40em) {
+    .imageContainer {
+        max-width: max(60%, 260px);
     }
-
-  
 }
