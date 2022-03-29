@@ -108,14 +108,16 @@ export default function About() {
                 whileInView="visible"
                 viewport={{ once: true }}
             >
-                As you already know, I&apos;m Zane and I&apos;m a software engineer that
-                used to sell real estate at the highest level. I have a lovely
-                partner who has been extremely supportive throughout my career
-                change - thank you! We have a very handsome French Bulldog whose
-                name is Theo, he brings us so much joy and certainly keeps us
-                laughing. Cooking is something that I enjoy very much. I cook
-                everything from dinner to homemade sourdough bread. I mean, I
-                love food! Who doesn&apos;t?
+                As you already know, I&apos;m Zane and I&apos;m a software
+                engineer that used to sell real estate at the highest level. I
+                have a lovely partner who has been extremely supportive
+                throughout my career change - thank you! We have a very handsome
+                French Bulldog whose name is Theo. He brings us so much joy and
+                certainly keeps us laughing with his quirky personality and
+                stinky toots &#128168;. Cooking is something that I enjoy very
+                much. I cook everything from tofu with bokchoy and cauliflower
+                rice 🥗 to homemade sourdough bread 🍞. I mean, I love food! Who
+                doesn&apos;t?
             </motion.p>
         </section>
     );
