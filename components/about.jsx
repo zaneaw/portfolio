@@ -55,18 +55,16 @@ export default function About() {
                 }}
                 viewport={{ once: true }}
             >
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
-                excepturi veniam fugiat consequatur, quas quos inventore est
-                exercitationem voluptatem, harum accusantium tenetur a ea nemo
-                obcaecati aut maxime deleniti nulla magni blanditiis
-                reprehenderit! Nisi, molestiae?
+                If I&apos;m being honest, I&apos;m not sure what to say here... I used to sell real estate in Charleston, SC. Following a dream, I then moved to NYC to pursue my real estate career in the big city with all the bright lights! I loved it so much that I quickly became the top solo agent at my company and started a team of agents that I managed! Big buildings, big deals, and more bright lights. COVID struck almost exactly on my 2 year anniversary of moving to the city and I realized it was time for a change... I had always loved computers and decided to take the plunge into learning to code. I&apos;ve learned SO much and fallen more in love with computers and technology as time has gone by. I enjoyed real estate, but I was never passionate about it. That&apos;s why I&apos;m teeming with excitement to continue my path in technology - because I&apos;m passionate about it! I can&apos;t wait to see what the future has in store for me.
             </motion.p>
 
             {photos.map((photo) => (
                 <motion.div
                     key={photo.text}
                     whileHover={{ scale: 1.2, zIndex: 3 }}
-                    className={`${styles.image} styles.${photo.text.toLowerCase()}`}
+                    className={`${
+                        styles.image
+                    } styles.${photo.text.toLowerCase()}`}
                     variants={textVariant}
                     initial="hidden"
                     whileInView="visible"
@@ -97,10 +95,7 @@ export default function About() {
                 whileInView="visible"
                 viewport={{ once: true }}
             >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Explicabo corrupti et minima eius expedita dignissimos nisi
-                eligendi quod deleniti provident aut, vero voluptate suscipit
-                odio!
+                As you know already, I&apos;m Zane and I&apos;m a software engineer that used to sell real estate at the highest level... I have a lovely partner who has been extremely supportive throughout my career change - thank you! We have a very handsome French Bulldog whose name is Theo, he brings us so much joy and certainly keeps us laughing. Cooking is something that I enjoy very much. I cook everything from dinner to homemade sourdough bread... I love food! Who doesn&apos;t?
             </motion.p>
         </section>
     );
