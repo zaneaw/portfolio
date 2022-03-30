@@ -33,7 +33,7 @@ export default function Projects() {
     const projectsList = [
         {
             key: 1,
-            title: "Notes Taking App",
+            title: "Forum Website",
             desc: "Full-Stack web application built using Django and MySQL. I implemented Django's MVC pattern to create an interactive, customized user experience. The project consists of user authentication, user customization, forum-like commenting, a system of 'liking' projects, AWS integration for use and storage of files, and more.",
             sourceCode: "https://github.com/zaneaw/Portfolio-Site",
             youtube: "",
