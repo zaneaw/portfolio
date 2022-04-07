@@ -33,16 +33,16 @@ export default function Projects() {
     const projectsList = [
         {
             key: 1,
-            title: "Forum Website",
-            desc: "Full-Stack web application built using Django and MySQL. I implemented Django's MVC pattern to create an interactive, customized user experience. The project consists of user authentication, user customization, forum-like commenting, a system of 'liking' projects, AWS integration for use and storage of files, and more.",
-            sourceCode: "https://github.com/zaneaw/Portfolio-Site",
-            youtube: "",
+            title: "Pizza by Zane",
+            desc: "Built in React, this is another full-stack web application. I developed a backend using MongoDB as well as another version using Firebase (to get more experience). The stack involved in this site includes Redux, Bootstrap, Express, MongoDB and Firebase.",
+            sourceCode: "https://github.com/zaneaw/conFusion",
+            youtube: "https://www.youtube.com/embed/iS4MRaI6DGU",
         },
         {
             key: 2,
-            title: "Restaurant Site",
-            desc: "Built in React, this is another full-stack web application. I developed a backend using MongoDB as well as another version using Firebase (to get more experience). The stack involved in this site includes Redux, Bootstrap, Express, MongoDB and Firebase.",
-            sourceCode: "https://github.com/zaneaw/conFusion",
+            title: "Forum Website",
+            desc: "Full-Stack web application built using Django and MySQL. I implemented Django's MVC pattern to create an interactive, customized user experience. The project consists of user authentication, user customization, forum-like commenting, a system of 'liking' projects, AWS integration for use and storage of files, and more.",
+            sourceCode: "https://github.com/zaneaw/Portfolio-Site",
             youtube: "",
         },
         {
