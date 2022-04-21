@@ -34,8 +34,6 @@ export default function Feedback({
         setSubmitValue(data);
         data.createdOn = new Date().toISOString().split("T")[0];
 
-        console.log(data);
-
         fetch("/api/createFeedback", {
             method: "POST",
             headers: {
@@ -52,8 +50,6 @@ export default function Feedback({
         reset();
         setRating(null);
     };
-
-    console.log(errors);
 
     return (
         <AnimatePresence>
