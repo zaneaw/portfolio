@@ -32,25 +32,36 @@ export default function Projects() {
 
     const projectsList = [
         {
-            key: 1,
+            title: "LA Mountains",
+            desc: "This project was completed in the React framework, NextJS. The task was to take a Photoshop Design (.psd) file and turn it into a responsive web application.",
+            sourceCode: "https://github.com/zaneaw/la-mountains",
+            youtube: "",
+            liveSiteUrl: "https://la-mountains.vercel.app",
+            liveSiteImg: "la-mntns.jpg",
+        },
+        {
             title: "Pizza by Zane",
             desc: "Built in React, this is another full-stack web application. I developed a backend using MongoDB as well as another version using Firebase (to get more experience). The stack involved in this site includes Redux, Bootstrap, Express, MongoDB and Firebase.",
             sourceCode: "https://github.com/zaneaw/conFusion",
             youtube: "https://www.youtube.com/embed/iS4MRaI6DGU",
+            liveSiteUrl: "",
+            liveSiteImg: "",
         },
         {
-            key: 2,
             title: "Forum Website",
             desc: "Full-Stack web application built using Django and MySQL. I implemented Django's MVC pattern to create an interactive, customized user experience. The project consists of user authentication, user customization, forum-like commenting, a system of 'liking' projects, AWS integration for use and storage of files, and more.",
             sourceCode: "https://github.com/zaneaw/Portfolio-Site",
             youtube: "",
+            liveSiteUrl: "https://www.zane-wilson.com",
+            liveSiteImg: "zw-forum.jpg",
         },
         {
-            key: 3,
             title: "Notes App",
             desc: "Built in React JS. I utilized custom hooks to support a toggleable dark mode option as well as the use of local storage. When closed navigated back to, the users notes will persist.",
             sourceCode: "https://github.com/zaneaw/notes-app",
             youtube: "https://www.youtube.com/embed/FFEjjDExoSs",
+            liveSiteUrl: "",
+            liveSiteImg: "",
         },
     ];
 
@@ -68,12 +79,11 @@ export default function Projects() {
             >
                 Projects
             </motion.h2>
-            {projectsList.map((project) => {
+            {projectsList.map((project, i) => {
                 return (
                     <motion.article
-                        key={project.key}
+                        key={i}
                         className={styles.article}
-                        // className={`${styles.article} ${styles.article + i}`}
                         variants={textVariant}
                         initial="hidden"
                         whileInView="visible"
@@ -92,29 +102,61 @@ export default function Projects() {
                         >
                             {project.desc}
                         </motion.p>
-                        <motion.a
-                            href={project.sourceCode}
-                            target="_blank"
-                            rel="noreferrer"
-                            className={styles.articleLink}
-                            variants={childVariant}
-                            whileHover="hover"
-                            whileTap="tap"
-                            viewport="view"
-                        >
-                            <p>
-                                View Source Code <MdExitToApp />
-                            </p>
-                        </motion.a>
+                        <motion.div className={project.liveSiteUrl !== "" && `${styles.articleLinksContainer}`}>
+                            <motion.a
+                                href={project.sourceCode}
+                                target="_blank"
+                                rel="noreferrer"
+                                className={styles.articleLink}
+                                variants={childVariant}
+                                whileHover="hover"
+                                whileTap="tap"
+                                viewport="view"
+                            >
+                                <p>
+                                    Source Code <MdExitToApp />
+                                </p>
+                            </motion.a>
+                            {project.liveSiteUrl !== "" && <motion.a
+                                href={project.liveSiteUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                                className={styles.articleLinkLive}
+                                variants={childVariant}
+                                whileHover="hover"
+                                whileTap="tap"
+                                viewport="view"
+                            >
+                                <p>
+                                    Live Site <MdExitToApp />
+                                </p>
+                            </motion.a>}
+                        </motion.div>
                         <motion.div
                             className={`${
-                                project.youtube != ""
+                                project.youtube !== ""
                                     ? styles.videoContainer
                                     : styles.imgContainer
                             } ${styles.articleVideo}`}
                             variants={childVariant}
                         >
-                            {project.youtube != "" ? (
+                            {project.liveSiteUrl !== "" ? (
+                                <a
+                                    href={project.liveSiteUrl}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <motion.img
+                                        className={styles.imgLiveSite}
+                                        src={`/images/${project.liveSiteImg}`}
+                                        alt="Coming soon! *smiley face*"
+                                        variants={childVariant}
+                                        whileHover="hover"
+                                        whileTap="tap"
+                                        viewport="view"
+                                    ></motion.img>
+                                </a>
+                            ) : project.youtube !== "" ? (
                                 <iframe
                                     className={styles.iframe}
                                     src={project.youtube}
