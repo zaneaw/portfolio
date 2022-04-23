@@ -47,32 +47,33 @@ export default function Hero() {
                             being a great software engineer!
                         </motion.span>
                     </motion.h4>
-                    <motion.a
-                        variants={itemVariant}
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className={`${styles.contact} ${styles.buttons}`}
-                        href="mailto:wilsonzanea@gmail.com?subject=Contacting%20You
+                    <motion.div className={styles.buttonsContainer}>
+                        <motion.a
+                            variants={itemVariant}
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            className={`${styles.contact} ${styles.buttons}`}
+                            href="mailto:wilsonzanea@gmail.com?subject=Contacting%20You
                 &body=I'd%20like%20to%20hire%20YOU!"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Contact Me <FaTelegramPlane />
-                    </motion.a>
-                    <motion.a
-                        variants={itemVariant}
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className={`${styles.download} ${styles.buttons}`}
-                        href="/downloads/resume_website.pdf"
-                        download="zanesAwesomeResume"
-                    >
-                        Download CV <FaDownload />
-                    </motion.a>
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Contact Me <FaTelegramPlane />
+                        </motion.a>
+                        <motion.a
+                            variants={itemVariant}
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            className={`${styles.download} ${styles.buttons}`}
+                            href="/downloads/resume_website.pdf"
+                            download="zanesAwesomeResume"
+                        >
+                            Download CV <FaDownload />
+                        </motion.a>
+                    </motion.div>
                     <motion.div variants={itemVariant} className={styles.image}>
                         <Image
                             src="/images/hero-image.svg"
-                            layout="responsive"
                             height="400px"
                             width="600px"
                             alt="image of a cartoon sitting on a computer desk with a computer next to them."

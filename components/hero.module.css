@@ -1,13 +1,8 @@
 .grid {
-    display: grid;
+    display: flex;
     gap: 1.2rem;
-    grid-template-areas:
-        "hello hello"
-        "detail detail"
-        "contact download"
-        "image image";
+    flex-direction: column;
 }
-
 .hello {
     grid-area: hello;
 }
@@ -18,9 +13,18 @@
     margin: 0 0 3% 2%;
 }
 
+.buttonsContainer {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
 .buttons {
+    flex: 1 1 0px;
     border-radius: 10px;
     min-width: 140px;
+    max-width: 250px;
     min-height: 42px;
     font-family: var(--ff-primary);
     border: none;
@@ -38,20 +42,28 @@
 
 .download {
     background-color: var(--clr-dark);
-    color: var(--clr-light);
     grid-area: download;
+    color: var(--clr-light);
 }
 
 .image {
-    padding-bottom: 1em;
     grid-area: image;
+    padding-bottom: 1em;
 }
 
 .show {
     font-family: var(--ff-primary);
 }
 
-/* @media (min-width: 40em) */
+@media (max-width: 25em) {
+    .buttonsContainer {
+        /* flex-direction: column; */
+    }
+    /* text underneath header, only show at > 30em */
+    .show {
+        display: none;
+    }
+}
 
 @media (min-width: 60em) {
     .grid {
@@ -76,12 +88,5 @@
 
     .image {
         padding: 0;
-    }
-}
-
-@media (max-width: 30em) {
-    /* text underneath header, only show at > 30em */
-    .show {
-        display: none;
     }
 }
