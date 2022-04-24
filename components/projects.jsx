@@ -33,7 +33,7 @@ export default function Projects() {
     const projectsList = [
         {
             title: "LA Mountains",
-            desc: "This project was completed in the React framework, NextJS. The task was to take a Photoshop Design (.psd) file and turn it into a responsive web application.",
+            desc: "This project was completed in the React framework, NextJS. The task was to take a PSD file (Photoshop Document) and turn it into a responsive, single page web application. In addition to Next.js, I also used Sass and some Bootstrap as well. I think the project came out looking great! Don't forget to check out the live site for yourself.",
             sourceCode: "https://github.com/zaneaw/la-mountains",
             youtube: "",
             liveSiteUrl: "https://la-mountains.vercel.app",
@@ -41,7 +41,7 @@ export default function Projects() {
         },
         {
             title: "Pizza by Zane",
-            desc: "Built in React, this is another full-stack web application. I developed a backend using MongoDB as well as another version using Firebase (to get more experience). The stack involved in this site includes Redux, Bootstrap, Express, MongoDB and Firebase.",
+            desc: "Built in React, this is a full-stack web application. I developed a backend using MongoDB and utilized JWT for user authentication. The stack involved in this site includes Redux, Bootstrap, Express, MongoDB, and more. Be sure to check out the video demo of the project!",
             sourceCode: "https://github.com/zaneaw/conFusion",
             youtube: "https://www.youtube.com/embed/iS4MRaI6DGU",
             liveSiteUrl: "",
@@ -59,9 +59,9 @@ export default function Projects() {
             title: "Notes App",
             desc: "Built in React JS. I utilized custom hooks to support a toggleable dark mode option as well as the use of local storage. When closed navigated back to, the users notes will persist.",
             sourceCode: "https://github.com/zaneaw/notes-app",
-            youtube: "https://www.youtube.com/embed/FFEjjDExoSs",
-            liveSiteUrl: "",
-            liveSiteImg: "",
+            youtube: "",
+            liveSiteUrl: "https://zanes-notes-app.vercel.app/",
+            liveSiteImg: "notes-app.jpg",
         },
     ];
 

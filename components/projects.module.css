@@ -145,6 +145,7 @@
     border-radius: 15px;
     align-items: center;
     justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .img {
@@ -157,6 +158,4 @@
 .imgLiveSite {
     width: 100%;
     position: relative;
-    bottom: 35px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
