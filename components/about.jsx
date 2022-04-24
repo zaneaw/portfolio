@@ -15,12 +15,27 @@ const textVariant = {
 };
 
 export default function About() {
-
     const photos = [
-        { text: "Theo", image: "/images/theo.jpg", alt: "most handsome French Bulldog (biased opinion)" },
-        { text: "Cooking", image: "/images/cooking.jpg", alt: "cutting board with freshly chopped food on it" },
-        { text: "Park", image: "/images/park.jpg", alt: "Me, my partner, and our dog, Theo in a park" },
-        { text: "NYC", image: "/images/nyc.jpg", alt: "view of NYC skyscrapers" },
+        {
+            text: "Theo",
+            image: "/images/theo.jpg",
+            alt: "most handsome French Bulldog (biased opinion)",
+        },
+        {
+            text: "Cooking",
+            image: "/images/cooking.jpg",
+            alt: "cutting board with freshly chopped food on it",
+        },
+        {
+            text: "Park",
+            image: "/images/park.jpg",
+            alt: "Me, my partner, and our dog, Theo in a park",
+        },
+        {
+            text: "NYC",
+            image: "/images/nyc.jpg",
+            alt: "view of NYC skyscrapers",
+        },
     ];
 
     return (
@@ -57,18 +72,20 @@ export default function About() {
             >
                 Hi there &#128075; I&apos;m Zane! I used to sell real estate in
                 Charleston, SC. Following a dream, I moved to NYC to pursue my
-                real estate career in the big city with all of the bright
-                lights! I loved it so much that I quickly became the top solo
-                agent at my company and started a team of agents that I managed!
-                COVID struck almost exactly on my two-year anniversary of moving
-                to the city and I realized it was time for a change... I had
-                always loved computers and decided to take the plunge into
-                learning to code. I&apos;ve learned SO much and fallen more in
-                love with computers and technology as time has gone by. I
-                enjoyed real estate, but I was never passionate about it.
-                That&apos;s why I&apos;m teeming with excitement to continue my
-                path in technology - because I&apos;m passionate about it! I
-                can&apos;t wait to see what the future has in store for me.
+                real estate career in the big city with all the bright lights! I
+                loved it so much that I quickly became the top agent at my
+                company - doing the most deals and being the highest rated and
+                highest rated agent. I became too busy to handle it all on my
+                own and started a team of agents that I managed! COVID struck
+                almost exactly on my two-year anniversary of moving to the city
+                and I realized it was time for a change... I had always loved
+                computers and decided to take the plunge into learning to code.
+                I&apos;ve learned SO much and fallen more in love with computers
+                and technology as time has gone by. I enjoyed real estate, but I
+                was never passionate about it. That&apos;s why I&apos;m teeming
+                with excitement to continue my path in technology - because
+                I&apos;m passionate about it! I can&apos;t wait to see what the
+                future has in store for me.
             </motion.p>
 
             {photos.map((photo) => (
