@@ -37,6 +37,7 @@
     font-size: 0.875rem;
     letter-spacing: 0.02857rem;
     font-family: var(--ff-primary);
+    cursor: pointer;
 }
 
 @media (min-width: 550px) {
