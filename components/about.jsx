@@ -74,11 +74,11 @@ export default function About() {
                 Charleston, SC. Following a dream, I moved to NYC to pursue my
                 real estate career in the big city with all the bright lights! I
                 loved it so much that I quickly became the top agent at my
-                company - doing the most deals and being the highest rated and
-                highest rated agent. I became too busy to handle it all on my
-                own and started a team of agents that I managed! COVID struck
-                almost exactly on my two-year anniversary of moving to the city
-                and I realized it was time for a change... I had always loved
+                company - doing the most deals while also having the most 5-star
+                client reviews. I became too busy to handle it all on my own and
+                started a team of agents that I managed! COVID struck almost
+                exactly on my two-year anniversary of moving to the city and I
+                realized it was time for a change... I had always loved
                 computers and decided to take the plunge into learning to code.
                 I&apos;ve learned SO much and fallen more in love with computers
                 and technology as time has gone by. I enjoyed real estate, but I
