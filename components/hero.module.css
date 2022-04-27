@@ -52,6 +52,7 @@
 }
 
 .show {
+    display: none;
     font-family: var(--ff-primary);
 }
 
