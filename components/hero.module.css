@@ -57,9 +57,9 @@
 }
 
 @media (max-width: 25em) {
-    .buttonsContainer {
-        /* flex-direction: column; */
-    }
+    /* .buttonsContainer {
+        flex-direction: column;
+    } */
     /* text underneath header, only show at > 30em */
     .show {
         display: none;
