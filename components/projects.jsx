@@ -102,7 +102,7 @@ export default function Projects() {
                         >
                             {project.desc}
                         </motion.p>
-                        <motion.div className={project.liveSiteUrl !== "" && `${styles.articleLinksContainer}`}>
+                        <motion.div className={project.liveSiteUrl !== "" ? `${styles.articleLinksContainer}` : undefined}>
                             <motion.a
                                 href={project.sourceCode}
                                 target="_blank"
