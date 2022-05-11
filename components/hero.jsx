@@ -65,8 +65,8 @@ export default function Hero() {
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                             className={`${styles.download} ${styles.buttons}`}
-                            href="/downloads/resume_website.pdf"
-                            download="zanesAwesomeResume"
+                            href="/downloads/zanescv.pdf"
+                            download="ZanesCV"
                         >
                             Download CV <FaDownload />
                         </motion.a>
