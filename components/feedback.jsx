@@ -1,18 +1,8 @@
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { FaHeart } from "react-icons/fa";
-import { motion, AnimatePresence } from "framer-motion";
-import styles from "./feedback.module.css";
-import Confetti from "react-confetti";
-
-const backdropVariant = {
-    hidden: {
-        opacity: 0,
-    },
-    visible: {
-        opacity: 1,
-    },
-};
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { FaHeart } from 'react-icons/fa';
+import styles from './feedback.module.css';
+import Confetti from 'react-confetti';
 
 export default function Feedback({
     open,
@@ -32,19 +22,19 @@ export default function Feedback({
     } = useForm();
     const onSubmit = (data, e) => {
         setSubmitValue(data);
-        data.createdOn = new Date().toISOString().split("T")[0];
+        data.createdOn = new Date().toISOString().split('T')[0];
 
-        fetch("/api/createFeedback", {
-            method: "POST",
+        fetch('/api/createFeedback', {
+            method: 'POST',
             headers: {
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify({ data }),
         })
             .then((res) => res.json())
 
             .catch((err) => {
-                console.error("Error: ", err);
+                console.error('Error: ', err);
             });
         setSubmitSuccess(true);
         reset();
@@ -52,25 +42,22 @@ export default function Feedback({
     };
 
     return (
-        <AnimatePresence>
+        <div>
             {open && (
-                <motion.div
+                <div
                     className={styles.backdrop}
-                    variants={backdropVariant}
-                    animate="visible"
-                    initial="hidden"
                     onClick={submitSuccess ? handleClose : undefined}
                 >
-                    <motion.div className={styles.modal}>
+                    <div className={styles.modal}>
                         <h4 className={styles.modalTitle}>
-                            Send Feedback{" "}
-                            <motion.button
+                            Send Feedback{' '}
+                            <button
                                 className={styles.close}
-                                type="button"
+                                type='button'
                                 onClick={handleClose}
                             >
                                 &times;
-                            </motion.button>
+                            </button>
                         </h4>
                         {submitSuccess && (
                             <div>
@@ -90,7 +77,7 @@ export default function Feedback({
                             >
                                 <div className={styles.ratingContainer}>
                                     <label
-                                        htmlFor="rating"
+                                        htmlFor='rating'
                                         className={styles.ratingLabel}
                                     >
                                         Rating:
@@ -104,12 +91,12 @@ export default function Feedback({
                                                     key={`heart_${ratingValue}`}
                                                 >
                                                     <input
-                                                        type="radio"
-                                                        {...register("rating", {
+                                                        type='radio'
+                                                        {...register('rating', {
                                                             required:
-                                                                "Rating required",
+                                                                'Rating required',
                                                         })}
-                                                        name="rating"
+                                                        name='rating'
                                                         value={ratingValue}
                                                         onClick={() =>
                                                             setRating(
@@ -122,11 +109,11 @@ export default function Feedback({
                                                         color={
                                                             ratingValue <=
                                                             (hover || rating)
-                                                                ? "#c97064"
-                                                                : "#e4e5e9"
+                                                                ? '#c97064'
+                                                                : '#e4e5e9'
                                                         }
                                                         size={30}
-                                                        name="rating"
+                                                        name='rating'
                                                         className={styles.star}
                                                         onMouseEnter={() =>
                                                             setHover(
@@ -148,56 +135,50 @@ export default function Feedback({
                                     </p>
                                 </div>
                                 <br />
-                                <motion.textarea
-                                    whileHover={{ scale: 1.05 }}
-                                    whileFocus={{ scale: 1.05 }}
-                                    id="comments"
-                                    placeholder="Your Comments"
-                                    name="comments"
-                                    rows="4"
+                                <textarea
+                                    id='comments'
+                                    placeholder='Your Comments'
+                                    name='comments'
+                                    rows='4'
                                     className={`${styles.commentsInput} ${styles.input}`}
-                                    {...register("comments", {
+                                    {...register('comments', {
                                         maxLength: {
                                             value: 120,
                                             message:
-                                                "Message too long. Max 120",
+                                                'Message too long. Max 120',
                                         },
                                     })}
                                 />
                                 <p className={styles.error}>
                                     {errors.comments?.message}
                                 </p>
-                                <motion.input
-                                    whileHover={{ scale: 1.05 }}
-                                    whileFocus={{ scale: 1.05 }}
-                                    id="email"
-                                    placeholder="Your Email"
-                                    name="email"
+                                <input
+                                    id='email'
+                                    placeholder='Your Email'
+                                    name='email'
                                     className={`${styles.emailInput} ${styles.input}`}
-                                    {...register("email", {
-                                        required: "Email required",
+                                    {...register('email', {
+                                        required: 'Email required',
                                         pattern: {
                                             value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
                                             message:
-                                                "Please enter a valid email",
+                                                'Please enter a valid email',
                                         },
                                     })}
                                 />
                                 <p className={styles.error}>
                                     {errors.email?.message}
                                 </p>
-                                <motion.input
-                                    whileHover={{ scale: 1.05 }}
-                                    whileFocus={{ scale: 1.05 }}
-                                    id="name"
-                                    placeholder="Your Name"
-                                    name="name"
+                                <input
+                                    id='name'
+                                    placeholder='Your Name'
+                                    name='name'
                                     className={`${styles.nameInput} ${styles.input}`}
-                                    {...register("name", {
-                                        required: "Name required",
+                                    {...register('name', {
+                                        required: 'Name required',
                                         minLength: {
                                             value: 2,
-                                            message: "Min length is 2",
+                                            message: 'Min length is 2',
                                         },
                                     })}
                                 />
@@ -205,29 +186,25 @@ export default function Feedback({
                                     {errors.name?.message}
                                 </p>
                                 <div className={styles.buttonContainer}>
-                                    <motion.button
-                                        whileHover={{ scale: 1.1 }}
-                                        whileTap={{ scale: 0.9 }}
+                                    <button
                                         className={`${styles.cancelButton} ${styles.formButton}`}
-                                        type="button"
+                                        type='button'
                                         onClick={handleClose}
                                     >
                                         Cancel
-                                    </motion.button>
-                                    <motion.button
-                                        whileHover={{ scale: 1.1 }}
-                                        whileTap={{ scale: 0.9 }}
+                                    </button>
+                                    <button
                                         className={`${styles.submitButton} ${styles.formButton}`}
-                                        type="submit"
+                                        type='submit'
                                     >
                                         Submit
-                                    </motion.button>
+                                    </button>
                                 </div>
                             </form>
                         )}
-                    </motion.div>
-                </motion.div>
+                    </div>
+                </div>
             )}
-        </AnimatePresence>
+        </div>
     );
 }
