@@ -21,8 +21,7 @@ export default function Hero() {
                     <div className={styles.buttonsContainer}>
                         <a
                             className={`${styles.contact} ${styles.buttons}`}
-                            href="mailto:wilsonzanea@gmail.com?subject=Contacting%20You
-                &body=I'd%20like%20to%20hire%20YOU!"
+                            href="mailto:wilsonzanea@gmail.com?subject=Contacting%20You&body=I'd%20like%20to%20hire%20YOU!"
                             target='_blank'
                             rel='noreferrer'
                         >
@@ -37,12 +36,12 @@ export default function Hero() {
                         </a>
                     </div>
                     <div className={styles.image}>
-                        <Image
+                        {/* <Image
                             src='/images/hero-image.svg'
                             height='400px'
                             width='600px'
                             alt='image of a cartoon sitting on a computer desk with a computer next to them.'
-                        />
+                        /> */}
                     </div>
                 </section>
             </div>

@@ -21,9 +21,6 @@
         "react-intersection-observer": "^8.33.1"
     },
     "devDependencies": {
-        "@emotion/react": "^11.8.1",
-        "@emotion/styled": "^11.8.1",
-        "@mui/material": "^5.5.0",
         "eslint": "8.10.0",
         "eslint-config-next": "12.1.0",
         "react-hook-form": "^7.28.0",

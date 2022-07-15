@@ -49,6 +49,7 @@
 .image {
     grid-area: image;
     padding-bottom: 1em;
+    z-index: 1;
 }
 
 .show {

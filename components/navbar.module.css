@@ -19,7 +19,7 @@
 }
 
 @media (max-width: 45em) {
-    .nav {
+    #pageNav {
         inset: 0 0 0 30%;
         background: hsl(196 53% 17% / 0.75);
         transition: 0.3s;
@@ -29,10 +29,6 @@
 
     .toggle {
         inset: 0 0 0 100%;
-    }
-
-    .navList {
-        flex-direction: column;
     }
 
     .navItem {
