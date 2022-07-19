@@ -781,6 +781,11 @@ video {
   background-color: rgb(0 109 119 / var(--tw-bg-opacity));
 }
 
+.bg-blue-light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(131 197 190 / var(--tw-bg-opacity));
+}
+
 .fill-blue {
   fill: #006d77;
 }
@@ -791,6 +796,10 @@ video {
 
 .fill-red-orange {
   fill: #E29578;
+}
+
+.fill-blue-light {
+  fill: #83C5BE;
 }
 
 .p-2 {
