@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import styles from './navbar.module.css';
 
-export default function Navbar({ handleOpenFeedback, toggleBlur }) {
+export default function Navbar({ handleOpenFeedback }) {
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
     const [showNav, setShowNav] = useState(true);
 
@@ -33,15 +32,13 @@ export default function Navbar({ handleOpenFeedback, toggleBlur }) {
         window.addEventListener('scroll', onScroll);
 
         return () => window.removeEventListener('scroll', onScroll);
-    }, [showNav]);
-
-    const normalClick = isNavbarOpen ? toggleNavbar : undefined;
+    }, [isNavbarOpen]);
 
     const navItems = [
-        { title: 'About', click: normalClick },
-        { title: 'Projects', click: normalClick },
-        { title: 'Certificates', click: normalClick },
-        { title: 'Contact', click: normalClick },
+        { title: 'Projects' },
+        { title: 'About' },
+        { title: 'Certificates' },
+        { title: 'Contact' },
     ];
 
     const toggleNavbar = () => {
@@ -52,7 +49,10 @@ export default function Navbar({ handleOpenFeedback, toggleBlur }) {
         <header className={`mt-16 z-10`}>
             <nav className={`${!showNav && '-translate-y-14'} w-full bg-blue-dark shadow-lg p-2 flex justify-between items-center fixed top-0 transition-all duration-200 ease-out`}>
                 <Link href='#' passHref>
-                    <svg className='w-10 h-10 fill-blue hover:fill-blue-light cursor-pointer transition-all duration-300 ease-out' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <svg 
+                        className='w-10 h-10 fill-blue hover:fill-blue-light cursor-pointer transition-all duration-300 ease-out' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                        onClick={() => isNavbarOpen && setIsNavbarOpen()}
+                    >
                         <path d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"/>
                     </svg>
                 </Link>
@@ -72,46 +72,37 @@ export default function Navbar({ handleOpenFeedback, toggleBlur }) {
                         className={`${isNavbarOpen && '-translate-y-[10px] -rotate-45'} group-hover:bg-blue-light block w-[35px] h-[5px] bg-blue rounded my-[5px] mx-auto transition-all duration-300 ease-out`}
                     ></span>
                 </button>
-                // change backdrop - this won't work
+
                 {isNavbarOpen && (
-                    <div className={styles.backdrop}>
-                        <ul className={`z-50 fixed right-0 top-[60px] flex flex-col bg-red-500 transition-all ${
-                            !isNavbarOpen && 'translate-x-full'}`}>
-                            {navItems.map((navItem) => (
-                                <li
-                                    // fix style below - add to CSS
-                                    style={{ originX: 0.01 }}
-                                    className={styles.navItem}
-                                    key={navItem.title}
-                                >
-                                    <Link href={`#${navItem.title.toLowerCase()}`}>
-                                        <a
-                                            className={styles.navLink}
-                                            onClick={navItem.click}
-                                        >
-                                            {navItem.title}
-                                        </a>
-                                    </Link>
-                                </li>
-                            ))}
-                            <li
-                                // fix style below - add to CSS
-                                style={{ originX: 0.01 }}
-                                className={`${styles.navItem} ${styles.feedback}`}
-                            >
-                                <a
-                                    className={styles.navLink}
-                                    onClick={() => {
-                                        handleOpenFeedback();
-                                        {isNavbarOpen && setIsNavbarOpen();}
-                                    }}
-                                >
-                                    Feedback
-                                </a>
-                            </li>
-                        </ul>
+                    <div 
+                        className='absolute z-0 top-[60px] left-0 w-[100vw] h-[100vh] backdrop-blur-[2px] transition-all duration-1000 ease-out'
+                        onClick={() => isNavbarOpen && setIsNavbarOpen()}
+                    >
+
                     </div>
                 )}
+
+                <div 
+                    className={`z-50 min-w-2/5 divide-y-2 divide-blue border-l-2 border-b-2 border-blue fixed right-0 top-[60px] flex flex-col shadow-lg bg-blue-dark transition-all duration-300 ease-out ${!isNavbarOpen && 'translate-x-full'} origin-right`}
+                    onClick={() => isNavbarOpen && setIsNavbarOpen()}
+                >
+                    {navItems.map((navItem) => (
+                        <Link href={`#${navItem.title.toLowerCase()}`} key={navItem.title}>
+                            <a className='uppercase font-medium text-blue-light text-xl tracking-widest px-6 py-2 hover:bg-blue hover:text-blue-dark transition-all duration-150 ease-in hover:cursor-pointer'>
+                                {navItem.title}
+                            </a>
+                        </Link>
+                    ))}
+                        <a
+                            className='uppercase font-medium text-blue-light text-xl tracking-widest px-6 py-2 hover:bg-blue hover:text-blue-dark transition-all duration-150 ease-in hover:cursor-pointer'
+                            onClick={() => {
+                                handleOpenFeedback();
+                                {isNavbarOpen && setIsNavbarOpen();}
+                            }}
+                        >
+                            Feedback
+                        </a>
+                </div>
                 
             </nav>
             <Link href='#' passHref>
