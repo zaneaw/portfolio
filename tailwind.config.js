@@ -10,19 +10,19 @@ module.exports = {
         extend: {
             colors: {
                 'off-white': '#EDF6F9',
+                'gray-light': '#BDBDBD',
                 blue: { 
-                    DEFAULT: '#006d77', 
-                    dark: '#00363B', 
-                    light: '#83C5BE' 
+                    DEFAULT: '#6495ED', 
+                    dark: '#132246', 
+                    light: '#ABD7EE' 
                 },
-                'light-pink': '#FFDDD2',
+                'pink-light': '#FFB0EE',
                 'red-orange': '#E29578',
             },
         },
         fontFamily: {
-            roboto: ['Roboto', 'sans-serif'],
-            notoSans: ['Noto Sans', 'sans-serif'],
-            firaCode: ['Fira Code', 'monospace'],
+            serifCustom: ['Roboto', 'sans-serif'],
+            monoCustom: ['Source Code Pro', 'monospace'],
         },
     },
     variants: {
