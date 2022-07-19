@@ -1,5 +1,3 @@
-import styles from './hero.module.css';
-
 export default function Hero() {
     return (
         <section className='font-monoCustom text-lg pt-16 flex flex-col gap-8 pb-20'>
@@ -31,7 +29,7 @@ export default function Hero() {
                 </p>
             </div>
 
-            <div className='flex flex-col gap-y-4 gap-x-2 justify-center items-center sm:flex-row max-w-3xl text-lg font-semibold'>
+            <div className='flex flex-col gap-y-4 gap-x-6 justify-center items-center self-center w-full sm:flex-row min-w-fit max-w-3xl text-lg font-semibold'>
                 <a
                     className='group flex flex-row flex-nowrap w-full justify-center gap-2 border-2 border-blue rounded-xl p-2 hover:bg-blue transition-all duration-300 ease-out'
                     href="mailto:wilsonzanea@gmail.com?subject=Contacting%20You&body=Hi%20Zane!%20I'd%20like%20to%20hire%20you%20:)"

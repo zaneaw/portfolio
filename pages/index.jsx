@@ -37,8 +37,8 @@ export default function Home() {
             />
             <div className='px-4'>
                 <Hero />
-                <About />
                 <Projects />
+                <About />
                 <Cert />
                 <FindMe />
             </div>

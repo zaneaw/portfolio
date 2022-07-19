@@ -6,6 +6,14 @@ import { MdExitToApp } from 'react-icons/md';
 export default function Projects() {
     const projectsList = [
         {
+            title: 'Share-a-Cart.com',
+            desc: "Developed and updated new pages, components, and animations. Optimized site speed while focusing on the user experience and creating a completely responsive user interface with an emphasis on ease-of-use to improve click-through rate. Improved site speed and decreased bundle size. Streamlined the development process to make collaboration with other developers simpler. 1,000+ users every week!",
+            sourceCode: '',
+            youtube: '',
+            liveSiteUrl: 'https://share-a-cart.com/',
+            liveSiteImg: 'sac.jpg',
+        },
+        {
             title: 'LA Mountains',
             desc: "This project was completed in the React framework, NextJS. The task was to take a PSD file (Photoshop Document) and turn it into a responsive, single page web application. In addition to Next.js, I also used Sass and some Bootstrap as well. I think the project came out looking great! Don't forget to check out the live site for yourself.",
             sourceCode: 'https://github.com/zaneaw/la-mountains',
