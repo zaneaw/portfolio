@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { Image } from 'next/image';
 import styles from './projects.module.css';
 import { MdExitToApp } from 'react-icons/md';
@@ -7,7 +6,7 @@ export default function Projects() {
     const projectsList = [
         {
             title: 'Share-a-Cart.com',
-            desc: "Developed and updated new pages, components, and animations. Optimized site speed while focusing on the user experience and creating a completely responsive user interface with an emphasis on ease-of-use to improve click-through rate. Improved site speed and decreased bundle size. Streamlined the development process to make collaboration with other developers simpler. 1,000+ users every week!",
+            desc: 'Developed and updated new pages, components, and animations. Optimized site speed while focusing on the user experience and creating a completely responsive user interface with an emphasis on ease-of-use to improve click-through rate. Improved site speed and decreased bundle size. Streamlined the development process to make collaboration with other developers simpler. 1,000+ users every week!',
             sourceCode: '',
             youtube: '',
             liveSiteUrl: 'https://share-a-cart.com/',
@@ -48,10 +47,7 @@ export default function Projects() {
     ];
 
     return (
-        <section
-            className={`${styles.section} primaryBackground`}
-            id='projects'
-        >
+        <section className='pt-20 flex flex-col gap--y-8' id='projects'>
             <h2 className={`${styles.projects} sectionHeader`}>Projects</h2>
             {projectsList.map((project, i) => {
                 return (
