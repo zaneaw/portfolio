@@ -35,11 +35,13 @@ export default function Home() {
             <Navbar 
                 handleOpenFeedback={handleOpenFeedback}
             />
-            <Hero />
-            <About />
-            <Projects />
-            <Cert />
-            <FindMe />
+            <div className='px-4'>
+                <Hero />
+                <About />
+                <Projects />
+                <Cert />
+                <FindMe />
+            </div>
             <Footer 
                 handleOpenFeedback={handleOpenFeedback}
             />

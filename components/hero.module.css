@@ -1,17 +1,4 @@
-.grid {
-    display: flex;
-    gap: 1.2rem;
-    flex-direction: column;
-}
-.hello {
-    grid-area: hello;
-}
 
-.detail {
-    grid-area: detail;
-    /* slight offset from left side */
-    margin: 0 0 3% 2%;
-}
 
 .buttonsContainer {
     display: flex;
@@ -52,21 +39,6 @@
     z-index: 1;
 }
 
-.show {
-    display: none;
-    font-family: var(--ff-primary);
-}
-
-@media (max-width: 25em) {
-    /* .buttonsContainer {
-        flex-direction: column;
-    } */
-    /* text underneath header, only show at > 30em */
-    .show {
-        display: none;
-    }
-}
-
 @media (min-width: 60em) {
     .grid {
         display: grid;
@@ -78,17 +50,5 @@
             "hello hello hello image image image image image"
             "detail detail detail image image image image image"
             "contact download . image image image image image";
-    }
-
-    .hello {
-        font-size: 3rem;
-    }
-
-    .detail {
-        font-size: 1.25rem;
-    }
-
-    .image {
-        padding: 0;
     }
 }
