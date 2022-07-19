@@ -5,8 +5,8 @@ import styles from './feedback.module.css';
 import Confetti from 'react-confetti';
 
 export default function Feedback({
-    open,
-    handleClose,
+    isFeedbackOpen,
+    handleCloseFeedback,
     submitSuccess,
     setSubmitSuccess,
 }) {
@@ -43,10 +43,10 @@ export default function Feedback({
 
     return (
         <div>
-            {open && (
+            {isFeedbackOpen && (
                 <div
                     className={styles.backdrop}
-                    onClick={submitSuccess ? handleClose : undefined}
+                    onClick={submitSuccess ? handleCloseFeedback : undefined}
                 >
                     <div className={styles.modal}>
                         <h4 className={styles.modalTitle}>
@@ -54,7 +54,7 @@ export default function Feedback({
                             <button
                                 className={styles.close}
                                 type='button'
-                                onClick={handleClose}
+                                onClick={handleCloseFeedback}
                             >
                                 &times;
                             </button>
@@ -189,7 +189,7 @@ export default function Feedback({
                                     <button
                                         className={`${styles.cancelButton} ${styles.formButton}`}
                                         type='button'
-                                        onClick={handleClose}
+                                        onClick={handleCloseFeedback}
                                     >
                                         Cancel
                                     </button>

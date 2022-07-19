@@ -32,16 +32,20 @@ export default function Home() {
                 />
                 <link rel='icon' href='/images/heart.png' />
             </Head>
-            <Navbar handleOpenFeedback={handleOpenFeedback} />
+            <Navbar 
+                handleOpenFeedback={handleOpenFeedback}
+            />
             <Hero />
             <About />
             <Projects />
             <Cert />
             <FindMe />
-            <Footer handleOpenFeedback={handleOpenFeedback} />
+            <Footer 
+                handleOpenFeedback={handleOpenFeedback}
+            />
             <Feedback
-                open={isFeedbackOpen}
-                handleClose={handleCloseFeedback}
+                isFeedbackOpen={isFeedbackOpen}
+                handleCloseFeedback={handleCloseFeedback}
                 submitSuccess={submitSuccess}
                 setSubmitSuccess={setSubmitSuccess}
             />

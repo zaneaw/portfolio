@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './navbar.module.css';
 
-export default function Navbar({ handleOpenFeedback }) {
+export default function Navbar({ handleOpenFeedback, toggleBlur }) {
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
     const [showNav, setShowNav] = useState(true);
 
@@ -44,8 +44,8 @@ export default function Navbar({ handleOpenFeedback }) {
         { title: 'Contact', click: normalClick },
     ];
 
-    function toggleNavbar() {
-        return setIsNavbarOpen(!isNavbarOpen);
+    const toggleNavbar = () => {
+        setIsNavbarOpen(isNavbarOpen => !isNavbarOpen);
     }
 
     return (
@@ -72,49 +72,47 @@ export default function Navbar({ handleOpenFeedback }) {
                         className={`${isNavbarOpen && '-translate-y-[10px] -rotate-45'} group-hover:bg-blue-light block w-[35px] h-[5px] bg-blue rounded my-[5px] mx-auto transition-all duration-300 ease-out`}
                     ></span>
                 </button>
-
-                <div id='pageNav'
-                    className={`z-10 fixed right-[10px] top-12 bg-blue-dark backdrop-blur-lg ${
-                        !isNavbarOpen && styles.toggle
-                    }`}
-                >
-                    <ul className='flex flex-col'>
-                        {navItems.map((navItem) => (
+                // change backdrop - this won't work
+                {isNavbarOpen && (
+                    <div className={styles.backdrop}>
+                        <ul className={`z-50 fixed right-0 top-[60px] flex flex-col bg-red-500 transition-all ${
+                            !isNavbarOpen && 'translate-x-full'}`}>
+                            {navItems.map((navItem) => (
+                                <li
+                                    // fix style below - add to CSS
+                                    style={{ originX: 0.01 }}
+                                    className={styles.navItem}
+                                    key={navItem.title}
+                                >
+                                    <Link href={`#${navItem.title.toLowerCase()}`}>
+                                        <a
+                                            className={styles.navLink}
+                                            onClick={navItem.click}
+                                        >
+                                            {navItem.title}
+                                        </a>
+                                    </Link>
+                                </li>
+                            ))}
                             <li
                                 // fix style below - add to CSS
                                 style={{ originX: 0.01 }}
-                                className={styles.navItem}
-                                key={navItem.title}
+                                className={`${styles.navItem} ${styles.feedback}`}
                             >
-                                <Link href={`#${navItem.title.toLowerCase()}`}>
-                                    <a
-                                        className={styles.navLink}
-                                        onClick={navItem.click}
-                                    >
-                                        {navItem.title}
-                                    </a>
-                                </Link>
+                                <a
+                                    className={styles.navLink}
+                                    onClick={() => {
+                                        handleOpenFeedback();
+                                        {isNavbarOpen && setIsNavbarOpen();}
+                                    }}
+                                >
+                                    Feedback
+                                </a>
                             </li>
-                        ))}
-                        <li
-                            // fix style below - add to CSS
-                            style={{ originX: 0.01 }}
-                            className={`${styles.navItem} ${styles.feedback}`}
-                        >
-                            <a
-                                className={styles.navLink}
-                                onClick={() => {
-                                    handleOpenFeedback();
-                                    {
-                                        isNavbarOpen && toggleNavbar();
-                                    }
-                                }}
-                            >
-                                Feedback
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                        </ul>
+                    </div>
+                )}
+                
             </nav>
             <Link href='#' passHref>
                 <svg className='fill-blue-dark border-[1px] border-blue-dark z-10 w-8 h-8 p-1.5 shadow fixed m-1 right-3 bottom-3 rounded-full cursor-pointer bg-blue opacity-60 transition-all duration-300 ease-out hover:fill-blue hover:bg-blue-dark hover:border-blue' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
