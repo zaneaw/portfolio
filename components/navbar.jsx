@@ -50,11 +50,11 @@ export default function Navbar({ handleOpenFeedback }) {
             <nav
                 className={`${
                     !showNav && '-translate-y-14'
-                } w-full bg-blue-dark shadow p-2 flex justify-between items-center fixed top-0 transition-all duration-200 ease-out`}
+                } w-full bg-primary-dark shadow p-2 flex justify-between items-center fixed top-0 transition-all duration-200 ease-out`}
             >
                 <Link href='#' passHref>
                     <svg
-                        className='w-10 h-10 fill-blue hover:fill-blue-light md:fill-blue md:hover:fill-blue-light cursor-pointer transition-all duration-300 ease-out'
+                        className='w-10 h-10 fill-primary hover:fill-primary-light md:fill-primary md:hover:fill-primary-light cursor-pointer transition-all duration-300 ease-out'
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 512 512'
                         onClick={() => isNavbarOpen && setIsNavbarOpen()}
@@ -64,29 +64,29 @@ export default function Navbar({ handleOpenFeedback }) {
                 </Link>
 
                 <button
-                    className='group bg-blue-dark rounded block p-1 md:hidden'
+                    className='group bg-primary-dark rounded block p-1 md:hidden'
                     onClick={toggleNavbar}
                     aria-label='toggle navigation'
                 >
                     <span
                         className={`${
                             isNavbarOpen && 'translate-y-[10px] rotate-45'
-                        } group-hover:bg-blue-light block w-[35px] h-[5px] bg-blue rounded my-[5px] mx-auto transition-all duration-300 ease-out`}
+                        } group-hover:bg-primary-light block w-[35px] h-[5px] bg-primary rounded my-[5px] mx-auto transition-all duration-300 ease-out`}
                     ></span>
                     <span
                         className={`${
                             isNavbarOpen && 'opacity-0'
-                        } group-hover:bg-blue-light block w-[35px] h-[5px] bg-blue rounded my-[5px] mx-auto transition-all duration-300 ease-out`}
+                        } group-hover:bg-primary-light block w-[35px] h-[5px] bg-primary rounded my-[5px] mx-auto transition-all duration-300 ease-out`}
                     ></span>
                     <span
                         className={`${
                             isNavbarOpen && '-translate-y-[10px] -rotate-45'
-                        } group-hover:bg-blue-light block w-[35px] h-[5px] bg-blue rounded my-[5px] mx-auto transition-all duration-300 ease-out`}
+                        } group-hover:bg-primary-light block w-[35px] h-[5px] bg-primary rounded my-[5px] mx-auto transition-all duration-300 ease-out`}
                     ></span>
                 </button>
 
                 <div
-                    className={`z-50 text-xl min-w-2/5 divide-y-2 divide-blue border-l-2 border-t-2 border-b-2 border-blue fixed right-0 top-[60px] flex flex-col shadow-lg bg-blue-dark/60 backdrop-blur-lg transition-all duration-300 ease-out ${
+                    className={`z-50 text-xl min-w-2/5 divide-y-2 divide-primary border-l-2 border-t-2 border-b-2 border-primary fixed right-0 top-[60px] flex flex-col shadow-lg bg-primary-dark/60 backdrop-blur-lg transition-all duration-300 ease-out ${
                         !isNavbarOpen && 'translate-x-full'
                     } origin-right
                             md:flex-row md:static md:translate-x-0 md:border-0 md:divide-y-0 md:gap-x-2 md:shadow-none md:text-base`}
@@ -97,13 +97,13 @@ export default function Navbar({ handleOpenFeedback }) {
                             href={`#${navItem.title.toLowerCase()}`}
                             key={navItem.title}
                         >
-                            <a className='uppercase font-medium text-blue tracking-widest px-6 py-2 hover:bg-blue hover:text-blue-dark md:hover:bg-blue-dark md:hover:text-blue-light transition-all duration-150 ease-in hover:cursor-pointer md:px-2'>
+                            <a className='uppercase font-medium text-primary tracking-widest px-6 py-2 hover:bg-primary hover:text-primary-dark md:hover:bg-primary-dark md:hover:text-primary-light transition-all duration-150 ease-in hover:cursor-pointer md:px-2'>
                                 {navItem.title}
                             </a>
                         </Link>
                     ))}
                     <a
-                        className='uppercase font-medium text-blue tracking-widest px-6 py-2 hover:bg-blue hover:text-blue-dark md:hover:bg-blue-dark md:hover:text-blue-light transition-all duration-150 ease-in hover:cursor-pointer md:px-2'
+                        className='uppercase font-medium text-primary tracking-widest px-6 py-2 hover:bg-primary hover:text-primary-dark md:hover:bg-primary-dark md:hover:text-primary-light transition-all duration-150 ease-in hover:cursor-pointer md:px-2'
                         onClick={() => {
                             handleOpenFeedback();
                             {
@@ -124,7 +124,7 @@ export default function Navbar({ handleOpenFeedback }) {
             </nav>
             <Link href='#' passHref>
                 <svg
-                    className='fill-blue-dark border-[1px] border-blue-dark z-10 w-8 h-8 p-1.5 shadow fixed m-1 right-3 bottom-3 rounded-full cursor-pointer bg-blue opacity-60 transition-all duration-300 ease-out hover:fill-blue hover:bg-blue-dark hover:border-blue'
+                    className='fill-primary-dark border-[1px] border-primary-dark z-10 w-8 h-8 p-1.5 shadow fixed m-1 right-3 bottom-3 rounded-full cursor-pointer bg-primary opacity-60 transition-all duration-300 ease-out hover:fill-primary hover:bg-primary-dark hover:border-primary'
                     xmlns='http://www.w3.org/2000/svg'
                     viewBox='0 0 384 512'
                 >

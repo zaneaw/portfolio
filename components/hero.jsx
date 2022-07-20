@@ -4,7 +4,7 @@ export default function Hero() {
             <div className='text-gray-light text-2xl'>
                 <p className='pb-2'>Hello, I&apos;m</p>
                 <span className='before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-light relative inline-block -z-10'>
-                    <span className='relative text-blue-dark font-bold text-4xl'>
+                    <span className='relative text-primary-dark font-bold text-4xl'>
                         Zane Wilson
                     </span>
                 </span>
@@ -31,16 +31,16 @@ export default function Hero() {
 
             <div className='flex flex-col gap-y-4 gap-x-6 justify-center items-center self-center w-full sm:flex-row min-w-fit max-w-3xl text-lg font-semibold'>
                 <a
-                    className='group flex flex-row flex-nowrap w-full justify-center gap-2 border-2 border-blue rounded-xl p-2 hover:bg-blue transition-all duration-300 ease-out'
+                    className='group flex flex-row flex-nowrap w-full justify-center gap-2 border-2 border-primary rounded-xl p-2 hover:bg-primary transition-all duration-300 ease-out'
                     href="mailto:wilsonzanea@gmail.com?subject=Contacting%20You&body=Hi%20Zane!%20I'd%20like%20to%20hire%20you%20:)"
                     target='_blank'
                     rel='noreferrer'
                 >
-                    <span className='text-blue group-hover:text-blue-dark transition-all duration-300 ease-out'>
+                    <span className='text-primary group-hover:text-primary-dark transition-all duration-300 ease-out'>
                         Contact Me
                     </span>
                     <svg
-                        className='w-6 fill-blue group-hover:fill-blue-dark transition-all duration-300 ease-out'
+                        className='w-6 fill-primary group-hover:fill-primary-dark transition-all duration-300 ease-out'
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 512 512'
                     >
@@ -48,13 +48,13 @@ export default function Hero() {
                     </svg>
                 </a>
                 <a
-                    className='group flex flex-row flex-nowrap w-full justify-center gap-2 border-2 border-blue rounded-xl p-2 hover:bg-blue transition-all duration-300 ease-out'
+                    className='group flex flex-row flex-nowrap w-full justify-center gap-2 border-2 border-primary rounded-xl p-2 hover:bg-primary transition-all duration-300 ease-out'
                     href='/downloads/zanescv.pdf'
                     download='ZanesCV'
                 >
-                    <span className='text-blue group-hover:text-blue-dark transition-all duration-300 ease-out'>Download CV</span>
+                    <span className='text-primary group-hover:text-primary-dark transition-all duration-300 ease-out'>Download CV</span>
                     <svg
-                        className='w-6 fill-blue group-hover:fill-blue-dark transition-all duration-300 ease-out'
+                        className='w-6 fill-primary group-hover:fill-primary-dark transition-all duration-300 ease-out'
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 512 512'
                     >
