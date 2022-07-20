@@ -26,10 +26,10 @@ export default function About() {
 
     return (
         <section
-            className='z-0 mt-20 border border-primary shadow-lg mb-6 p-4 mx-6 rounded-lg text-gray-light flex flex-col gap-y-8 justify-center items-center'
+            className='z-0 mt-20 border border-primary shadow-lg mb-6 p-4 xs:mx-6 rounded-lg text-gray-light flex flex-col gap-y-8 justify-center items-center'
             id='about'
         >
-            <h2 className='text-primary text-4xl font-rampart mt-2'>
+            <h2 className='text-primary text-4xl font-rampart mt-2 text-center'>
                 About Me
             </h2>
             <p className='text-gray-light font-serifCustom tracking-wide'>
@@ -68,7 +68,7 @@ export default function About() {
                 </div>
             ))} */}
 
-            <h3 className='text-primary text-4xl font-rampart mt-2'>
+            <h3 className='text-primary text-4xl font-rampart mt-2 text-center'>
                 Getting Personal
             </h3>
             <p className='text-gray-light font-serifCustom tracking-wide'>

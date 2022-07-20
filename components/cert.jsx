@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import styles from './cert.module.css';
 
 export default function Certs() {
     const certs = [

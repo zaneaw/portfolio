@@ -1,91 +1,36 @@
-import styles from './findMe.module.css';
-import {
-    FaGithub,
-    FaLinkedinIn,
-    FaTwitter,
-    FaInstagram,
-    FaFacebookF,
-    FaYoutube,
-} from 'react-icons/fa';
-import { SiGmail } from 'react-icons/si';
-
 export default function ContactMe() {
-    const itemVariant = {
-        hidden: { opacity: 0, scale: 0 },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: { duration: 1 },
-        },
-        hover: { scale: 1.2 },
-        tap: { scale: 0.9 },
-        view: { visible: { once: true } },
-    };
-
     return (
-        <section className={`${styles.grid} primaryBackground`} id='contact'>
-            <h2 className={`${styles.findMe} sectionHeader`}>Find Me</h2>
+        <section
+            className='z-0 flex flex-col gap-y-8 justify-center items-center my-40'
+            id='contact'
+        >
+            <h2 className='text-primary text-5xl font-rampart mt-2 text-center'>
+                Contact Me
+            </h2>
+            <p className='text-gray-light font-serifCustom tracking-wide text-center max-w-[520px]'>
+                I&apos;m actively searching for more a permament position and
+                my&nbsp;
+                <a
+                    className='group text-pink-light transition-all duration-300 ease-in-out'
+                    href="mailto:wilsonzanea@gmail.com?subject=Contacting%20You&body=Hi%20Zane!%20I'd%20like%20to%20hire%20you%20:)"
+                    target='_blank'
+                    rel='noreferrer'
+                >
+                    <span className='font-monoCustom bg-left-bottom bg-gradient-to-r from-pink-light to-pink-light bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
+                        inbox is open
+                    </span>
+                </a>
+                ! Whether you have a question, some feedback or just want to say
+                hi, I&apos;ll try my best to get back to you!
+            </p>
+
             <a
+                className='w-full max-w-[200px] text-center border-2 border-pink-light rounded-xl p-2 hover:bg-pink-light text-pink-light hover:text-primary-dark font-monoCustom text-lg font-semibold uppercase transition-all duration-300 ease-out'
+                href="mailto:wilsonzanea@gmail.com?subject=Contacting%20You&body=Hi%20Zane!%20I'd%20like%20to%20hire%20you%20:)"
                 target='_blank'
                 rel='noreferrer'
-                href='https://github.com/zaneaw'
-                className={`${styles.bubble} ${styles.githubBubble}`}
             >
-                <FaGithub className={`${styles.icon} ${styles.githubIcon}`} />
-            </a>
-            <a
-                target='_blank'
-                rel='noreferrer'
-                href='mailto:wilsonzanea@gmail.com?subject=Portfolio&body=Hello%20Zane...'
-                className={`${styles.bubble} ${styles.gmailBubble}`}
-            >
-                <SiGmail className={`${styles.icon} ${styles.gmailIcon}`} />
-            </a>
-            <a
-                target='_blank'
-                rel='noreferrer'
-                href='https://www.linkedin.com/in/zaneaw/'
-                className={`${styles.bubble} ${styles.linkedInBubble}`}
-            >
-                <FaLinkedinIn
-                    className={`${styles.icon} ${styles.linkedInIcon}`}
-                />
-            </a>
-            <a
-                target='_blank'
-                rel='noreferrer'
-                href='https://twitter.com/zane_ohh'
-                className={`${styles.bubble} ${styles.twitterBubble}`}
-            >
-                <FaTwitter className={`${styles.icon} ${styles.twitterIcon}`} />
-            </a>
-            <a
-                target='_blank'
-                rel='noreferrer'
-                href='https://www.instagram.com/zane_ohh/'
-                className={`${styles.bubble} ${styles.instagramBubble}`}
-            >
-                <FaInstagram
-                    className={`${styles.icon} ${styles.instagramIcon}`}
-                />
-            </a>
-            <a
-                target='_blank'
-                rel='noreferrer'
-                href='https://www.facebook.com/zaneohh/'
-                className={`${styles.bubble} ${styles.facebookBubble}`}
-            >
-                <FaFacebookF
-                    className={`${styles.icon} ${styles.facebookIcon}`}
-                />
-            </a>
-            <a
-                target='_blank'
-                rel='noreferrer'
-                href='https://www.youtube.com/channel/UCYCFZAEq-7qAwr8dMdqbw5Q'
-                className={`${styles.bubble} ${styles.youtubeBubble}`}
-            >
-                <FaYoutube className={`${styles.icon} ${styles.youtubeIcon}`} />
+                Email Me
             </a>
         </section>
     );

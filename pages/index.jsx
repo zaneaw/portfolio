@@ -35,7 +35,7 @@ export default function Home() {
             <Navbar 
                 handleOpenFeedback={handleOpenFeedback}
             />
-            <div className='z-0 px-4 sm:px-8 md:px-16 lg:px-40 overflow-hidden font-serifCustom'>
+            <div className='z-0 px-4 sm:px-8 md:px-16 lg:px-40 overflow-hidden font-serifCustom tracking-wide'>
                 <Hero />
                 <Projects />
                 <About />

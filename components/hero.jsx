@@ -19,13 +19,14 @@ export default function Hero() {
                     for&nbsp;
                     <a
                         href='https://share-a-cart.com/'
-                        className='group text-pink-light transition-all duration-300 ease-in-out'
+                        className='group font-monoCustom font-semibold text-pink-light transition-all duration-300 ease-in-out'
                     >
                         <span className='bg-left-bottom bg-gradient-to-r from-pink-light to-pink-light bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
                             Share-a-Cart.com
                         </span>
                         <span className='text-gray-light'>.</span>
                     </a>
+                    &nbsp;I am in the market for new opportunities.
                 </p>
             </div>
 

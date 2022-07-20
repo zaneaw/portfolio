@@ -35,8 +35,8 @@ export default function Navbar({ handleOpenFeedback }) {
     }, [isNavbarOpen]);
 
     const navItems = [
-        { title: 'Projects' },
-        { title: 'About' },
+        { title: 'Work' },
+        { title: 'About Me' },
         // { title: 'Certificates' },
         { title: 'Contact' },
     ];
@@ -122,15 +122,17 @@ export default function Navbar({ handleOpenFeedback }) {
                     ></div>
                 )}
             </nav>
-            <Link href='#' passHref>
-                <svg
-                    className='fill-primary-dark border-[1px] border-primary-dark z-10 w-8 h-8 p-1.5 shadow fixed m-1 right-3 bottom-3 rounded-full cursor-pointer bg-primary opacity-60 transition-all duration-300 ease-out hover:fill-primary hover:bg-primary-dark hover:border-primary'
-                    xmlns='http://www.w3.org/2000/svg'
-                    viewBox='0 0 384 512'
-                >
-                    <path d='M374.6 246.6C368.4 252.9 360.2 256 352 256s-16.38-3.125-22.62-9.375L224 141.3V448c0 17.69-14.33 31.1-31.1 31.1S160 465.7 160 448V141.3L54.63 246.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160C387.1 213.9 387.1 234.1 374.6 246.6z' />
-                </svg>
-            </Link>
+            <div className='hidden xs:block'>
+                <Link href='#' passHref>
+                    <svg
+                        className='fill-primary-dark border-[1px] border-primary-dark z-10 w-8 h-8 p-1.5 shadow fixed m-1 right-3 bottom-3 rounded-full cursor-pointer bg-primary opacity-60 transition-all duration-300 ease-out hover:fill-primary hover:bg-primary-dark hover:border-primary'
+                        xmlns='http://www.w3.org/2000/svg'
+                        viewBox='0 0 384 512'
+                    >
+                        <path d='M374.6 246.6C368.4 252.9 360.2 256 352 256s-16.38-3.125-22.62-9.375L224 141.3V448c0 17.69-14.33 31.1-31.1 31.1S160 465.7 160 448V141.3L54.63 246.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160C387.1 213.9 387.1 234.1 374.6 246.6z' />
+                    </svg>
+                </Link>
+            </div>
         </header>
     );
 }
