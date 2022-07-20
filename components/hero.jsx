@@ -1,6 +1,6 @@
 export default function Hero() {
     return (
-        <section className='font-monoCustom text-lg pt-16 flex flex-col gap-8 pb-20'>
+        <section className='font-monoCustom text-lg pt-[10vh] flex flex-col gap-[5vh] min-h-[100vh]'>
             <div className='text-gray-light text-2xl'>
                 <p className='pb-2'>Hello, I&apos;m</p>
                 <span className='before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-light relative inline-block -z-10'>
@@ -37,7 +37,7 @@ export default function Hero() {
                     rel='noreferrer'
                 >
                     <span className='text-primary group-hover:text-primary-dark transition-all duration-300 ease-out'>
-                        Contact Me
+                        Email Me
                     </span>
                     <svg
                         className='w-6 fill-primary group-hover:fill-primary-dark transition-all duration-300 ease-out'

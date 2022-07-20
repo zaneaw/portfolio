@@ -14,7 +14,8 @@ module.exports = {
                 'primary': { 
                     DEFAULT: '#6495ED', 
                     dark: '#132246', 
-                    light: '#ABD7EE' 
+                    light: '#ABD7EE',
+                    darker: '#0F1A35', 
                 },
                 'pink-light': '#FFB0EE',
                 'red-orange': '#E29578',
@@ -23,14 +24,7 @@ module.exports = {
         fontFamily: {
             serifCustom: ['Roboto', 'sans-serif'],
             monoCustom: ['Source Code Pro', 'monospace'],
-            audiowide: 'Audiowide', cursive;
-            cinzel: 'Cinzel Decorative', cursive;
-            gruppo: 'Gruppo', cursive;
-            limelight: 'Limelight', cursive;
-            monoton: 'Monoton', cursive;
-            poiret: 'Poiret One', cursive;
-            pressStart: 'Press Start 2P', cursive;
-            rampart: 'Rampart One', cursive;
+            rampart: ['Rampart One', 'cursive'],
         },
     },
     variants: {

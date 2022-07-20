@@ -43,14 +43,13 @@ export default function Certs() {
 
     return (
         <section
-            className={`${styles.section} secondaryBackground`}
+            className='z-0 mt-20 rounded-lg text-gray-light flex flex-col gap-y-8 justify-center items-center'
             id='certificates'
         >
-            <h2 className={`${styles.certificates} sectionHeader`}>
-                Certificates
+            <h2 className='text-primary text-4xl font-rampart mt-2'>
+                Education
             </h2>
-
-            <div className={styles.articlesContainer}>
+            <div className=''>
                 {certs.map((cert) => {
                     return (
                         <article key={cert.key} className={styles.article}>
@@ -71,9 +70,6 @@ export default function Certs() {
                                     alt={cert.alt}
                                 />
                             </a>
-                            <small className={styles.small}>
-                                (click &#9757; to view details)
-                            </small>
                         </article>
                     );
                 })}

@@ -35,11 +35,11 @@ export default function Home() {
             <Navbar 
                 handleOpenFeedback={handleOpenFeedback}
             />
-            <div className='px-4'>
+            <div className='z-0 px-4 sm:px-8 md:px-16 lg:px-40 overflow-hidden font-serifCustom'>
                 <Hero />
                 <Projects />
                 <About />
-                <Cert />
+                {/* <Cert /> */}
                 <FindMe />
             </div>
             <Footer 

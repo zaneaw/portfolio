@@ -37,7 +37,7 @@ export default function Navbar({ handleOpenFeedback }) {
     const navItems = [
         { title: 'Projects' },
         { title: 'About' },
-        { title: 'Certificates' },
+        // { title: 'Certificates' },
         { title: 'Contact' },
     ];
 
@@ -50,7 +50,7 @@ export default function Navbar({ handleOpenFeedback }) {
             <nav
                 className={`${
                     !showNav && '-translate-y-14'
-                } w-full bg-primary-dark shadow p-2 flex justify-between items-center fixed top-0 transition-all duration-200 ease-out`}
+                } z-10 w-full bg-primary-dark shadow p-2 flex justify-between items-center fixed top-0 transition-all duration-200 ease-out`}
             >
                 <Link href='#' passHref>
                     <svg
@@ -86,7 +86,7 @@ export default function Navbar({ handleOpenFeedback }) {
                 </button>
 
                 <div
-                    className={`z-50 text-xl min-w-2/5 divide-y-2 divide-primary border-l-2 border-t-2 border-b-2 border-primary fixed right-0 top-[60px] flex flex-col shadow-lg bg-primary-dark/60 backdrop-blur-lg transition-all duration-300 ease-out ${
+                    className={`z-50 text-xl min-w-2/5 divide-y-2 divide-primary border-l-2 border-t-2 border-b-2 border-primary fixed right-0 top-[58px] flex flex-col shadow-lg bg-primary-dark/60 backdrop-blur-md transition-all duration-300 ease-out ${
                         !isNavbarOpen && 'translate-x-full'
                     } origin-right
                             md:flex-row md:static md:translate-x-0 md:border-0 md:divide-y-0 md:gap-x-2 md:shadow-none md:text-base`}
@@ -117,7 +117,7 @@ export default function Navbar({ handleOpenFeedback }) {
 
                 {isNavbarOpen && (
                     <div
-                        className='absolute z-30 top-[60px] left-0 w-[100vw] h-[100vh] backdrop-blur-[2px] transition-all duration-1000 ease-out'
+                        className='absolute z-30 top-[58px] left-0 w-[100vw] h-[100vh] backdrop-blur-[2px] transition-all duration-1000 ease-out'
                         onClick={() => isNavbarOpen && setIsNavbarOpen()}
                     ></div>
                 )}
