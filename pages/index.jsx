@@ -45,12 +45,13 @@ export default function Home() {
             <Footer 
                 handleOpenFeedback={handleOpenFeedback}
             />
-            <Feedback
-                isFeedbackOpen={isFeedbackOpen}
-                handleCloseFeedback={handleCloseFeedback}
-                submitSuccess={submitSuccess}
-                setSubmitSuccess={setSubmitSuccess}
-            />
+            {isFeedbackOpen && (
+                <Feedback
+                    handleCloseFeedback={handleCloseFeedback}
+                    submitSuccess={submitSuccess}
+                    setSubmitSuccess={setSubmitSuccess}
+                />
+            )}
         </>
     );
 }

@@ -43,7 +43,7 @@ export default function Footer({ handleOpenFeedback }) {
                 Send Feedback
             </button>
 
-            <a href='https://github.com/zaneaw/portfolio' className='text-center text-sm xs:text-base'>
+            <a href='https://github.com/zaneaw/portfolio' target='_blank' rel='noreferrer' className='text-center text-sm xs:text-base hover:text-red-orange'>
                 Designed and Built by Zane Wilson
             </a>
         </footer>
