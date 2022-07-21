@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { FaHeart } from 'react-icons/fa';
-import styles from './feedback.module.css';
 import Confetti from 'react-confetti';
 
 export default function Feedback({
@@ -51,7 +49,7 @@ export default function Feedback({
                     onClick={handleCloseFeedback}
                 >
                     <svg
-                        className='w-4 fill-gray-light group-hover:fill-gray-400 transition-all duration-300 ease-out'
+                        className='w-4 fill-primary group-hover:fill-primary-light transition-all duration-300 ease-out'
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 320 512'
                     >
@@ -79,7 +77,7 @@ export default function Feedback({
                             <div className='flex justify-between'>
                                 <label
                                     htmlFor='rating'
-                                    className={`text-lg xs:text-xl font-semibold ${errors.rating?.message ? 'text-pink-light' : 'text-primary'}`}
+                                    className='text-primary text-lg xs:text-xl font-semibold'
                                 >
                                     Rating:
                                 </label>
@@ -102,23 +100,25 @@ export default function Feedback({
                                                     }
                                                     className='hidden'
                                                 />
-                                                <FaHeart
-                                                    color={
+                                                <svg
+                                                    className={`w-8 cursor-pointer p-0.5 transition-all duration-300 ease-out ${
                                                         ratingValue <=
                                                         (hover || rating)
-                                                            ? '#6495ED'
-                                                            : '#EDF6F9'
-                                                    }
-                                                    size={30}
+                                                            ? 'fill-primary'
+                                                            : 'fill-off-white'
+                                                    }`}
                                                     name='rating'
-                                                    className='cursor-pointer p-0.5 transition-all duration-300 ease-out'
                                                     onMouseEnter={() =>
                                                         setHover(ratingValue)
                                                     }
                                                     onMouseLeave={() =>
                                                         setHover()
                                                     }
-                                                />
+                                                    xmlns='http://www.w3.org/2000/svg'
+                                                    viewBox='0 0 512 512'
+                                                >
+                                                    <path d='M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z' />
+                                                </svg>
                                             </label>
                                         );
                                     })}
@@ -134,7 +134,7 @@ export default function Feedback({
                         <div className='flex flex-col'>
                             <label
                                 htmlFor='name'
-                                className='text-primary text-lg xs:text-xl font-semibold'
+                                className='text-primary text-lg xs:text-xl font-semibold w-fit'
                             >
                                 Name:
                             </label>
@@ -142,7 +142,10 @@ export default function Feedback({
                                 id='name'
                                 placeholder='Your Name'
                                 name='name'
-                                className={`w-full px-2 py-1 text-lg rounded-md focus:outline-none text-primary-dark font-semibold ${errors.name?.message && 'border-2 border-pink-light'}`}
+                                className={`w-full px-2 py-1 text-lg rounded-md text-primary-dark font-semibold focus-visible:outline-primary outline outline-offset-0 outline-[3px] ${
+                                    errors.name?.message &&
+                                    'border-2 border-pink-light'
+                                }`}
                                 {...register('name', {
                                     required: 'Name required*',
                                     minLength: {
@@ -161,7 +164,7 @@ export default function Feedback({
                         <div className='flex flex-col'>
                             <label
                                 htmlFor='email'
-                                className='text-primary text-lg xs:text-xl font-semibold'
+                                className='text-primary text-lg xs:text-xl font-semibold w-fit'
                             >
                                 Email:
                             </label>
@@ -169,7 +172,10 @@ export default function Feedback({
                                 id='email'
                                 placeholder='Your Email'
                                 name='email'
-                                className={`${styles.emailInput} ${styles.input}`}
+                                className={`w-full px-2 py-1 text-lg rounded-md text-primary-dark font-semibold focus-visible:outline-primary outline outline-offset-0 outline-[3px] ${
+                                    errors.email?.message &&
+                                    'border-2 border-pink-light'
+                                }`}
                                 {...register('email', {
                                     required: 'Email required*',
                                     pattern: {
@@ -185,41 +191,46 @@ export default function Feedback({
                             )}
                         </div>
 
-                        <label
-                            htmlFor='name'
-                            className='text-primary text-lg xs:text-xl font-semibold'
-                        >
-                            Name:
-                        </label>
-                        <textarea
-                            id='comments'
-                            placeholder='Your Comments'
-                            name='comments'
-                            rows='4'
-                            className={`${styles.commentsInput} ${styles.input}`}
-                            {...register('comments', {
-                                maxLength: {
-                                    value: 120,
-                                    message: 'Message too long. Max 120',
-                                },
-                            })}
-                        />
-                        <p className={styles.error}>
-                            {errors.comments?.message}
-                        </p>
+                        <div className='flex flex-col'>
+                            <label
+                                htmlFor='comments'
+                                className='text-primary text-lg xs:text-xl font-semibold w-fit'
+                            >
+                                Comments:
+                            </label>
+                            <textarea
+                                id='comments'
+                                placeholder='Your Comments'
+                                name='comments'
+                                rows='4'
+                                className={`w-full px-2 py-1 text-lg rounded-md text-primary-dark font-semibold focus-visible:outline-primary outline outline-offset-0 outline-[3px] ${
+                                    errors.comments?.message &&
+                                    'border-2 border-pink-light'
+                                }`}
+                                {...register('comments', {
+                                    maxLength: {
+                                        value: 120,
+                                        message:
+                                            'Message too long. Max 120 characters',
+                                    },
+                                })}
+                            />
+                            {errors.comments?.message && (
+                                <p className='font-monoCustom italic text-sm text-pink-light'>
+                                    {errors.comments?.message}
+                                </p>
+                            )}
+                        </div>
 
-                        <div className={styles.buttonContainer}>
+                        <div className='mt-4 flex flex-row justify-between gap-2'>
                             <button
-                                className={`${styles.cancelButton} ${styles.formButton}`}
+                                className='grow-0 border-2 font-semibold border-primary text-primary hover:bg-primary hover:text-primary-dark rounded-lg px-4 py-2 transition-all duration-300 ease-out'
                                 type='button'
                                 onClick={handleCloseFeedback}
                             >
                                 Cancel
                             </button>
-                            <button
-                                className={`${styles.submitButton} ${styles.formButton}`}
-                                type='submit'
-                            >
+                            <button className='grow border-2 font-semibold border-red-orange text-primary-dark bg-red-orange hover:bg-primary-dark hover:text-red-orange rounded-lg px-4 py-2 transition-all duration-300 ease-out' type='submit'>
                                 Submit
                             </button>
                         </div>

@@ -26,7 +26,7 @@ export default function About() {
 
     return (
         <section
-            className='z-0 mt-20 border border-primary shadow-lg mb-6 p-4 xs:mx-6 rounded-lg text-gray-light flex flex-col gap-y-8 justify-center items-center'
+            className='scroll-mt-20 z-0 mt-20 border border-primary shadow-lg mb-6 p-4 xs:mx-6 rounded-lg text-gray-light flex flex-col gap-y-8 justify-center items-center'
             id='about'
         >
             <h2 className='text-primary text-4xl font-rampart mt-2 text-center'>

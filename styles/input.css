@@ -2,23 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* 
-    General Styling 
-*/
 html {
     scroll-behavior: smooth;
 }
-
-
-
-/* KEEP THIS? YES OR NO? */
-/* 
-    NavLinks
-*/
-/* #about,
-#projects,
-#certificates,
-#contact {
-    scroll-margin-top: 71px;
-} */

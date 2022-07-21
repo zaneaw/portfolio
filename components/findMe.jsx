@@ -8,7 +8,7 @@ export default function ContactMe() {
                 Contact Me
             </h2>
             <p className='text-gray-light font-serifCustom tracking-wide text-center max-w-[520px]'>
-                I&apos;m actively searching for more a permament position and
+                I&apos;m actively searching for a more permament position and
                 my&nbsp;
                 <a
                     className='group text-pink-light transition-all duration-300 ease-in-out'

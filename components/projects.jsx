@@ -61,8 +61,8 @@ export default function Projects() {
 
     return (
         <section
-            className='z-0 flex flex-col gap-y-8 justify-center items-center'
-            id='projects'
+            className='scroll-mt-20 z-0 flex flex-col gap-y-8 justify-center items-center'
+            id='work'
         >
             <h2 className='text-primary text-5xl font-rampart mb-12'>
                 My Work

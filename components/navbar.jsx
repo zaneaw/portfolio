@@ -35,10 +35,10 @@ export default function Navbar({ handleOpenFeedback }) {
     }, [isNavbarOpen]);
 
     const navItems = [
-        { title: 'Work' },
-        { title: 'About Me' },
+        { title: 'Work', link: 'work' },
+        { title: 'About Me', link: 'about' },
         // { title: 'Certificates' },
-        { title: 'Contact' },
+        { title: 'Contact', link: 'contact' },
     ];
 
     const toggleNavbar = () => {
@@ -94,7 +94,7 @@ export default function Navbar({ handleOpenFeedback }) {
                 >
                     {navItems.map((navItem) => (
                         <Link
-                            href={`#${navItem.title.toLowerCase()}`}
+                            href={`#${navItem.link.toLowerCase()}`}
                             key={navItem.title}
                         >
                             <a className='uppercase font-medium text-primary tracking-widest px-6 py-2 hover:bg-primary hover:text-primary-dark md:hover:bg-primary-dark md:hover:text-primary-light transition-all duration-150 ease-in hover:cursor-pointer md:px-2'>

@@ -26,7 +26,7 @@ export default function Hero() {
                         </span>
                         <span className='text-gray-light'>.</span>
                     </a>
-                    &nbsp;I am in the market for new opportunities.
+                    &nbsp;I am in the market for new opportunities!
                 </p>
             </div>
 
