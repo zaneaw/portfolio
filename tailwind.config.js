@@ -20,6 +20,22 @@ module.exports = {
                 'pink-light': '#FFB0EE',
                 'red-orange': '#E29578',
             },
+            keyframes: {
+                spinDots: {
+                    '0%': { transform: 'rotate(0deg)'},
+                    '50%, 100%': { transform: 'rotate(180deg)'},
+                },
+                onOff: {
+                    '0%, 49%': { opacity: '0'},
+                    '50%, 100%': { opacity: '1'},
+                },
+            },
+            animation: {
+                spinDots: 'spinDots 2s cubic-bezier(.52,-0.75,.75,.23) infinite',
+                spinDotsReverse: 'spinDots 2s cubic-bezier(.52,-0.75,.75,.23) infinite reverse',
+                onOff: 'onOff 2s cubic-bezier(.52,-0.75,.75,.23) infinite',
+                onOffReverse: 'onOff 2s cubic-bezier(.52,-0.75,.75,.23) infinite reverse',
+            },
         },
         fontFamily: {
             serifCustom: ['Roboto', 'sans-serif'],

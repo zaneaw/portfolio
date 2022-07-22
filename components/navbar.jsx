@@ -42,7 +42,7 @@ export default function Navbar({ handleOpenFeedback }) {
     ];
 
     const toggleNavbar = () => {
-        setIsNavbarOpen((isNavbarOpen) => !isNavbarOpen);
+        setIsNavbarOpen((prev) => !prev);
     };
 
     return (

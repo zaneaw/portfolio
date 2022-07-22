@@ -32,9 +32,7 @@ export default function Home() {
                 />
                 <link rel='icon' href='/images/heart.png' />
             </Head>
-            <Navbar 
-                handleOpenFeedback={handleOpenFeedback}
-            />
+            <Navbar handleOpenFeedback={handleOpenFeedback} />
             <div className='z-0 px-4 sm:px-8 md:px-16 lg:px-40 overflow-hidden font-serifCustom tracking-wide'>
                 <Hero />
                 <Projects />
@@ -42,9 +40,7 @@ export default function Home() {
                 {/* <Cert /> */}
                 <FindMe />
             </div>
-            <Footer 
-                handleOpenFeedback={handleOpenFeedback}
-            />
+            <Footer handleOpenFeedback={handleOpenFeedback} />
             {isFeedbackOpen && (
                 <Feedback
                     handleCloseFeedback={handleCloseFeedback}

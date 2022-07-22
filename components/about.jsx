@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import EmblaCarousel from './carousel';
 
 export default function About() {
     const photos = [
