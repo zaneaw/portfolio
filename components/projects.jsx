@@ -64,8 +64,8 @@ export default function Projects() {
             className='scroll-mt-20 z-0 flex flex-col gap-y-8 justify-center items-center'
             id='work'
         >
-            <div className='flex flex-row flex-nowrap w-full after:h-[7px] after:w-full after:ml-2 after:relative after:top-6 after:border-y after:border-red-orange before:h-[7px] before:w-full before:mr-2 before:relative before:top-6 before:border-y before:border-red-orange'>
-                <h2 className='w-fit whitespace-nowrap text-center text-primary text-5xl font-monoCustom mb-12'>
+            <div className='flex flex-row flex-nowrap w-full after:h-[7px] after:w-full after:ml-2 after:relative after:top-6 md:after:top-8 after:border-y after:border-red-orange before:h-[7px] before:w-full before:mr-2 before:relative before:top-6 md:before:top-8 before:border-y before:border-red-orange'>
+                <h2 className='w-fit whitespace-nowrap text-center text-primary text-5xl md:text-7xl font-monoCustom mb-12'>
                     My Work
                 </h2>
             </div>
@@ -74,7 +74,7 @@ export default function Projects() {
                 return (
                     <article
                         key={i}
-                        className='group hover:-translate-y-1 font-serifCustom relative overflow-hidden flex flex-col gap-2 xs:mx-6 px-4 py-2 mb-6 shadow-xl bg-primary-darker rounded-lg text-gray-light fill-gray-light transition-all duration-300 ease-in'
+                        className='group xs:tracking-wide lg:tracking-wider hover:-translate-y-1 font-serifCustom relative overflow-hidden flex flex-col gap-2 sm:mx-2 md:mx-6 px-4 py-2 mb-6 shadow-xl bg-primary-darker rounded-lg text-gray-light fill-gray-light transition-all duration-300 ease-in'
                     >
                         {/* {project.liveSiteImg && (
                             <Image
@@ -86,19 +86,21 @@ export default function Projects() {
                         )} */}
 
                         <a
-                            className='text-red-orange group-hover:text-pink-light text-xl xs:text-2xl w-fit font-monoCustom flex flex-row flex-nowrap gap-2 py-1 bg-right-bottom bg-gradient-to-l from-red-orange to-red-orange group-hover:from-pink-light group-hover:to-pink-light bg-[length:0%_2px] bg-no-repeat hover:bg-[length:100%_2px] transition-all duration-200 ease-in'
+                            className='text-red-orange group-hover:text-pink-light text-xl xs:text-2xl lg:text-3xl w-fit font-monoCustom flex flex-row flex-nowrap gap-2 py-1 bg-right-bottom bg-gradient-to-l from-red-orange to-red-orange group-hover:from-pink-light group-hover:to-pink-light bg-[length:0%_2px] bg-no-repeat hover:bg-[length:100%_2px] transition-all duration-200 ease-in'
                             href={
                                 project.liveSiteUrl
                                     ? project.liveSiteUrl
                                     : project.sourceCode
                             }
+                            target='_blank'
+                            rel='noreferrer'
                         >
                             {project.title}
                         </a>
 
-                        <p className='tracking-wide'>{project.desc}</p>
+                        <p className='text-base leading-[26px] lg:text-lg text-gray-light'>{project.desc}</p>
 
-                        <div className='flex flex-row flex-wrap font-monoCustom text-base xs:text-lg gap-x-4 gap-y-1'>
+                        <div className='flex flex-row flex-wrap font-monoCustom text-base xs:text-lg lg:text-xl gap-x-4 gap-y-1'>
                             {project.stack.map((x, i) => {
                                 return (
                                     <span
@@ -111,7 +113,7 @@ export default function Projects() {
                             })}
                         </div>
 
-                        <div className='absolute h-8 top-2 right-4 w-fit flex flex-row flex-nowrap gap-2 items-center justify-center'>
+                        <div className='absolute top-4 right-4 w-fit flex flex-row flex-nowrap gap-2 items-center justify-center'>
                             {project.sourceCode && (
                                 <a
                                     href={project.sourceCode}
@@ -120,7 +122,7 @@ export default function Projects() {
                                     className=''
                                 >
                                     <svg
-                                        className='w-6 fill-primary hover:fill-primary-light transition-all duration-300 ease-out'
+                                        className='h-6 lg:h-7 2xl:h-8 fill-primary hover:fill-primary-light transition-all duration-300 ease-out'
                                         xmlns='http://www.w3.org/2000/svg'
                                         viewBox='0 0 496 512'
                                     >
@@ -136,7 +138,7 @@ export default function Projects() {
                                     className=''
                                 >
                                     <svg
-                                        className='w-[22px] fill-primary hover:fill-primary-light transition-all duration-300 ease-out'
+                                        className='h-6 lg:h-7 2xl:h-8 fill-primary hover:fill-primary-light transition-all duration-300 ease-out'
                                         xmlns='http://www.w3.org/2000/svg'
                                         viewBox='0 0 512 512'
                                     >
@@ -152,7 +154,7 @@ export default function Projects() {
                                     className=''
                                 >
                                     <svg
-                                        className='w-5 fill-primary hover:fill-primary-light transition-all duration-300 ease-out'
+                                        className='h-6 lg:h-7 2xl:h-8 fill-primary hover:fill-primary-light transition-all duration-300 ease-out'
                                         xmlns='http://www.w3.org/2000/svg'
                                         viewBox='0 0 384 512'
                                     >

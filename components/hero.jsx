@@ -2,21 +2,21 @@ import Dots from '../components/dots';
 
 export default function Hero() {
     return (
-        <section className='font-monoCustom text-lg pt-[10vh] flex flex-col gap-[5vh] min-h-[100vh]'>
+        <section className='font-monoCustom text-lg pt-[10vh] flex flex-col gap-[5vh] min-h-[100vh] '>
             {/* Keep div below to make animation translateIn work properly */}
             <div className='-z-10 w-[1px] h-[1px] bg-transparent animate-[translateIn_1000ms] -mb-[5vh]'></div>
-            <div className='text-gray-light text-2xl animate-[fadeIn_1000ms]'>
-                <p className='pb-2'>Hello, I&apos;m</p>
+            <div className='text-gray-light text-2xl md:text-4xl animate-[fadeIn_1000ms]'>
+                <p className='pb-2 md:pb-6'>Hello, I&apos;m</p>
                 <span className='before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-light relative inline-block -z-10'>
-                    <span className='relative text-primary-dark font-bold text-4xl'>
+                    <span className='relative text-primary-dark font-bold text-4xl md:text-7xl'>
                         Zane Wilson
                     </span>
                 </span>
-                <p className='pt-2'>and I build things for the web.</p>
+                <p className='pt-2 md:pt-6'>and I build things for the web.</p>
             </div>
 
             <div className='font-serifCustom max-w-lg animate-[fadeIn_1000ms] animate-[translateIn_1000ms]'>
-                <p className='text-base text-gray-light'>
+                <p className='text-base tracking-wide md:tracking-wider leading-[26px] lg:text-lg text-gray-light'>
                     I&apos;m a software engineer specializing in building
                     exceptional digital experiences. Currently, I&apos;m focused
                     on developing and updating user experiences and interfaces
@@ -34,9 +34,9 @@ export default function Hero() {
                 </p>
             </div>
 
-            <div className='flex flex-col gap-y-4 gap-x-6 mb-12 justify-center items-center self-center w-full sm:flex-row min-w-fit max-w-3xl text-lg font-semibold animate-[fadeIn_1000ms] animate-[translateIn_1000ms]'>
+            <div className='flex flex-col gap-y-4 gap-x-6 mb-12 mx-auto justify-center items-center self-center w-full sm:flex-row min-w-fit max-w-xl md:max-w-2xl md:pt-20 text-lg md:text-xl lg:text-2xl font-semibold animate-[fadeIn_1000ms] animate-[translateIn_1000ms]'>
                 <a
-                    className='group flex flex-row flex-nowrap w-full justify-center gap-2 border-2 border-primary rounded-xl p-2 hover:bg-primary transition-all duration-300 ease-out'
+                    className='group flex flex-row flex-nowrap w-full justify-center gap-2 border-2 border-primary rounded-xl p-2 md:p-3 hover:bg-primary transition-all duration-300 ease-out'
                     href="mailto:wilsonzanea@gmail.com?subject=Contacting%20You&body=Hi%20Zane!%20I'd%20like%20to%20hire%20you%20:)"
                     target='_blank'
                     rel='noreferrer'
@@ -53,7 +53,7 @@ export default function Hero() {
                     </svg>
                 </a>
                 <a
-                    className='group flex flex-row flex-nowrap w-full justify-center gap-2 border-2 border-primary rounded-xl p-2 hover:bg-primary transition-all duration-300 ease-out'
+                    className='group flex flex-row flex-nowrap w-full justify-center gap-2 border-2 border-primary rounded-xl p-2 md:p-3 hover:bg-primary transition-all duration-300 ease-out'
                     href='/downloads/zanescv.pdf'
                     download='ZanesCV'
                 >
@@ -67,7 +67,7 @@ export default function Hero() {
                     </svg>
                 </a>
             </div>
-            <div className='animate-[fadeIn_1000ms] animate-[translateIn_1000ms]'>
+            <div className='mb-16 md:mb-4 animate-[fadeIn_1000ms] animate-[translateIn_1000ms]'>
                 <Dots />
             </div>
         </section>

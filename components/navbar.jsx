@@ -50,11 +50,11 @@ export default function Navbar({ handleOpenFeedback }) {
             <nav
                 className={`${
                     !showNav && '-translate-y-14'
-                } z-10 w-full bg-primary-dark shadow p-2 flex justify-between items-center fixed top-0 transition-all duration-200 ease-out`}
+                } z-10 w-full bg-primary-dark p-2 mx-auto md:px-6 lg:px-16 flex justify-between items-center fixed top-0 transition-all duration-300 ease-out`}
             >
                 <Link href='#' passHref>
                     <svg
-                        className='w-10 h-10 fill-primary hover:fill-primary-light md:fill-primary md:hover:fill-primary-light cursor-pointer transition-all duration-300 ease-out'
+                        className='w-10 h-10 lg:w-12 lg:h-12 fill-primary hover:fill-primary-light md:fill-primary md:hover:fill-primary-light cursor-pointer transition-all duration-300 ease-out'
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 512 512'
                         onClick={() => isNavbarOpen && setIsNavbarOpen()}
@@ -97,13 +97,13 @@ export default function Navbar({ handleOpenFeedback }) {
                             href={`#${navItem.link.toLowerCase()}`}
                             key={navItem.title}
                         >
-                            <a className='uppercase font-medium text-primary tracking-widest px-6 py-2 hover:bg-primary hover:text-primary-dark md:hover:bg-primary-dark md:hover:text-primary-light transition-all duration-150 ease-in hover:cursor-pointer md:px-2'>
+                            <a className='uppercase font-medium md:text-xl lg:font-semibold text-primary tracking-widest md:tracking-wide lg:tracking-widest px-6 py-2 hover:bg-primary hover:text-primary-dark md:hover:bg-primary-dark md:hover:text-primary-light transition-all duration-150 ease-in hover:cursor-pointer md:px-2'>
                                 {navItem.title}
                             </a>
                         </Link>
                     ))}
                     <a
-                        className='uppercase font-medium text-primary tracking-widest px-6 py-2 hover:bg-primary hover:text-primary-dark md:hover:bg-primary-dark md:hover:text-primary-light transition-all duration-150 ease-in hover:cursor-pointer md:px-2'
+                        className='uppercase font-medium md:text-xl lg:font-semibold text-primary tracking-widest px-6 py-2 hover:bg-primary hover:text-primary-dark md:hover:bg-primary-dark md:hover:text-primary-light transition-all duration-150 ease-in hover:cursor-pointer md:px-2'
                         onClick={() => {
                             handleOpenFeedback();
                             {

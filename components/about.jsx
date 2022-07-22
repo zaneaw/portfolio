@@ -27,7 +27,7 @@ export default function About() {
 
     return (
         <section
-            className='scroll-mt-20 z-0 mt-20 border border-primary shadow-lg mb-6 p-4 xs:mx-6 rounded-lg text-gray-light flex flex-col gap-y-8 justify-center items-center'
+            className='scroll-mt-20 z-0 mt-20 border border-primary shadow-lg mb-6 p-4 xs:mx-6 md:mx-12 rounded-lg text-gray-light flex flex-col gap-y-8 justify-center items-center'
             id='about'
         >
             {/* <div className='flex flex-row flex-nowrap w-full mt-2 after:h-[7px] after:w-full after:ml-2 after:relative after:top-4 after:border-y after:border-red-orange before:h-[7px] before:w-full before:mr-2 before:relative before:top-4 before:border-y before:border-red-orange'>
@@ -35,10 +35,10 @@ export default function About() {
                     About Me
                 </h2>
             </div> */}
-            <h2 className='text-primary text-4xl font-rampart mt-2 text-center'>
+            <h2 className='tracking-wide text-primary text-4xl lg:text-5xl font-rampart mt-2 text-center'>
                 About Me
             </h2>
-            <p className='text-gray-light font-serifCustom tracking-wide'>
+            <p className='text-gray-light font-serifCustom tracking-wide lg:tracking-wider leading-[26px] lg:text-lg'>
                 Hi there, I&apos;m Zane! I used to sell real estate in
                 Charleston, SC. Following a dream, I moved to NYC to pursue my
                 real estate career in the big city with all the bright lights! I
@@ -74,10 +74,10 @@ export default function About() {
                 </div>
             ))} */}
 
-            <h3 className='text-primary text-4xl font-rampart mt-2 text-center'>
+            <h3 className='tracking-wide text-primary text-4xl lg:text-5xl font-rampart mt-2 text-center'>
                 Getting Personal
             </h3>
-            <p className='text-gray-light font-serifCustom tracking-wide'>
+            <p className='text-gray-light font-serifCustom tracking-wide lg:tracking-wider leading-[26px] lg:text-lg'>
                 As you already know, I&apos;m Zane and I&apos;m a software
                 engineer that used to sell real estate in NYC. I have a lovely
                 partner who has been extremely supportive throughout my career
