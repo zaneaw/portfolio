@@ -46,7 +46,7 @@ export default function Navbar({ handleOpenFeedback }) {
     };
 
     return (
-        <header className='mt-16 z-10 font-serifCustom animate-[fadeIn_1000ms]'>
+        <header className='mt-16 z-10 font-serifCustom animate-fadeIn'>
             <nav
                 className={`${
                     !showNav && '-translate-y-14'

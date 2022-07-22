@@ -74,7 +74,7 @@ export default function Projects() {
                 return (
                     <article
                         key={i}
-                        className='group xs:tracking-wide lg:tracking-wider hover:-translate-y-1 font-serifCustom relative overflow-hidden flex flex-col gap-2 sm:mx-2 md:mx-6 px-4 py-2 mb-6 shadow-xl bg-primary-darker rounded-lg text-gray-light fill-gray-light transition-all duration-300 ease-in'
+                        className='group xs:tracking-wide lg:tracking-wider hover:-translate-y-1 font-serifCustom relative overflow-hidden flex flex-col gap-2 sm:mx-2 md:mx-6 px-4 py-2 mb-6 shadow-xl bg-primary-darker rounded-lg transition-all duration-300 ease-in'
                     >
                         {/* {project.liveSiteImg && (
                             <Image
@@ -98,9 +98,9 @@ export default function Projects() {
                             {project.title}
                         </a>
 
-                        <p className='text-base leading-[26px] lg:text-lg text-gray-light'>{project.desc}</p>
+                        <p>{project.desc}</p>
 
-                        <div className='flex flex-row flex-wrap font-monoCustom text-base xs:text-lg lg:text-xl gap-x-4 gap-y-1'>
+                        <div className='flex flex-row flex-wrap font-monoCustom xs:text-lg lg:text-xl gap-x-4 gap-y-1'>
                             {project.stack.map((x, i) => {
                                 return (
                                     <span
@@ -119,7 +119,6 @@ export default function Projects() {
                                     href={project.sourceCode}
                                     target='_blank'
                                     rel='noreferrer'
-                                    className=''
                                 >
                                     <svg
                                         className='h-6 lg:h-7 2xl:h-8 fill-primary hover:fill-primary-light transition-all duration-300 ease-out'
@@ -135,7 +134,6 @@ export default function Projects() {
                                     href={project.liveSiteUrl}
                                     target='_blank'
                                     rel='noreferrer'
-                                    className=''
                                 >
                                     <svg
                                         className='h-6 lg:h-7 2xl:h-8 fill-primary hover:fill-primary-light transition-all duration-300 ease-out'
@@ -151,7 +149,6 @@ export default function Projects() {
                                     href={project.youtube}
                                     target='_blank'
                                     rel='noreferrer'
-                                    className=''
                                 >
                                     <svg
                                         className='h-6 lg:h-7 2xl:h-8 fill-primary hover:fill-primary-light transition-all duration-300 ease-out'

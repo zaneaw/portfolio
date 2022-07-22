@@ -36,7 +36,7 @@ export default function Home() {
                 <link rel='icon' href='/images/heart.png' />
             </Head>
             <Navbar handleOpenFeedback={handleOpenFeedback} />
-            <div className='z-0 sm:px-4 lg:px-22 w-[85%] max-w-[1024px] mx-auto overflow-x-hidden font-serifCustom tracking-wide'>
+            <div className='z-0 sm:px-4 lg:px-22 w-[85%] max-w-[1024px] mx-auto overflow-x-hidden font-serifCustom text-base leading-[26px] lg:text-lg text-gray-light tracking-wide md:tracking-wider transition-all duration-300 ease-out'>
                 <Hero />
                 <Projects />
                 <About />

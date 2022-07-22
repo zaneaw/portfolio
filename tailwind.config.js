@@ -38,8 +38,8 @@ module.exports = {
                     '100%': { opacity: '0' },
                 },
                 translateIn: {
-                    '0%': { transform: 'translateY(-40px)', marginTop: '40px' },
-                    '100%': { transform: 'translateY(0)', marginTop: '0' },
+                    '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
                 },
             },
             animation: {

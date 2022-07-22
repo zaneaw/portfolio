@@ -35,10 +35,10 @@ export default function About() {
                     About Me
                 </h2>
             </div> */}
-            <h2 className='tracking-wide text-primary text-4xl lg:text-5xl font-rampart mt-2 text-center'>
+            <h2 className='tracking-wide lg:tracking-wider text-primary text-4xl lg:text-5xl font-rampart mt-2 text-center'>
                 About Me
             </h2>
-            <p className='text-gray-light font-serifCustom tracking-wide lg:tracking-wider leading-[26px] lg:text-lg'>
+            <p>
                 Hi there, I&apos;m Zane! I used to sell real estate in
                 Charleston, SC. Following a dream, I moved to NYC to pursue my
                 real estate career in the big city with all the bright lights! I
@@ -74,10 +74,10 @@ export default function About() {
                 </div>
             ))} */}
 
-            <h3 className='tracking-wide text-primary text-4xl lg:text-5xl font-rampart mt-2 text-center'>
+            <h3 className='tracking-wide lg:tracking-wider text-primary text-4xl lg:text-5xl font-rampart mt-2 text-center'>
                 Getting Personal
             </h3>
-            <p className='text-gray-light font-serifCustom tracking-wide lg:tracking-wider leading-[26px] lg:text-lg'>
+            <p>
                 As you already know, I&apos;m Zane and I&apos;m a software
                 engineer that used to sell real estate in NYC. I have a lovely
                 partner who has been extremely supportive throughout my career

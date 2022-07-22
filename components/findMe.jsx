@@ -9,7 +9,7 @@ export default function ContactMe() {
                     Contact Me
                 </h2>
             </div>
-            <p className='text-gray-light font-serifCustom tracking-wide lg:tracking-wider lg:text-lg leading-[26px] text-center max-w-[520px]'>
+            <p className='text-center max-w-[520px]'>
                 I&apos;m actively searching for a more permament position and
                 my&nbsp;
                 <a
