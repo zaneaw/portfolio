@@ -4,9 +4,11 @@ export default function ContactMe() {
             className='z-0 flex flex-col gap-y-8 justify-center items-center my-40'
             id='contact'
         >
-            <h2 className='text-primary text-5xl font-rampart mt-2 text-center'>
-                Contact Me
-            </h2>
+            <div className="flex flex-row flex-nowrap w-full mt-2 after:h-[7px] after:w-full after:ml-2 after:relative after:top-6 after:border-y after:border-red-orange before:h-[7px] before:w-full before:mr-2 before:relative before:top-6 before:border-y before:border-red-orange">
+                <h2 className='text-primary text-5xl w-fit sm:whitespace-nowrap font-monoCustom text-center'>
+                    Contact Me
+                </h2>
+            </div>
             <p className='text-gray-light font-serifCustom tracking-wide text-center max-w-[520px]'>
                 I&apos;m actively searching for a more permament position and
                 my&nbsp;

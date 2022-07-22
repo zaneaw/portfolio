@@ -16,7 +16,7 @@ export default function Projects() {
         {
             title: 'LA Mountains',
             desc: "This project was completed in the React framework, NextJS. The task was to take a PSD file and turn it into a responsive, single page web application. In addition to Next.js, I also used Sass and some Bootstrap as well. I think the project came out looking great! Don't forget to check out the live site for yourself.",
-            stack: ['Next.js', 'SASS', 'Bootstrap'],
+            stack: ['React.js', 'Next.js', 'SASS', 'Bootstrap'],
             sourceCode: 'https://github.com/zaneaw/la-mountains',
             youtube: '',
             liveSiteUrl: 'https://la-mountains.vercel.app',
@@ -27,7 +27,7 @@ export default function Projects() {
         {
             title: 'Pizza by Zane',
             desc: 'Built in React, this is a full-stack web application. I developed a backend using MongoDB and utilized JWT for user authentication. The stack involved in this site includes Redux, Bootstrap, Express, MongoDB, and more. Be sure to check out the video demo of the project!',
-            stack: ['React', 'MongoDB', 'Express', 'Redux', 'Bootstrap'],
+            stack: ['React.js', 'MongoDB', 'Express', 'Redux', 'Bootstrap CSS'],
             sourceCode: 'https://github.com/zaneaw/conFusion',
             youtube: 'https://www.youtube.com/embed/iS4MRaI6DGU',
             liveSiteUrl: '',
@@ -64,9 +64,12 @@ export default function Projects() {
             className='scroll-mt-20 z-0 flex flex-col gap-y-8 justify-center items-center'
             id='work'
         >
-            <h2 className='text-primary text-5xl font-rampart mb-12'>
-                My Work
-            </h2>
+            <div className='flex flex-row flex-nowrap w-full after:h-[7px] after:w-full after:ml-2 after:relative after:top-6 after:border-y after:border-red-orange before:h-[7px] before:w-full before:mr-2 before:relative before:top-6 before:border-y before:border-red-orange'>
+                <h2 className='w-fit whitespace-nowrap text-center text-primary text-5xl font-monoCustom mb-12'>
+                    My Work
+                </h2>
+            </div>
+            
             {projectsList.map((project, i) => {
                 return (
                     <article

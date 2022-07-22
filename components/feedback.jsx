@@ -3,13 +3,17 @@ import { useForm } from 'react-hook-form';
 import Confetti from 'react-confetti';
 
 export default function Feedback({
+    isFeedbackOpen,
     handleCloseFeedback,
+    fadeOutFeedback,
     submitSuccess,
     setSubmitSuccess,
 }) {
     const [rating, setRating] = useState(null);
     const [hover, setHover] = useState(null);
     const [submitValue, setSubmitValue] = useState();
+
+
 
     const {
         register,
@@ -39,7 +43,9 @@ export default function Feedback({
     };
 
     return (
-        <div className='w-full flex justify-center font-monoCustom '>
+        <div className={`w-full flex justify-center font-monoCustom ${
+            isFeedbackOpen ? 'animate-[fadeIn_300ms]' : 'hidden'
+        } ${fadeOutFeedback && 'animate-[fadeOut_500ms]'}`}>
             <div
                 className='z-20 fixed top-0 w-[100vw] h-[100vh] backdrop-blur'
                 onClick={submitSuccess ? handleCloseFeedback : undefined}

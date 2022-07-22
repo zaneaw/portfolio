@@ -30,6 +30,11 @@ export default function About() {
             className='scroll-mt-20 z-0 mt-20 border border-primary shadow-lg mb-6 p-4 xs:mx-6 rounded-lg text-gray-light flex flex-col gap-y-8 justify-center items-center'
             id='about'
         >
+            {/* <div className='flex flex-row flex-nowrap w-full mt-2 after:h-[7px] after:w-full after:ml-2 after:relative after:top-4 after:border-y after:border-red-orange before:h-[7px] before:w-full before:mr-2 before:relative before:top-4 before:border-y before:border-red-orange'>
+                <h2 className='text-primary text-4xl font-monoCustom text-center w-fit whitespace-nowrap'>
+                    About Me
+                </h2>
+            </div> */}
             <h2 className='text-primary text-4xl font-rampart mt-2 text-center'>
                 About Me
             </h2>

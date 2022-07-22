@@ -59,6 +59,7 @@ module.exports = {
             serifCustom: ['Roboto', 'sans-serif'],
             monoCustom: ['Source Code Pro', 'monospace'],
             rampart: ['Rampart One', 'cursive'],
+            special: ['Audiowide', 'cursive'],
         },
     },
     variants: {

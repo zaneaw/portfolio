@@ -4,7 +4,7 @@ export default function Hero() {
     return (
         <section className='font-monoCustom text-lg pt-[10vh] flex flex-col gap-[5vh] min-h-[100vh]'>
             {/* Keep div below to make animation translateIn work properly */}
-            <div className='w-[1px] h-[1px] bg-transparent animate-[translateIn_1000ms] -mb-[5vh]'></div>
+            <div className='-z-10 w-[1px] h-[1px] bg-transparent animate-[translateIn_1000ms] -mb-[5vh]'></div>
             <div className='text-gray-light text-2xl animate-[fadeIn_1000ms]'>
                 <p className='pb-2'>Hello, I&apos;m</p>
                 <span className='before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-light relative inline-block -z-10'>
@@ -34,7 +34,7 @@ export default function Hero() {
                 </p>
             </div>
 
-            <div className='flex flex-col gap-y-4 gap-x-6 mb-12 justify-center items-center self-center w-full sm:flex-row min-w-fit max-w-3xl text-lg font-semibold animate-[translateIn_1000ms]'>
+            <div className='flex flex-col gap-y-4 gap-x-6 mb-12 justify-center items-center self-center w-full sm:flex-row min-w-fit max-w-3xl text-lg font-semibold animate-[fadeIn_1000ms] animate-[translateIn_1000ms]'>
                 <a
                     className='group flex flex-row flex-nowrap w-full justify-center gap-2 border-2 border-primary rounded-xl p-2 hover:bg-primary transition-all duration-300 ease-out'
                     href="mailto:wilsonzanea@gmail.com?subject=Contacting%20You&body=Hi%20Zane!%20I'd%20like%20to%20hire%20you%20:)"
@@ -67,7 +67,9 @@ export default function Hero() {
                     </svg>
                 </a>
             </div>
-            <Dots />
+            <div className='animate-[fadeIn_1000ms] animate-[translateIn_1000ms]'>
+                <Dots />
+            </div>
         </section>
     );
 }

@@ -20,7 +20,8 @@ export default function Home() {
 
     const handleCloseFeedback = () => {
         setFadeOutFeedback(true);
-        setTimeout(() => setIsFeedbackOpen(false), 300);
+        setTimeout(() => setIsFeedbackOpen(false), 500);
+        setTimeout(() => setFadeOutFeedback(false), 500);
         setSubmitSuccess(false);
     };
 
@@ -43,14 +44,13 @@ export default function Home() {
                 <FindMe />
             </div>
             <Footer handleOpenFeedback={handleOpenFeedback} />
-            <div className={`${isFeedbackOpen ? 'w-full flex justify-center font-monoCustom animate-fadeIn' : 'hidden'} ${fadeOutFeedback && 'animate-fadeOut'}`}>
-                <Feedback
-                    handleCloseFeedback={handleCloseFeedback}
-                    submitSuccess={submitSuccess}
-                    setSubmitSuccess={setSubmitSuccess}
-                />
-            </div>
-                
+            <Feedback
+                isFeedbackOpen={isFeedbackOpen}
+                handleCloseFeedback={handleCloseFeedback}
+                fadeOutFeedback={fadeOutFeedback}
+                submitSuccess={submitSuccess}
+                setSubmitSuccess={setSubmitSuccess}
+            />
         </>
     );
 }

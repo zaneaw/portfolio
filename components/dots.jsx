@@ -22,7 +22,7 @@ export default function LoadingScreen() {
 
     return (
         <div
-            className='relative w-8 h-8 mx-auto rotate-90 md:rotate-0 animate-[translateIn_800ms]'
+            className='relative w-8 h-8 mx-auto'
             onClick={handleAnimationClick}
         >
             <div
