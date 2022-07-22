@@ -12,13 +12,15 @@ import Feedback from '../components/feedback';
 export default function Home() {
     const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
     const [submitSuccess, setSubmitSuccess] = useState(false);
+    const [fadeOutFeedback, setFadeOutFeedback] = useState(false);
 
     const handleOpenFeedback = () => {
         setIsFeedbackOpen(true);
     };
 
     const handleCloseFeedback = () => {
-        setIsFeedbackOpen(false);
+        setFadeOutFeedback(true);
+        setTimeout(() => setIsFeedbackOpen(false), 300);
         setSubmitSuccess(false);
     };
 
@@ -33,7 +35,7 @@ export default function Home() {
                 <link rel='icon' href='/images/heart.png' />
             </Head>
             <Navbar handleOpenFeedback={handleOpenFeedback} />
-            <div className='z-0 px-4 sm:px-8 md:px-16 lg:px-40 overflow-hidden font-serifCustom tracking-wide'>
+            <div className='z-0 px-4 sm:px-8 md:px-16 lg:px-40 overflow-x-hidden font-serifCustom tracking-wide'>
                 <Hero />
                 <Projects />
                 <About />
@@ -41,13 +43,14 @@ export default function Home() {
                 <FindMe />
             </div>
             <Footer handleOpenFeedback={handleOpenFeedback} />
-            {isFeedbackOpen && (
+            <div className={`${isFeedbackOpen ? 'w-full flex justify-center font-monoCustom animate-fadeIn' : 'hidden'} ${fadeOutFeedback && 'animate-fadeOut'}`}>
                 <Feedback
                     handleCloseFeedback={handleCloseFeedback}
                     submitSuccess={submitSuccess}
                     setSubmitSuccess={setSubmitSuccess}
                 />
-            )}
+            </div>
+                
         </>
     );
 }

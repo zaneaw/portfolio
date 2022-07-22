@@ -39,7 +39,11 @@ export default function Feedback({
     };
 
     return (
-        <div className='w-full flex justify-center font-monoCustom'>
+        <div className='w-full flex justify-center font-monoCustom '>
+            <div
+                className='z-20 fixed top-0 w-[100vw] h-[100vh] backdrop-blur'
+                onClick={submitSuccess ? handleCloseFeedback : undefined}
+            ></div>
             <div className='z-50 fixed top-40 w-11/12 mx-4 max-w-5xl px-4 pb-4 pt-2 rounded-lg bg-primary-dark border-2 border-primary'>
                 <h4 className='text-red-orange text-2xl xs:text-3xl font-monoCustom font-semibold'>
                     Send Feedback
@@ -230,17 +234,16 @@ export default function Feedback({
                             >
                                 Cancel
                             </button>
-                            <button className='grow border-2 font-semibold border-red-orange text-primary-dark bg-red-orange hover:bg-primary-dark hover:text-red-orange rounded-lg px-4 py-2 transition-all duration-300 ease-out' type='submit'>
+                            <button
+                                className='grow border-2 font-semibold border-red-orange text-primary-dark bg-red-orange hover:bg-primary-dark hover:text-red-orange rounded-lg px-4 py-2 transition-all duration-300 ease-out'
+                                type='submit'
+                            >
                                 Submit
                             </button>
                         </div>
                     </form>
                 )}
             </div>
-            <div
-                className='z-30 fixed top-0 w-[100vw] h-[100vh] backdrop-blur'
-                onClick={submitSuccess ? handleCloseFeedback : undefined}
-            ></div>
         </div>
     );
 }

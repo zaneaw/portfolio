@@ -582,6 +582,10 @@ video {
   right: 0px;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .top-40 {
   top: 10rem;
 }
@@ -592,10 +596,6 @@ video {
 
 .right-2 {
   right: 0.5rem;
-}
-
-.top-0 {
-  top: 0px;
 }
 
 .top-\[58px\] {
@@ -618,12 +618,12 @@ video {
   z-index: 0;
 }
 
-.z-50 {
-  z-index: 50;
+.z-20 {
+  z-index: 20;
 }
 
-.z-30 {
-  z-index: 30;
+.z-50 {
+  z-index: 50;
 }
 
 .-z-10 {
@@ -632,6 +632,10 @@ video {
 
 .z-10 {
   z-index: 10;
+}
+
+.z-30 {
+  z-index: 30;
 }
 
 .m-1 {
@@ -690,6 +694,14 @@ video {
   margin-top: 4rem;
 }
 
+.mt-auto {
+  margin-top: auto;
+}
+
+.-mb-\[5vh\] {
+  margin-bottom: -5vh;
+}
+
 .block {
   display: block;
 }
@@ -722,8 +734,16 @@ video {
   height: 5px;
 }
 
+.h-\[1px\] {
+  height: 1px;
+}
+
 .min-h-\[100vh\] {
   min-height: 100vh;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .w-8 {
@@ -734,8 +754,8 @@ video {
   width: 5rem;
 }
 
-.w-full {
-  width: 100%;
+.w-\[100vw\] {
+  width: 100vw;
 }
 
 .w-11\/12 {
@@ -750,10 +770,6 @@ video {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-
-.w-\[100vw\] {
-  width: 100vw;
 }
 
 .w-9 {
@@ -778,6 +794,14 @@ video {
 
 .w-5 {
   width: 1.25rem;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[1px\] {
+  width: 1px;
 }
 
 .min-w-fit {
@@ -855,6 +879,85 @@ video {
 .-rotate-45 {
   --tw-rotate: -45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  -webkit-animation: fadeIn 800ms ease-in;
+          animation: fadeIn 800ms ease-in;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-fadeOut {
+  -webkit-animation: fadeOut 300ms ease-in;
+          animation: fadeOut 300ms ease-in;
+}
+
+@-webkit-keyframes translateIn {
+  0% {
+    transform: translateY(-40px);
+    margin-top: 40px;
+  }
+
+  100% {
+    transform: translateY(0);
+    margin-top: 0;
+  }
+}
+
+@keyframes translateIn {
+  0% {
+    transform: translateY(-40px);
+    margin-top: 40px;
+  }
+
+  100% {
+    transform: translateY(0);
+    margin-top: 0;
+  }
+}
+
+.animate-\[translateIn_800ms\] {
+  -webkit-animation: translateIn 800ms;
+          animation: translateIn 800ms;
 }
 
 @-webkit-keyframes spinDots {
@@ -935,6 +1038,53 @@ video {
           animation: onOff 2s cubic-bezier(.52,-0.75,.75,.23) infinite;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-\[fadeIn_1000ms\] {
+  -webkit-animation: fadeIn 1000ms;
+          animation: fadeIn 1000ms;
+}
+
+@keyframes translateIn {
+  0% {
+    transform: translateY(-40px);
+    margin-top: 40px;
+  }
+
+  100% {
+    transform: translateY(0);
+    margin-top: 0;
+  }
+}
+
+.animate-\[translateIn_1000ms\] {
+  -webkit-animation: translateIn 1000ms;
+          animation: translateIn 1000ms;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-\[fadeIn_800ms\] {
+  -webkit-animation: fadeIn 800ms;
+          animation: fadeIn 800ms;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -987,6 +1137,10 @@ video {
   gap: 5vh;
 }
 
+.gap-0 {
+  gap: 0px;
+}
+
 .gap-y-8 {
   row-gap: 2rem;
 }
@@ -1026,6 +1180,10 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .rounded-lg {
@@ -1114,6 +1272,10 @@ video {
 .bg-primary-darker {
   --tw-bg-opacity: 1;
   background-color: rgb(15 26 53 / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 .bg-gradient-to-r {
@@ -1246,6 +1408,10 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1254,12 +1420,12 @@ video {
   font-family: Roboto, sans-serif;
 }
 
-.font-rampart {
-  font-family: Rampart One, cursive;
-}
-
 .font-monoCustom {
   font-family: Source Code Pro, monospace;
+}
+
+.font-rampart {
+  font-family: Rampart One, cursive;
 }
 
 .text-4xl {
