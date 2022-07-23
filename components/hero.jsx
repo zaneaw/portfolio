@@ -35,7 +35,7 @@ export default function Hero() {
 
             <div className='font-monoCustom flex flex-col gap-y-4 gap-x-6 mb-12 mx-auto justify-center items-center self-center w-full sm:flex-row min-w-fit max-w-xl md:max-w-2xl md:pt-20 text-lg md:text-xl lg:text-2xl font-semibold animate-translateInDown'>
                 <a
-                    className='group flex flex-row flex-nowrap w-full justify-center gap-2 border-2 border-primary rounded-xl p-2 md:p-3 hover:bg-primary transition-all duration-300 ease-out'
+                    className='group flex flex-row flex-nowrap w-full justify-center items-center gap-2 border-2 border-primary rounded-xl p-2 md:p-3 hover:bg-primary transition-all duration-300 ease-out'
                     href="mailto:wilsonzanea@gmail.com?subject=Contacting%20You&body=Hi%20Zane!%20I'd%20like%20to%20hire%20you%20:)"
                     target='_blank'
                     rel='noreferrer'
@@ -52,7 +52,7 @@ export default function Hero() {
                     </svg>
                 </a>
                 <a
-                    className='group flex flex-row flex-nowrap w-full justify-center gap-2 border-2 border-primary rounded-xl p-2 md:p-3 hover:bg-primary transition-all duration-300 ease-out'
+                    className='group flex flex-row flex-nowrap w-full justify-center items-center gap-2 border-2 border-primary rounded-xl p-2 md:p-3 hover:bg-primary transition-all duration-300 ease-out'
                     href='/downloads/zanescv.pdf'
                     download='ZanesCV'
                 >
