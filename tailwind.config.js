@@ -45,10 +45,15 @@ module.exports = {
                     '0%': { opacity: '0', transform: 'translateY(20px)' },
                     '100%': { opacity: '1', transform: 'translateY(0)' },
                 },
+                translateInUpNav: {
+                    '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    '100%': { opacity: '.8', transform: 'translateY(0)' },
+                },
 
             },
             animation: {
                 translateInUp: 'translateInUp 800ms ease-in',
+                translateInUpNav: 'translateInUpNav 800ms ease-in',
                 translateInDown: 'translateInDown 800ms ease-in',
                 fadeOut: 'fadeOut 300ms ease-in',
                 fadeIn: 'fadeIn 800ms ease-in',

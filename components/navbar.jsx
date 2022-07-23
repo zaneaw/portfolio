@@ -1,3 +1,4 @@
+import { FiGithub, FiLinkedin, FiInstagram, FiTwitter } from 'react-icons/fi';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -125,13 +126,41 @@ export default function Navbar({ handleOpenFeedback }) {
             <div className='hidden xs:block'>
                 <Link href='#' passHref>
                     <svg
-                        className='fill-primary-dark border-[1px] border-primary-dark z-10 w-8 h-8 p-1.5 shadow fixed m-1 right-3 bottom-3 rounded-full cursor-pointer bg-primary opacity-60 transition-all duration-300 ease-out hover:fill-primary hover:bg-primary-dark hover:border-primary'
+                        className='fixed right-8 lg:right-14 bottom-2 fill-primary-dark border-[1px] border-primary-dark z-10 w-8 h-8 p-1.5 rounded-full cursor-pointer bg-primary opacity-60 transition-all duration-300 ease-out hover:fill-primary hover:bg-primary-dark hover:border-primary animate-translateInUpNav'
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 384 512'
                     >
                         <path d='M374.6 246.6C368.4 252.9 360.2 256 352 256s-16.38-3.125-22.62-9.375L224 141.3V448c0 17.69-14.33 31.1-31.1 31.1S160 465.7 160 448V141.3L54.63 246.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160C387.1 213.9 387.1 234.1 374.6 246.6z' />
                     </svg>
                 </Link>
+
+                <div className='z-[9] fixed w-fit right-2 bottom-2 animate-translateInUpNav'>
+                    <div className='relative -right-[260px] lg:-right-[236px] flex flex-row flex-nowrap w-full rotate-90 after:h-[1px] after:w-[330px] after:ml-2 after:mt-2.5 after:relative after:bg-gray-light opacity-80'>
+                        <a
+                            href='mail'
+                            className='text-gray-light text-sm font-monoCustom tracking-widest hover:text-pink-light transition-all duration-300 ease-out'
+                        >
+                            wilsonzanea@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <div id='test' className='z-[9] fixed w-fit left-2 lg:left-8 bottom-0 animate-translateInUpNav'>
+                    <div className='relative flex flex-col w-full after:w-[1px] after:h-[76px] after:ml-2 after:-mt-1.5 after:relative after:bg-gray-light opacity-80 gap-y-4'>
+                        <a href='https://github.com/zaneaw' target='_blank' rel='noreferrer'>
+                            <FiGithub size='24px' className='stroke-2 fill-transparent stroke-gray-light hover:stroke-pink-light transition-all duration-300 ease-out' />
+                        </a>
+                        <a href='https://www.linkedin.com/in/zaneaw/' target='_blank' rel='noreferrer'>
+                            <FiLinkedin size='24px' className='stroke-2 fill-transparent stroke-gray-light hover:stroke-pink-light transition-all duration-300 ease-out' />
+                        </a>
+                        <a href='https://www.instagram.com/zane_ohh/' target='_blank' rel='noreferrer'>
+                            <FiInstagram size='24px' className='stroke-2 fill-transparent stroke-gray-light hover:stroke-pink-light transition-all duration-300 ease-out' />
+                        </a>
+                        <a href='https://twitter.com/zane_ohh' target='_blank' rel='noreferrer'>
+                            <FiTwitter size='24px' className='stroke-2 fill-transparent stroke-gray-light hover:stroke-pink-light transition-all duration-300 ease-out' />
+                        </a>
+                    </div>
+                </div>
             </div>
         </header>
     );
