@@ -690,10 +690,6 @@ video {
   margin-bottom: 2rem;
 }
 
-.-mb-\[5vh\] {
-  margin-bottom: -5vh;
-}
-
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -732,10 +728,6 @@ video {
 
 .h-\[100vh\] {
   height: 100vh;
-}
-
-.h-\[1px\] {
-  height: 1px;
 }
 
 .h-10 {
@@ -790,10 +782,6 @@ video {
 
 .w-9 {
   width: 2.25rem;
-}
-
-.w-\[1px\] {
-  width: 1px;
 }
 
 .w-6 {
@@ -1012,7 +1000,7 @@ video {
           animation: fadeOut 500ms;
 }
 
-@-webkit-keyframes translateIn {
+@-webkit-keyframes translateInDown {
   0% {
     opacity: 0;
     transform: translateY(-20px);
@@ -1024,7 +1012,7 @@ video {
   }
 }
 
-@keyframes translateIn {
+@keyframes translateInDown {
   0% {
     opacity: 0;
     transform: translateY(-20px);
@@ -1036,9 +1024,9 @@ video {
   }
 }
 
-.animate-translateIn {
-  -webkit-animation: translateIn 800ms ease-in;
-          animation: translateIn 800ms ease-in;
+.animate-translateInDown {
+  -webkit-animation: translateInDown 800ms ease-in;
+          animation: translateInDown 800ms ease-in;
 }
 
 @keyframes fadeIn {
@@ -1054,6 +1042,35 @@ video {
 .animate-fadeIn {
   -webkit-animation: fadeIn 800ms ease-in;
           animation: fadeIn 800ms ease-in;
+}
+
+@-webkit-keyframes translateInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes translateInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-translateInUp {
+  -webkit-animation: translateInUp 800ms ease-in;
+          animation: translateInUp 800ms ease-in;
 }
 
 .cursor-pointer {
@@ -1236,10 +1253,6 @@ video {
   background-color: rgb(226 149 120 / var(--tw-bg-opacity));
 }
 
-.bg-transparent {
-  background-color: transparent;
-}
-
 .bg-primary-dark\/60 {
   background-color: rgb(19 34 70 / 0.6);
 }
@@ -1303,10 +1316,6 @@ video {
 
 .fill-primary-dark {
   fill: #132246;
-}
-
-.fill-gray-light {
-  fill: #BDBDBD;
 }
 
 .p-4 {
@@ -1377,6 +1386,10 @@ video {
 
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.pl-1 {
+  padding-left: 0.25rem;
 }
 
 .text-center {
@@ -1575,10 +1588,6 @@ video {
 
 .duration-1000 {
   transition-duration: 1000ms;
-}
-
-.duration-200 {
-  transition-duration: 200ms;
 }
 
 .ease-out {
@@ -1868,11 +1877,6 @@ html {
   .sm\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  .sm\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 }
 

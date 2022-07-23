@@ -37,13 +37,19 @@ module.exports = {
                     '0%': { opacity: '1' },
                     '100%': { opacity: '0' },
                 },
-                translateIn: {
+                translateInDown: {
                     '0%': { opacity: '0', transform: 'translateY(-20px)' },
                     '100%': { opacity: '1', transform: 'translateY(0)' },
                 },
+                translateInUp: {
+                    '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                },
+
             },
             animation: {
-                translateIn: 'translateIn 800ms ease-in',
+                translateInUp: 'translateInUp 800ms ease-in',
+                translateInDown: 'translateInDown 800ms ease-in',
                 fadeOut: 'fadeOut 300ms ease-in',
                 fadeIn: 'fadeIn 800ms ease-in',
                 spinDots:

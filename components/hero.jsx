@@ -3,10 +3,10 @@ import Dots from '../components/dots';
 export default function Hero() {
     return (
         <section className='text-lg pt-[10vh] flex flex-col gap-[5vh] min-h-[100vh] '>
-        
-            <div className='font-monoCustom text-2xl md:text-4xl animate-translateIn'>
+
+            <div className='font-monoCustom text-2xl md:text-4xl animate-translateInDown'>
                 <p className='pb-2 md:pb-6'>Hello, I&apos;m</p>
-                <span className='before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-light relative inline-block -z-10'>
+                <span className='pl-1 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-light relative inline-block -z-10'>
                     <span className='relative text-primary-dark font-bold text-4xl md:text-7xl'>
                         Zane Wilson
                     </span>
@@ -14,7 +14,7 @@ export default function Hero() {
                 <p className='pt-2 md:pt-6'>and I build things for the web.</p>
             </div>
 
-            <div className='font-serifCustom max-w-lg animate-translateIn'>
+            <div className='font-serifCustom max-w-lg animate-translateInDown'>
                 <p>
                     I&apos;m a software engineer specializing in building
                     exceptional digital experiences. Currently, I&apos;m focused
@@ -33,7 +33,7 @@ export default function Hero() {
                 </p>
             </div>
 
-            <div className='font-monoCustom flex flex-col gap-y-4 gap-x-6 mb-12 mx-auto justify-center items-center self-center w-full sm:flex-row min-w-fit max-w-xl md:max-w-2xl md:pt-20 text-lg md:text-xl lg:text-2xl font-semibold animate-translateIn'>
+            <div className='font-monoCustom flex flex-col gap-y-4 gap-x-6 mb-12 mx-auto justify-center items-center self-center w-full sm:flex-row min-w-fit max-w-xl md:max-w-2xl md:pt-20 text-lg md:text-xl lg:text-2xl font-semibold animate-translateInDown'>
                 <a
                     className='group flex flex-row flex-nowrap w-full justify-center gap-2 border-2 border-primary rounded-xl p-2 md:p-3 hover:bg-primary transition-all duration-300 ease-out'
                     href="mailto:wilsonzanea@gmail.com?subject=Contacting%20You&body=Hi%20Zane!%20I'd%20like%20to%20hire%20you%20:)"
@@ -66,7 +66,7 @@ export default function Hero() {
                     </svg>
                 </a>
             </div>
-            <div className='mb-16 md:mb-4 animate-translateIn'>
+            <div className='mb-16 md:mb-4 animate-translateInDown'>
                 <Dots />
             </div>
         </section>
