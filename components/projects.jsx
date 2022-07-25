@@ -15,7 +15,7 @@ export default function Projects() {
         {
             title: 'Share-a-Cart.com',
             desc: 'Developed and updated new pages, components, and animations. Optimized site speed while focusing on the user experience and creating a completely responsive user interface with an emphasis on ease-of-use to improve click-through rate. Improved site speed and decreased bundle size. Streamlined the development process to make collaboration with other developers simpler. 1,000+ users every week!',
-            stack: ['Node.js', 'Tailwind CSS', 'LottieFiles'],
+            stack: ['Node.js', 'Tailwind CSS', 'JQuery', 'LottieFiles'],
             sourceCode: '',
             youtube: '',
             liveSiteUrl: 'https://share-a-cart.com/',
