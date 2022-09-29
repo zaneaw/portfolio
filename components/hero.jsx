@@ -53,7 +53,7 @@ export default function Hero() {
                 </a>
                 <a
                     className='group flex flex-row flex-nowrap w-full justify-center items-center gap-2 border-2 border-primary rounded-xl p-2 md:p-3 hover:bg-primary transition-all duration-300 ease-out'
-                    href='/downloads/zanescv.pdf'
+                    href='/downloads/ZanesCV.pdf'
                     download='ZanesCV'
                 >
                     <span className='text-primary group-hover:text-primary-dark transition-all duration-300 ease-out'>Download CV</span>
