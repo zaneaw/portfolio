@@ -43,14 +43,20 @@ export default function Feedback({
     };
 
     return (
-        <div className={`w-full flex justify-center font-monoCustom ${
+        <div className={`h-fit w-screen flex justify-center items-center font-monoCustom ${
             isFeedbackOpen ? 'animate-[fadeIn_300ms]' : 'hidden'
         } ${fadeOutFeedback && 'animate-[fadeOut_500ms]'}`}>
+            {submitSuccess && 
+                <div className='fixed top-0 left-0 z-50'>
+                    <Confetti />
+                </div>
+            }
             <div
-                className='z-20 fixed top-0 w-[100vw] h-[100vh] backdrop-blur'
+                className='z-20 fixed top-0 left-0 w-screen h-screen backdrop-blur'
                 onClick={submitSuccess ? handleCloseFeedback : undefined}
             ></div>
-            <div className='z-50 fixed top-40 w-11/12 mx-4 max-w-5xl px-4 pb-4 pt-2 rounded-lg bg-primary-dark border-2 border-primary'>
+            <div className='overflow-y-auto z-50 fixed top-[10%] w-11/12 max-w-5xl h-fit max-h-[80%] mx-4 px-4 pb-4 pt-2 rounded-lg bg-primary-dark border-2 border-primary'>
+                
                 <h4 className='text-red-orange text-2xl xs:text-3xl font-monoCustom font-semibold'>
                     Send Feedback
                 </h4>
@@ -68,8 +74,7 @@ export default function Feedback({
                 </div>
 
                 {submitSuccess && (
-                    <div>
-                        <Confetti />
+                    <div className='text-gray-light'>
                         <p>Submission Successful!</p>
 
                         <strong> Thank you!</strong>
