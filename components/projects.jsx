@@ -15,7 +15,7 @@ export default function Projects() {
     const workExperience = [
         {
             title: 'Share-a-Cart.com',
-            desc: 'Developed and updated new pages, components, and animations. Optimized site speed while focusing on the user experience and creating a completely responsive user interface with an emphasis on ease-of-use to improve click-through rate. Improved site speed and decreased bundle size. Streamlined the development process to make collaboration with other developers simpler.',
+            desc: 'Develop and update new and existing pages, components, and animations while focusing on the user experience. Develop and design new, complex user interaction flows, such as a system to compare current cart items to other vendors in order to save users money and to increase conversion rate.',
             stack: ['Node.js', 'Tailwind CSS', 'jQuery', 'Express.js', 'EJS'],
             sourceCode: '',
             youtube: '',
@@ -51,7 +51,7 @@ export default function Projects() {
         // },
         {
             title: 'LA Mountains',
-            desc: "This project was completed in the React framework, NextJS. The task was to take a PSD file and turn it into a responsive, single page web application. In addition to Next.js, I also used Sass and some Bootstrap as well. I think the project came out looking great! Don't forget to check out the live site for yourself.",
+            desc: "This project was completed in the React framework, NextJS. The task was to take a PSD file and turn it into a mobile-friendly, responsive, single page web application. In addition to Next.js, I also used Sass and some Bootstrap as well.",
             stack: ['React.js', 'Next.js', 'SASS', 'Bootstrap'],
             sourceCode: 'https://github.com/zaneaw/la-mountains',
             youtube: '',
@@ -62,7 +62,7 @@ export default function Projects() {
         },
         {
             title: 'Pizza by Zane',
-            desc: 'Built in React, this is a full-stack web application. I developed a backend using MongoDB and utilized JWT for user authentication. The stack involved in this site includes Redux, Bootstrap, Express, MongoDB, and more. Be sure to check out the video demo of the project!',
+            desc: 'Built in React, this is a full-stack web application. I developed a backend using MongoDB and utilized JWT for user authentication. The stack involved in this site includes Redux, Bootstrap, Express, MongoDB, and more. Be sure to check out the video demo of the project.',
             stack: ['React.js', 'MongoDB', 'Express', 'Redux', 'Bootstrap CSS'],
             sourceCode: 'https://github.com/zaneaw/conFusion',
             youtube: 'https://www.youtube.com/embed/iS4MRaI6DGU',
@@ -73,7 +73,7 @@ export default function Projects() {
         },
         {
             title: 'Forum Website',
-            desc: "Full-Stack web application built using Django and MySQL. I implemented Django's MVC pattern to create an interactive, customized user experience. The project consists of user authentication, user customization, forum-like commenting, a system of 'liking' projects, AWS integration for use and storage of files, and more. It's hosted on Heroku, check it out!.",
+            desc: "Full-Stack web application built using Django and MySQL. I implemented Django's MVC pattern to create an interactive, customized user experience. The project consists of user authentication, user customization, forum-like commenting, a system of 'liking' projects, AWS integration for use and storage of files, and more. It's hosted on Heroku, check it out.",
             stack: ['Django', 'MySQL', 'AWS'],
             sourceCode: 'https://github.com/zaneaw/Portfolio-Site',
             youtube: '',
@@ -106,7 +106,7 @@ export default function Projects() {
                 }`}
                 ref={ref}
             >
-                <h2 className='w-fit whitespace-nowrap text-center text-primary text-5xl md:text-7xl font-monoCustom mb-4'>
+                <h2 className='w-fit sm:whitespace-nowrap text-center text-primary text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-monoCustom mb-4'>
                     Work Experience
                 </h2>
             </div>
@@ -131,7 +131,7 @@ export default function Projects() {
                 }`}
                 ref={ref}
             >
-                <h2 className='w-fit whitespace-nowrap text-center text-primary text-5xl md:text-7xl font-monoCustom mb-4'>
+                <h2 className='w-fit whitespace-nowrap text-center text-primary text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-monoCustom mb-4'>
                     Projects
                 </h2>
             </div>

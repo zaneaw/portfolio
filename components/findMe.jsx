@@ -17,7 +17,7 @@ export default function ContactMe() {
                 }`}
                 ref={ref}
             >
-                <h2 className='text-primary text-5xl md:text-7xl w-fit xs:whitespace-nowrap font-monoCustom text-center'>
+                <h2 className='text-primary text-4xl xs:text-5xl md:text-6xl lg:text-7xl w-fit xs:whitespace-nowrap font-monoCustom text-center'>
                     Contact Me
                 </h2>
             </div>

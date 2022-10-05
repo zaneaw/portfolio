@@ -6,7 +6,7 @@ export default function projectDisplay({ project, isInView }) {
             }`}
         >
             <a
-                className=' text-red-orange group-hover:text-pink-light text-xl xs:text-2xl lg:text-3xl w-fit font-monoCustom flex flex-row flex-nowrap gap-2 py-1 bg-right-bottom bg-gradient-to-l from-red-orange to-red-orange group-hover:from-pink-light group-hover:to-pink-light bg-[length:0%_2px] bg-no-repeat hover:bg-[length:100%_2px] transition-all duration-300 ease-in'
+                className='mt-2 text-red-orange group-hover:text-pink-light text-xl xs:text-2xl lg:text-3xl w-fit font-monoCustom flex flex-row flex-nowrap gap-2 py-1 bg-right-bottom bg-gradient-to-l from-red-orange to-red-orange group-hover:from-pink-light group-hover:to-pink-light bg-[length:0%_2px] bg-no-repeat hover:bg-[length:100%_2px] transition-all duration-300 ease-in'
                 href={
                     project.liveSiteUrl
                         ? project.liveSiteUrl
@@ -33,7 +33,7 @@ export default function projectDisplay({ project, isInView }) {
                 })}
             </div>
 
-            <div className='absolute top-4 right-4 w-fit flex flex-row flex-nowrap gap-2 items-center justify-center'>
+            <div className='absolute top-1 right-1 xs:top-4 xs:right-4 w-fit flex flex-row flex-nowrap gap-2 items-center justify-center'>
                 {project.sourceCode && (
                     <a
                         href={project.sourceCode}
@@ -41,7 +41,7 @@ export default function projectDisplay({ project, isInView }) {
                         rel='noreferrer'
                     >
                         <svg
-                            className='h-6 lg:h-7 2xl:h-8 fill-primary hover:fill-primary-light transition-all duration-300 ease-out'
+                            className='h-5 xs:h-6 lg:h-7 2xl:h-8 fill-primary hover:fill-primary-light transition-all duration-300 ease-out'
                             xmlns='http://www.w3.org/2000/svg'
                             viewBox='0 0 496 512'
                         >
@@ -56,7 +56,7 @@ export default function projectDisplay({ project, isInView }) {
                         rel='noreferrer'
                     >
                         <svg
-                            className='h-6 lg:h-7 2xl:h-8 fill-primary hover:fill-primary-light transition-all duration-300 ease-out'
+                            className='h-5 xs:h-6 lg:h-7 2xl:h-8 fill-primary hover:fill-primary-light transition-all duration-300 ease-out'
                             xmlns='http://www.w3.org/2000/svg'
                             viewBox='0 0 512 512'
                         >
@@ -67,7 +67,7 @@ export default function projectDisplay({ project, isInView }) {
                 {project.youtube && (
                     <a href={project.youtube} target='_blank' rel='noreferrer'>
                         <svg
-                            className='h-6 lg:h-7 2xl:h-8 fill-primary hover:fill-primary-light transition-all duration-300 ease-out'
+                            className='h-5 xs:h-6 lg:h-7 2xl:h-8 fill-primary hover:fill-primary-light transition-all duration-300 ease-out'
                             xmlns='http://www.w3.org/2000/svg'
                             viewBox='0 0 384 512'
                         >

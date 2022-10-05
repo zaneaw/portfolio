@@ -4,7 +4,7 @@ import Navbar from '../components/navbar';
 import Hero from '../components/hero';
 import About from '../components/about';
 import Projects from '../components/projects';
-import Cert from '../components/cert';
+// import Cert from '../components/cert';
 import FindMe from '../components/findMe';
 import Footer from '../components/footer';
 import Feedback from '../components/feedback';
