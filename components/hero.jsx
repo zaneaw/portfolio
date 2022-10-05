@@ -16,7 +16,7 @@ export default function Hero() {
 
             <div className='font-serifCustom max-w-lg animate-translateInDown'>
                 <p>
-                    I&apos;m a software engineer specializing in building
+                    I&apos;m a software developer specializing in building
                     exceptional digital experiences. Currently, I&apos;m focused
                     on developing and updating user experiences and interfaces
                     for&nbsp;
@@ -56,7 +56,7 @@ export default function Hero() {
                     href='/downloads/ZanesCV.pdf'
                     download='ZanesCV'
                 >
-                    <span className='text-primary group-hover:text-primary-dark transition-all duration-300 ease-out'>Download CV</span>
+                    <span className='text-primary group-hover:text-primary-dark transition-all duration-300 ease-out'>Download Résumé</span>
                     <svg
                         className='w-6 fill-primary group-hover:fill-primary-dark transition-all duration-300 ease-out'
                         xmlns='http://www.w3.org/2000/svg'
