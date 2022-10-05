@@ -29,7 +29,7 @@ export default function Hero() {
                         </span>
                         <span>.</span>
                     </a>
-                    &nbsp;I am in the market for new opportunities!
+                    &nbsp;I am in the market for new opportunities.
                 </p>
             </div>
 
