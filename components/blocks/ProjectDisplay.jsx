@@ -6,7 +6,7 @@ export default function projectDisplay({ project, isInView }) {
             }`}
         >
             <a
-                className='mt-2 text-red-orange group-hover:text-pink-light text-xl xs:text-2xl lg:text-3xl w-fit font-monoCustom flex flex-row flex-nowrap gap-2 py-1 bg-right-bottom bg-gradient-to-l from-red-orange to-red-orange group-hover:from-pink-light group-hover:to-pink-light bg-[length:0%_2px] bg-no-repeat hover:bg-[length:100%_2px] transition-all duration-300 ease-in'
+                className='mt-2 xs:mt-0 text-red-orange group-hover:text-pink-light text-xl xs:text-2xl lg:text-3xl w-fit font-monoCustom flex flex-row flex-nowrap gap-2 py-1 bg-right-bottom bg-gradient-to-l from-red-orange to-red-orange group-hover:from-pink-light group-hover:to-pink-light bg-[length:0%_2px] bg-no-repeat hover:bg-[length:100%_2px] transition-all duration-300 ease-in'
                 href={
                     project.liveSiteUrl
                         ? project.liveSiteUrl
