@@ -11,7 +11,7 @@ export default function Hero() {
                         Zane Wilson
                     </span>
                 </span>
-                <p className='pt-2 md:pt-6'>and I build things for the web.</p>
+                <p className='pt-2 md:pt-6'>and I build things for mobile devices and the web.</p>
             </div>
 
             <div className='font-serifCustom max-w-lg animate-translateInDown'>
