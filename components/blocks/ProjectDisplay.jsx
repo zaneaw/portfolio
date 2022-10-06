@@ -20,8 +20,8 @@ export default function projectDisplay({ project, isInView }) {
 
             {project.position && (
                 <span className="-mt-3 text-primary-light opacity-80 flex flex-wrap justify-between items-center text-base xs:text-lg lg:text-xl transition-all duration-300 ease-in">
-                    <p className="mr-auto italic hover:text-primary transition-all duration-300 ease-in">{project.position}</p>
-                    <p className="ml-auto italic hover:text-primary transition-all duration-300 ease-in">{project.startDate} - {project.endDate}</p>
+                    <p className="mr-auto italic hover:text-primary hover:cursor-default transition-all duration-300 ease-in">{project.position}</p>
+                    <p className="ml-auto italic hover:text-primary hover:cursor-default transition-all duration-300 ease-in">{project.startDate} - {project.endDate}</p>
                 </span>
             )}
 
