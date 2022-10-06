@@ -3,10 +3,14 @@ import { InView, useInView } from 'react-intersection-observer';
 import ProjectDisplay from './blocks/ProjectDisplay';
 
 export default function Projects() {
-    const { ref, inView } = useInView({
+    const [ ref, inView ] = useInView({
         triggerOnce: true,
         threshold: 1,
     });
+    const [ ref2, inView2 ] = useInView({
+        triggerOnce: true,
+        threshold: 1,
+    })
     // const [ ref, inView ] = useInView({
     //     triggerOnce: true,
     //     rootMargin: '-100px 0px',
@@ -127,15 +131,14 @@ export default function Projects() {
 
             <div
                 className={`flex flex-row flex-nowrap w-full after:h-[7px] after:w-full after:ml-2 after:relative after:top-6 md:after:top-8 after:border-y after:border-red-orange before:h-[7px] before:w-full before:mr-2 before:relative before:top-6 md:before:top-8 before:border-y before:border-red-orange ${
-                    inView ? 'animate-translateInUp' : 'opacity-0'
+                    inView2 ? 'animate-translateInUp' : 'opacity-0'
                 }`}
-                ref={ref}
+                ref={ref2}
             >
                 <h2 className='w-fit whitespace-nowrap text-center text-primary text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-monoCustom mb-4'>
                     Projects
                 </h2>
             </div>
-
             {projectsList.map((project, i) => {
                 return (
                     <InView as='div' key={i} threshold={0.25} triggerOnce>
