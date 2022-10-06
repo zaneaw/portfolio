@@ -27,6 +27,9 @@ export default function Projects() {
             liveSiteImg: 'sac.jpg',
             width: 100,
             height: 100,
+            position: 'Front End Developer',
+            startDate: '5/22',
+            endDate: 'Present'
         },
     ];
 
