@@ -81,7 +81,7 @@ export default function Projects() {
         {
             title: 'Forum Website',
             desc: "Full-Stack web application built using Django and MySQL. I implemented Django's MVC pattern to create an interactive, customized user experience. The project consists of user authentication, user customization, forum-like commenting, a system of 'liking' projects, AWS integration for use and storage of files, and more. It's hosted on Heroku, check it out.",
-            stack: ['Django', 'MySQL', 'AWS'],
+            stack: ['Heroku', 'Django', 'MySQL', 'AWS'],
             sourceCode: 'https://github.com/zaneaw/Portfolio-Site',
             youtube: '',
             liveSiteUrl: 'https://www.zane-wilson.com',
@@ -92,7 +92,7 @@ export default function Projects() {
         {
             title: 'Notes App',
             desc: 'Built in React JS. I utilized custom hooks to support a toggleable dark mode option as well as the use of local storage. When closed navigated back to, the users notes will persist.',
-            stack: ['React.js'],
+            stack: ['React.js', 'Vercel Hosting'],
             sourceCode: 'https://github.com/zaneaw/notes-app',
             youtube: '',
             liveSiteUrl: 'https://zanes-notes-app.vercel.app/',
