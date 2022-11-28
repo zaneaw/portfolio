@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { InView, useInView } from 'react-intersection-observer';
 import ProjectDisplay from './blocks/ProjectDisplay';
