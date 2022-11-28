@@ -27,7 +27,7 @@ export default function About() {
                             inView ? 'animate-translateInUp' : 'opacity-0'
                         }`}
                     >
-                        <h2 className='tracking-wide lg:tracking-wider text-primary text-4xl lg:text-5xl font-rampart mt-2 mb-8 text-center'>
+                        <h2 className='tracking-wide lg:tracking-wider text-primary text-3xl xs:text-4xl lg:text-5xl font-rampart mt-2 mb-8 text-center'>
                             About Me
                         </h2>
                         <p>
@@ -83,7 +83,7 @@ export default function About() {
                             inView ? 'animate-translateInUp' : 'opacity-0'
                         }`}
                     >
-                        <h3 className='tracking-wide lg:tracking-wider text-primary text-4xl lg:text-5xl font-rampart mt-2 mb-8 text-center'>
+                        <h3 className='tracking-wide lg:tracking-wider text-primary text-3xl xs:text-4xl lg:text-5xl font-rampart mt-2 mb-8 text-center'>
                             Getting Personal
                         </h3>
                         <p>
