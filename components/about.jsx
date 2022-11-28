@@ -71,7 +71,7 @@ export default function About() {
                 </div>
             ))} */}
 
-            <InView threshold={0.25} triggerOnce>
+            {/* <InView threshold={0.25} triggerOnce>
                 {({ inView, ref }) => (
                     <div
                         ref={ref}
@@ -80,27 +80,19 @@ export default function About() {
                         }`}
                     >
                         <h3 className='tracking-wide lg:tracking-wider text-primary text-3xl xs:text-4xl lg:text-5xl font-rampart mt-2 mb-8 text-center'>
-                            Getting Personal
+                            Getting Professional
                         </h3>
                         <p>
-                            As you already know, I&apos;m Zane and I&apos;m a
-                            software engineer that used to sell real estate in
-                            NYC. I have a lovely partner who has been extremely
-                            supportive throughout my career change - thank you!
-                            We have a very handsome French Bulldog whose name is
-                            Theo. He brings us so much joy and certainly keeps
-                            us laughing with his quirky personality and stinky
-                            toots.
-                            <br />
-                            <br />
-                            Cooking is something that brings me great joy as
-                            well. I cook everything from tofu with bokchoy and
-                            cauliflower rice to homemade sourdough bread. I
-                            mean... I love food! Who doesn&apos;t?
+                            Throughout my software development journey,
+                            I&apos;ve invested a lot of time and energy into
+                            becoming confident with several different languages.
+                            Understanding the core principles of software
+                            development and practicing and researching the
+                            best methodologies to follow. I spend 
                         </p>
                     </div>
                 )}
-            </InView>
+            </InView> */}
         </section>
     );
 }
