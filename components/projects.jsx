@@ -40,7 +40,7 @@ export default function Projects() {
                     Work Experience
                 </h2>
             </div>
-            {workExperience.map((project, i) => {
+            {workList.map((project, i) => {
                 return (
                     <InView as='div' key={i} threshold={0.25} triggerOnce>
                         {({ inView, ref }) => (
