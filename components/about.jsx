@@ -43,17 +43,13 @@ export default function About() {
                             <br />
                             <br />
                             COVID struck almost exactly on my two-year
-                            anniversary of moving to the city and I knew it was
-                            time for a change... I had always loved computers
-                            and decided to take the plunge into learning to
-                            code. I&apos;ve learned SO much and fallen more in
-                            love with computers and technology as time has gone
-                            by. I enjoyed real estate, but I was never
-                            passionate about it. That&apos;s why I&apos;m
+                            anniversary of moving to the city... During the 
+                            lockdown, I realized that my passion, knowledge,
+                            and skills for software development surpassed
+                            my desire and passion for real estate. I&apos;m
                             teeming with excitement to continue my path in
-                            technology - because I&apos;m passionate about it! I
-                            can&apos;t wait to see what the future has in store
-                            for me.
+                            technology. I can&apos;t wait to see what the 
+                            future has in store for me.
                         </p>
                     </div>
                 )}
