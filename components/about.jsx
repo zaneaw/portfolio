@@ -8,29 +8,6 @@ export default function About() {
         threshold: 0.25,
     })
 
-    const photos = [
-        {
-            text: 'Theo',
-            image: '/images/theo.jpg',
-            alt: 'the most handsome French Bulldog (biased opinion)',
-        },
-        {
-            text: 'Cooking',
-            image: '/images/cooking.jpg',
-            alt: 'cutting board with freshly chopped food on it',
-        },
-        {
-            text: 'Park',
-            image: '/images/park.jpg',
-            alt: 'Me, my partner, and our dog, Theo in a park',
-        },
-        {
-            text: 'NYC',
-            image: '/images/nyc.jpg',
-            alt: 'view of NYC skyscrapers',
-        },
-    ];
-
     return (
         <section
             className={`scroll-mt-20 z-0 mt-20 border border-primary shadow-lg mb-6 p-4 xs:mx-6 md:mx-12 rounded-lg text-gray-light flex flex-col gap-y-8 justify-center items-center ${inView ? 'animate-translateInUp' : 'opacity-0'}`}
