@@ -8,17 +8,14 @@ import projectsData from '../data/projectsData';
 export default function Projects() {
     const [workList, setWorkList] = useState([]);
     const [projectsList, setProjectList] = useState([]);
+    const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 1,
     });
-    const [ ref2, inView2 ] = useInView({
+    const [ref2, inView2] = useInView({
         triggerOnce: true,
         threshold: 1,
-    })
-    // const [ ref, inView ] = useInView({
-    //     triggerOnce: true,
-    //     rootMargin: '-100px 0px',
-    // });
+    });
 
     useEffect(() => {
         setWorkList(workData);
