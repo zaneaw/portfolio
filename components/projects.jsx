@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { InView, useInView } from 'react-intersection-observer';
 import ProjectDisplay from './blocks/ProjectDisplay';
 import workData from '../data/workData';
+import projectsData from '../data/projectsData';
 
 export default function Projects() {
     const [ ref, inView ] = useInView({
