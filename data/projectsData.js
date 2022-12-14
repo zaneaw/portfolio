@@ -1,7 +1,7 @@
 const projectData = [
     {
         title: 'Student Profiles',
-        desc: 'Built with Next.js and Tailwind CSS. This site fetches data from an external API at build time to create a static site, iterates over the data to create dynamic and interactive components and also takes user input in the form of tags. I implemented memoization for expensive functions and developed a query system to search the database on one or more inputs.',
+        desc: 'Built with React and styled using Tailwind CSS. This site fetches data from an external API at build time to create a static site, iterates over the data to create dynamic and interactive components and also takes user input in the form of tags. I implemented memoization for expensive functions and developed a query system to search the database on one or more inputs.',
         stack: ['React.js', 'Next.js', 'Tailwind CSS', 'REST API'],
         sourceCode: 'https://github.com/zaneaw/student-profiles',
         youtube: '',
