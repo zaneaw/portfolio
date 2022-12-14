@@ -47,7 +47,7 @@ const projectData = [
     {
         title: 'Notes App',
         desc: 'Built in React JS. I utilized custom hooks to support a toggleable dark mode option as well as the use of local storage. When closed navigated back to, the users notes will persist.',
-        stack: ['React.js', 'Vercel Hosting'],
+        stack: ['React.js', 'Vercel Hosting', 'Local Storage'],
         sourceCode: 'https://github.com/zaneaw/notes-app',
         youtube: '',
         liveSiteUrl: 'https://zanes-notes-app.vercel.app/',
