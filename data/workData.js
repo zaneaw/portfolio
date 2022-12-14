@@ -1,8 +1,8 @@
 const workData = [
     {
         title: 'Share-a-Cart.com',
-        desc: 'Develop and update new and existing pages, components, and animations for a clean and pixel-perfect user interface. Develop and maintain a user experience focused on ease of use, reducing visual and functional bugs by ~15%. Develop and design new, complex user interaction flows, such as a system to compare current cart items to other vendors in order to save users money and to increase conversion rate. Stack includes JavaScript, Node, Express, EJS, and Tailwind.',
-        stack: ['Node.js', 'Tailwind CSS', 'jQuery', 'Express.js', 'EJS'],
+        desc: 'Work alongside the lead developer to develop new features from ideation to production. Update existing features to enhance user experience. Develop and update new and existing pages and components for a clean, pixel-perfect user interface. Develop and maintain a user experience focused on ease of use, reducing visual and functional bugs by ~15%.',
+        stack: ['Node.js', 'Tailwind CSS', 'jQuery', 'Express.js', 'EJS', 'Firebase'],
         sourceCode: '',
         youtube: '',
         liveSiteUrl: 'https://share-a-cart.com/',
