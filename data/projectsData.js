@@ -23,11 +23,11 @@ const projectData = [
     // },
     {
         title: 'Forum Website',
-        desc: "Full-Stack web application built using Django and MySQL. I implemented Django's MVC pattern to create an interactive, customized user experience. The project consists of user authentication, user customization, forum-like commenting, a system of 'liking' projects, AWS integration for use and storage of files, and more. It's hosted on Heroku, check it out.",
+        desc: "Full-Stack web application built using Django and MySQL. Implemented Django's MVC pattern to create an interactive and customized user experience. This project consists of user authentication, user customization, forum-like commenting, a system of 'liking' projects, AWS integration, and more.",
         stack: ['Heroku', 'Django', 'MySQL', 'AWS'],
         sourceCode: 'https://github.com/zaneaw/Portfolio-Site',
         youtube: '',
-        liveSiteUrl: 'https://www.zane-wilson.com',
+        liveSiteUrl: 'https://www.zanes-forum-site.up.railway.app',
         liveSiteImg: 'zw-forum.jpg',
         width: 100,
         height: 100,
