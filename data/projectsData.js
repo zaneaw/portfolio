@@ -34,7 +34,7 @@ const projectData = [
     },
     {
         title: 'Pizza by Zane',
-        desc: 'Built in React, this is a full-stack web application. I developed a backend using MongoDB and utilized JWT for user authentication. The stack involved in this site includes Redux, Bootstrap, Express, MongoDB, and more. Be sure to check out the video demo of the project.',
+        desc: 'Built in React, this is a full-stack web application. I developed a backend using MongoDB and utilized JWT for user authentication. Project includes a system for users to login and view favorited pizzas as well as the ability to leave comments on pizzas for other users to view.',
         stack: ['React.js', 'MongoDB', 'Express', 'Redux', 'Bootstrap CSS'],
         sourceCode: 'https://github.com/zaneaw/conFusion',
         youtube: 'https://www.youtube.com/embed/iS4MRaI6DGU',
