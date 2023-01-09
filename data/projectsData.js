@@ -1,5 +1,16 @@
 const projectData = [
     {
+        title: 'Pathfinding Visualizer',
+        desc: "Developed in React with Typescript. The goal of this project was to create an animation displaying Dijkstra's famous pathfinding algorithm, guaranteed to find the shortest distance between the start and end point. The web app will first display each visited node and once the end node has been found, it will display the shortest path.",
+        stack: ['Typescript', 'React.js', 'Next.js', 'Tailwind CSS'],
+        sourceCode: 'https://github.com/zaneaw/pathfinding-visualizer',
+        youtube: '',
+        liveSiteUrl: 'https://zanes-pathfinder.vercel.app',
+        liveSiteImg: '',
+        width: 100,
+        height: 100,
+    },
+    {
         title: 'Student Profiles',
         desc: 'Built with React and styled using Tailwind CSS. This site fetches data from an external API at build time to create a static site, iterates over the data to create dynamic and interactive components and also takes user input in the form of tags. I implemented memoization for expensive functions and developed a query system to search the database on one or more inputs.',
         stack: ['React.js', 'Next.js', 'Tailwind CSS', 'REST API'],
@@ -43,7 +54,6 @@ const projectData = [
         width: 100,
         height: 100,
     },
-    
     {
         title: 'Notes App',
         desc: 'Built in React JS. I utilized custom hooks to support a toggleable dark mode option as well as the use of local storage. When closed navigated back to, the users notes will persist.',
@@ -55,17 +65,17 @@ const projectData = [
         width: 100,
         height: 100,
     },
-    {
-        title: 'LA Mountains',
-        desc: "This project was completed in the React framework, NextJS. The task was to take a PSD file and turn it into a mobile-friendly, responsive, single page web application. In addition to Next.js, I also used Sass and some Bootstrap as well.",
-        stack: ['React.js', 'Next.js', 'SASS', 'Bootstrap'],
-        sourceCode: 'https://github.com/zaneaw/la-mountains',
-        youtube: '',
-        liveSiteUrl: 'https://la-mountains.vercel.app',
-        liveSiteImg: 'la-mntns.jpg',
-        width: 100,
-        height: 100,
-    },
+    // {
+    //     title: 'LA Mountains',
+    //     desc: "This project was completed in the React framework, NextJS. The task was to take a PSD file and turn it into a mobile-friendly, responsive, single page web application. In addition to Next.js, I also used Sass and some Bootstrap as well.",
+    //     stack: ['React.js', 'Next.js', 'SASS', 'Bootstrap'],
+    //     sourceCode: 'https://github.com/zaneaw/la-mountains',
+    //     youtube: '',
+    //     liveSiteUrl: 'https://la-mountains.vercel.app',
+    //     liveSiteImg: 'la-mntns.jpg',
+    //     width: 100,
+    //     height: 100,
+    // },
 ];
 
 export default projectData;
