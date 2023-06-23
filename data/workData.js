@@ -10,7 +10,7 @@ const workData = [
         width: 100,
         height: 100,
         position: 'Front End Developer',
-        startDate: '05/2022',
+        startDate: '05/2021',
         endDate: 'Present'
     },
 ];
