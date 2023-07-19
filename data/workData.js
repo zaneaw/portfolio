@@ -1,8 +1,8 @@
 const workData = [
     {
         title: 'Share-a-Cart.com',
-        desc: 'Work alongside the lead developer to develop new features from ideation to production. Update existing features to enhance user experience. Develop and update new and existing pages and components for a clean, pixel-perfect user interface. Develop and maintain a user experience focused on ease of use, reducing visual and functional bugs by ~15%.',
-        stack: ['Node.js', 'Tailwind CSS', 'jQuery', 'Express.js', 'EJS', 'Firebase'],
+        desc: 'Website, browser extension, and mobile app that allows sharing of shopping cart contents across the internet in just a few clicks. Some of my duties include: reverse-engineering popular sites and their REST APIs to enable one-click cart saving, sharing, and loading; developing easy-to-use, pixel-perfect UI & UXs; developing analytics script to handle tens of millions of points of data; developing an authentication system tied to a paid subscription through Stripe for an enhanced version of services.',
+        stack: ['React', 'React Native', 'Typescript', 'Node', 'Tailwind CSS', 'jQuery', 'Express', 'EJS', 'Firebase'],
         sourceCode: '',
         youtube: '',
         liveSiteUrl: 'https://share-a-cart.com/',
