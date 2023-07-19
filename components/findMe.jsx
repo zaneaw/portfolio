@@ -31,8 +31,8 @@ export default function ContactMe() {
                         }`}
                     >
                         <p className='text-center max-w-[520px]'>
-                            I&apos;m actively searching for a more permament
-                            position and my&nbsp;
+                            I&apos;m actively searching for new
+                            opportunities and my&nbsp;
                             <a
                                 className='group text-pink-light transition-all duration-300 ease-in-out'
                                 href="mailto:wilsonzanea@gmail.com?subject=Contacting%20You&body=Hi%20Zane!%20I'd%20like%20to%20hire%20you%20:)"
