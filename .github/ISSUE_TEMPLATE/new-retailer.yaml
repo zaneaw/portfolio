@@ -1,0 +1,20 @@
+name: New Retailer
+description: Add support for a new retailer.
+title: "New Retailer: VENDOR_NAME"
+labels: ["new retailer"]
+# projects: ["octo-org/1", "octo-org/44"]
+assignees:
+  - khengyun
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: vendorLink
+    attributes:
+      label: Link to Vendor's Home Page
+      description: This will be used to link to the vendor's page from the Changelog page.
+      placeholder: ex. https://walmart.com
+    validations:
+      required: false
