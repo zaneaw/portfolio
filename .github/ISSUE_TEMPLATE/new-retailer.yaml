@@ -5,7 +5,7 @@ labels: ["new retailer"]
 # projects: ["octo-org/1", "octo-org/44"]
 # assignees:
 #   - khengyun
-form:
+body:
   - type: input
     id: vendorDisplayName
     attributes:
