@@ -9,7 +9,7 @@ body:
   - type: input
     id: vendorLink
     attributes:
-      description: <h2>Link to Vendor's Home Page.</h2><br /><br />This will be used to link to the vendor's page from the Changelog page.
+      description: Link to Vendor's Home Page. This will be used to link to the vendor's page from the Changelog page.
       placeholder: ex. https://walmart.com
     validations:
       required: false
