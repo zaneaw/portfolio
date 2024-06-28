@@ -3,10 +3,10 @@ description: Add support for a new retailer.
 title: "New Retailer: VENDOR_NAME"
 labels: ["new retailer"]
 # projects: ["octo-org/1", "octo-org/44"]
-assignees:
-  - khengyun
+# assignees:
+#   - khengyun
 body:
-  - type: input.url
+  - type: input
     id: vendorLink
     attributes:
       description: <h2>Link to Vendor's Home Page.</h2><br /><br />This will be used to link to the vendor's page from the Changelog page.
