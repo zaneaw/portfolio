@@ -6,11 +6,11 @@ labels: ["new retailer"]
 # assignees:
 #   - khengyun
 body:
-  - type: input
+  - type: input.url
     id: vendorLink
     attributes:
-      label:
-      description: Link to Vendor's Home Page. This will be used to link to the vendor's page from the Changelog page.
+      label: Link to Vendor's Home Page
+      description: This will be used to link to the vendor's page from the Changelog page.
       placeholder: ex. https://walmart.com
     validations:
       required: false
